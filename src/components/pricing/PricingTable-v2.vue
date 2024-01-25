@@ -148,7 +148,7 @@
   </v-container>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 const plans = [
   {
     name: 'Starter',

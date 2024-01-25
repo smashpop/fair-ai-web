@@ -11,13 +11,11 @@
     </template>
 
     <v-list-item-title class="text-h6">
-      <strong class="font-weight-black">NEBULA</strong>
-
-      UI KIT
+      <strong class="font-weight-black">FAIR-AI</strong>
     </v-list-item-title>
   </v-list-item>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 //
 </script>

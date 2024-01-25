@@ -5,11 +5,11 @@
     </h2>
 
     <h2>
-      <b> Nebula Web UI Kit</b>
+      <b> FAIR-AI</b>
     </h2>
   </v-card>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 //
 </script>

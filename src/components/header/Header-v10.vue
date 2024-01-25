@@ -31,7 +31,7 @@
   </v-layout>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { useDisplay } from 'vuetify'
 
 const { mdAndUp } = useDisplay()

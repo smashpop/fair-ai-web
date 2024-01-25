@@ -1,39 +1,43 @@
 <script setup>
-const emit = defineEmits(['click:toggle'])
+import { useDisplay } from 'vuetify'
+
+const { mdAndUp } = useDisplay()
 </script>
 
 <template>
-  <v-system-bar
-    color="#262626"
-    height="56"
+  <v-card
+    theme="dark"
+    color="#0d2141"
   >
-    <div class="d-flex align-center">
-      <v-app-bar-nav-icon
-        class="d-inline-block"
-        @click="emit('click:toggle')"
-      />
+    <v-layout class="fill-height">
+      <v-app-bar
+        color="transparent"
+        flat
+        height="48"
+      >
+        <template
+          v-if="mdAndUp"
+          #prepend
+        >
+          <logo />
+        </template>
 
-      <v-img
-        src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-text-dark.svg"
-        class="ms-2"
-        width="128"
-      />
+        <template #append>
+          <div v-if="mdAndUp">
+            <v-btn text="Home" />
+            <v-btn text="About us" />
+            <v-btn text="Portfolio" />
+            <v-btn text="Services" />
+            <v-btn text="Contact" />
+          </div>
+        </template>
+      </v-app-bar>
 
-      <div class="text-body-2 font-weight-black ms-2 d-none d-md-block">
-        THEMES
-      </div>
-    </div>
-
-    <v-spacer />
-
-    <v-btn
-      append-icon="mdi-open-in-new"
-      color="primary"
-      href="https://store.vuetifyjs.com/products/nebula-ui-kit/"
-      rel="noopener"
-      target="_blank"
-      text="Buy now"
-      variant="flat"
-    />
-  </v-system-bar>
+      <v-main>
+       
+      </v-main>
+    </v-layout>
+  </v-card>
 </template>
+
+

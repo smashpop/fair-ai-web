@@ -62,7 +62,7 @@
   </v-container>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 // Utilities
 import { useDisplay } from 'vuetify'
 

@@ -14,7 +14,7 @@ const drawer = shallowRef(null)
   <v-app>
     <default-system-bar @click:toggle="drawer = !drawer" />
 
-    <default-drawer v-model="drawer" />
+    <!-- <default-drawer v-model="drawer" /> -->
 
     <default-view />
   </v-app>

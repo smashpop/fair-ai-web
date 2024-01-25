@@ -27,7 +27,7 @@
   </v-card>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 const links = [
   'Home',
   'About Us',

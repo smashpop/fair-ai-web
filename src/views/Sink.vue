@@ -15,7 +15,7 @@
   </v-container>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import BlogV1 from '@/components/blog/Blog-v1.vue'
 import BlogV2 from '@/components/blog/Blog-v2.vue'
 import CalltoActionV1 from '@/components/call-to-action/CalltoAction-v1.vue'

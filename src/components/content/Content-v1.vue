@@ -26,7 +26,7 @@
           <h1 class="text-h3 mx-auto mb-4">
             Introducing new
 
-            <strong>Nebula Web UI Kit</strong>
+            <strong>FAIR-AI</strong>
           </h1>
 
           <div class="text-medium-emphasis text-body-2">
@@ -38,6 +38,6 @@
   </v-card>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 //
 </script>
