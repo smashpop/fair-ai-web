@@ -1,4 +1,3 @@
-# [Nebula UI Kit](https://store.vuetifyjs.com/products/nebula-ui-ki)
 
 A simple collection of components and layouts for building applications with Vuetify 3 and Vite.
 
