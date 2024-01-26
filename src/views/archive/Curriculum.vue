@@ -1,29 +1,20 @@
 <script setup>
 // Components
-import FeaturesV1 from '@/components/features/Features-v1'
-import FooterV1 from '@/components/footer/Footer-v1'
-import Team1 from '@/components/team/Team-v1'
-import TestimonialV1 from '@/components/testimonial/Testimonial-v1'
+import CurriculumView from '@/views/archive/components/CurriculumView.vue'
+import ContentV1 from '@/components/content/Content-v1'
+
 </script>
 
 <template>
   <v-container>
-    커리큘럼
+    <v-responsive class="align-center text-center fill-height">
+      <strong class="text-h4 font-weight-bold">교육 커리큘럼</strong>
+      <CurriculumView />
 
     <div class="py-1" />
 
-    <FeaturesV1 />
-
-    <div class="py-1" />
-
-    <TestimonialV1 />
-
-    <div class="py-1" />
-
-    <Team1 />
-
-    <div class="py-1" />
-
-    <FooterV1 />
+    <ContentV1 />
+  </v-responsive>
   </v-container>
 </template>
+

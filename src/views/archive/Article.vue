@@ -1,34 +1,18 @@
 <script setup>
 // Components
-import FeaturesV1 from '@/components/features/Features-v1'
-import FooterV1 from '@/components/footer/Footer-v1'
-import GalleryV1 from '@/components/gallery/Gallery-v1'
+import ArticleView from '@/views/archive/components/ArticleView.vue'
 import Team1 from '@/components/team/Team-v1'
-import TestimonialV1 from '@/components/testimonial/Testimonial-v1'
 </script>
 
 <template>
   <v-container>
-    기사
-
-    <div class="py-1" />
-
-    <GalleryV1 />
-
-    <div class="py-1" />
-
-    <FeaturesV1 />
-
-    <div class="py-1" />
-
-    <TestimonialV1 />
+    <v-responsive class="align-center text-center fill-height">
+      <strong class="text-h4 font-weight-bold">기사</strong>
+      <ArticleView />
 
     <div class="py-1" />
 
     <Team1 />
-
-    <div class="py-1" />
-
-    <FooterV1 />
+  </v-responsive>
   </v-container>
 </template>

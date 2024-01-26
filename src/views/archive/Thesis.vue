@@ -1,18 +1,18 @@
 <script setup>
 // Components
-import FooterV1 from '@/components/footer/Footer-v1'
+import ThesisView from '@/views/archive/components/ThesisView.vue'
 import Team1 from '@/components/team/Team-v1'
 </script>
 
 <template>
   <v-container>
-    논문
+    <v-responsive class="align-center text-center fill-height">
+      <strong class="text-h4 font-weight-bold">논문</strong>
+      <ThesisView />
+
     <div class="py-1" />
 
     <Team1 />
-
-    <div class="py-1" />
-
-    <FooterV1 />
+  </v-responsive>
   </v-container>
 </template>

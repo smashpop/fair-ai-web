@@ -1,11 +1,14 @@
-<script setup></script>
+<script setup>
+// Components
+import NoticeView from '@/views/news/components/NoticeView.vue'
+</script>
 
 <template>
   <v-container class="fill-height">
     <v-responsive class="align-center text-center fill-height">
-      <v-img height="100" src="@/assets/logo.svg" />
-
-      <h1 class="text-h2 font-weight-bold">공지사항</h1>
+      <strong class="text-h4 font-weight-bold">공지사항</strong>
+      <NoticeView />
+   
     </v-responsive>
   </v-container>
 </template>

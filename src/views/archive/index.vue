@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import Headers from '@/components/archive/Headers'
+import Headers from '@/views/archive/components/Headers'
 </script>
 
 <template>
