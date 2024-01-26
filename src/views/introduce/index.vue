@@ -1,5 +1,5 @@
 <script setup>
-import Introduce from '@/components/Introduce.vue'
+import Introduce from '@/components/introduce/Introduce.vue'
 </script>
 
 <template>

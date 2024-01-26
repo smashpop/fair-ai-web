@@ -14,10 +14,10 @@ const { mdAndUp } = useDisplay()
 
         <template #append>
           <div v-if="mdAndUp">
-            <v-btn text="FAIR AI 소개" to="introduce" />
-            <v-btn text="최신자료" to="archive" />
-            <v-btn text="소식" to="news" />
-            <v-btn text="문의/제안" to="suggest" />
+            <v-btn text="FAIR AI 소개" to="/introduce" />
+            <v-btn text="최신자료" to="/archive" />
+            <v-btn text="소식" to="/news" />
+            <v-btn text="문의/제안" to="/suggest" />
           </div>
         </template>
       </v-app-bar>

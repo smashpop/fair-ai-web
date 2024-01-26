@@ -11,25 +11,9 @@ import TestimonialV1 from '@/components/testimonial/Testimonial-v1.vue'
 
 <template>
   <v-container>
-    <Headers />
-
+논문
     <div class="py-1" />
 
-    <ContentV1 />
-
-    <div class="py-1" />
-
-    <GalleryV1 />
-
-    <div class="py-1" />
-
-    <FeaturesV1 />
-
-    <div class="py-1" />
-
-    <TestimonialV1 />
-
-    <div class="py-1" />
 
     <Team1 />
 

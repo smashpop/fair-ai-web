@@ -11,8 +11,7 @@ import TestimonialV1 from '@/components/testimonial/Testimonial-v1.vue'
 
 <template>
   <v-container>
-    <Headers />
-
+가이드라인
     <div class="py-1" />
 
     <ContentV1 />

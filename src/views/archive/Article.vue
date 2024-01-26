@@ -1,5 +1,4 @@
 <script setup>
-import Headers from '@/components/archive/Headers.vue'
 
 import ContentV1 from '@/components/content/Content-v1.vue'
 import FeaturesV1 from '@/components/features/Features-v1.vue'
@@ -11,11 +10,7 @@ import TestimonialV1 from '@/components/testimonial/Testimonial-v1.vue'
 
 <template>
   <v-container>
-    <Headers />
-
-    <div class="py-1" />
-
-    <ContentV1 />
+기사
 
     <div class="py-1" />
 
