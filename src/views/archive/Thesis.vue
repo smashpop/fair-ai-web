@@ -10,9 +10,9 @@ import Team1 from '@/components/team/Team-v1'
       <strong class="text-h4 font-weight-bold">논문</strong>
       <ThesisView />
 
-    <div class="py-1" />
+      <div class="py-1" />
 
-    <Team1 />
-  </v-responsive>
+      <Team1 />
+    </v-responsive>
   </v-container>
 </template>

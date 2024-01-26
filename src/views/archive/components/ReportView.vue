@@ -40,7 +40,6 @@ watch(
   },
   { deep: true }
 )
-
 </script>
 
 <template>
@@ -53,7 +52,7 @@ watch(
     <v-divider class="mb-2"></v-divider>
 
     <v-list density="compact">
-      <v-list-item v-for="(item, index) in items" :key="index" >
+      <v-list-item v-for="(item, index) in items" :key="index">
         <div class="d-flex justify-space-between align-center">
           <div class="d-flex align-baseline flex-1">
             <div class="bg-info pa-1 rounded-circle me-2"></div>
@@ -71,7 +70,6 @@ watch(
       </v-list-item>
     </v-list>
   </BaseCard>
-
 </template>
 
 <style lang="scss" scoped></style>

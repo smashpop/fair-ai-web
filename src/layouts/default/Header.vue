@@ -1,18 +1,18 @@
 <script setup>
 // Utilities
-import { useDisplay } from 'vuetify'
+// import { useDisplay } from 'vuetify'
 
-const { mdAndUp } = useDisplay()
+// const { mdAndUp } = useDisplay()
 </script>
 
 <template>
-  <v-app-bar color="#0d2141" flat height="48">
-    <template v-if="mdAndUp" #prepend>
+  <v-app-bar color="indigo-darken-4" flat height="48">
+    <template #prepend>
       <logo />
     </template>
 
     <template #append>
-      <div v-if="mdAndUp">
+      <div class="mr-12">
         <v-btn text="HOME" to="/home" />
         <v-btn text="FAIR AI 소개" to="/introduce" />
         <v-btn text="최신자료" to="/archive" />

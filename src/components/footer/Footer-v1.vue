@@ -1,3 +1,7 @@
+<script setup>
+const links = ['Home', 'About Us', 'Portfolio', 'Services', 'Contact']
+</script>
+
 <template>
   <v-card>
     <v-container class="pa-8">
@@ -13,7 +17,7 @@
         </v-col>
 
         <v-col cols="12" md="5" class="text-grey-darken-1 d-flex justify-md-start justify-end">
-          <div class="px-4">&copy; {{ new Date().getFullYear() }}, Vuetify, LLC</div>
+          <div class="px-4">&copy; {{ new Date().getFullYear() }}, Infix, LLC</div>
         </v-col>
 
         <v-col cols="12" md="7" class="text-end">
@@ -31,7 +35,3 @@
     </v-container>
   </v-card>
 </template>
-
-<script setup>
-const links = ['Home', 'About Us', 'Portfolio', 'Services', 'Contact']
-</script>

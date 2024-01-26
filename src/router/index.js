@@ -51,7 +51,7 @@ const routes = [
               title: 'AI윤리'
             },
             component: () => import('@/views/introduce/AiEthics')
-          },
+          }
         ]
       },
       {

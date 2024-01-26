@@ -1,11 +1,16 @@
 <script setup>
-//
+import ContentV1 from '@/components/content/Content-v1'
 </script>
 
 <template>
   <v-container class="fill-height">
     <v-responsive class="align-center text-center fill-height">
-      <strong class="text-h3 font-weight-bold">재단소개</strong>
+      <strong class="text-h4 font-weight-bold">재단소개</strong>
+      <div class="py-2" />
+
+      <ContentV1 />
+
+      <div class="py-2" />
 
       <v-sheet class="py-16">
         <section id="filter">
