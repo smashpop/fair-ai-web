@@ -30,7 +30,29 @@ const routes = [
       {
         path: '/introduce',
         name: 'Introduce',
-        component: Introduce
+        component: Introduce,
+        redirect: '/introduce/introduce',
+        meta: {
+          title: '소개'
+        },
+        children: [
+          {
+            path: '/introduce/introduce',
+            name: 'Introduce',
+            meta: {
+              title: '재단소개'
+            },
+            component: () => import('@/views/introduce/Introduce')
+          },
+          {
+            path: '/introduce/ai-ethics',
+            name: 'AiEthics',
+            meta: {
+              title: 'AI윤리'
+            },
+            component: () => import('@/views/introduce/AiEthics')
+          },
+        ]
       },
       {
         path: '/archive',
