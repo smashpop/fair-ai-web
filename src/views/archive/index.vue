@@ -1,5 +1,6 @@
 <script setup>
-import Headers from '@/components/archive/Headers.vue'
+// Components
+import Headers from '@/components/archive/Headers'
 </script>
 
 <template>

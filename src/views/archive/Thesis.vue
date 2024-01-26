@@ -1,8 +1,7 @@
 <script setup>
-import Headers from '@/components/archive/Headers.vue'
-
-import FooterV1 from '@/components/footer/Footer-v1.vue'
-import Team1 from '@/components/team/Team-v1.vue'
+// Components
+import FooterV1 from '@/components/footer/Footer-v1'
+import Team1 from '@/components/team/Team-v1'
 </script>
 
 <template>

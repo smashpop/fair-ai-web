@@ -1,5 +1,6 @@
 <script setup>
-import Suggest from '@/components/suggest/Suggest.vue'
+// Components
+import Suggest from '@/components/suggest/Suggest'
 </script>
 
 <template>

@@ -1,4 +1,5 @@
 <script setup>
+// Utilities
 import { useDisplay } from 'vuetify'
 
 const { mdAndUp } = useDisplay()

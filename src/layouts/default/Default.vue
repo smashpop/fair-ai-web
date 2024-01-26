@@ -1,7 +1,7 @@
 <script setup>
 // Components
-import Header from './Header.vue'
-import MainView from './MainView.vue'
+import Header from './Header'
+import MainView from './MainView'
 
 // Utilities
 </script>

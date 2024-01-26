@@ -137,7 +137,7 @@ const routes = [
       {
         path: '/suggest',
         name: 'Suggest',
-        component: () => import('@/views/suggest/index.vue')
+        component: () => import('@/views/suggest/index')
       },
       { path: '/:path(.*)', component: NotFound }
     ]
