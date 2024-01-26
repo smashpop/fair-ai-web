@@ -1,5 +1,4 @@
 <script setup>
-
 import ContentV1 from '@/components/content/Content-v1.vue'
 import FeaturesV1 from '@/components/features/Features-v1.vue'
 import FooterV1 from '@/components/footer/Footer-v1.vue'
@@ -10,7 +9,7 @@ import TestimonialV1 from '@/components/testimonial/Testimonial-v1.vue'
 
 <template>
   <v-container>
-참고사이트
+    참고사이트
     <div class="py-1" />
 
     <ContentV1 />

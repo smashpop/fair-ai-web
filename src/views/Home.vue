@@ -9,7 +9,6 @@ import TestimonialV1 from '@/components/testimonial/Testimonial-v1.vue'
 
 <template>
   <v-container>
-
     <div class="py-1" />
 
     <ContentV1 />

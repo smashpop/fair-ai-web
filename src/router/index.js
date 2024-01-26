@@ -10,6 +10,7 @@ import Default from '@/layouts/default/Default'
 import Home from '@/views/Home'
 import Introduce from '@/views/introduce/index'
 import Archive from '@/views/archive/index'
+import News from '@/views/news/index'
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
@@ -93,47 +94,45 @@ const routes = [
       {
         path: '/news',
         name: 'News',
-        component: () => import('@/views/news/index.vue'),
+        component: News,
+        redirect: '/news/notice',
         meta: {
-          title: '소식',
+          title: '소식'
         },
         children: [
           {
             path: '/news/notice',
             name: 'Notice',
             meta: {
-              title: '공지사항',
+              title: '공지사항'
             },
-            component: () => import('@/views/news/Notice'),
+            component: () => import('@/views/news/Notice')
           },
           {
             path: '/news/event',
             name: 'Event',
             meta: {
-              title: '관련행사',
+              title: '관련행사'
             },
-            component: () =>
-              import('@/views/news/Event'),
+            component: () => import('@/views/news/Event')
           },
           {
             path: '/news/eventCalendar',
             name: 'Event Calendar',
             meta: {
-              title: '행사캘린더',
+              title: '행사캘린더'
             },
-            component: () =>
-              import('@/views/news/EventCalendar'),
+            component: () => import('@/views/news/EventCalendar')
           },
           {
             path: '/news/eventRegist',
             name: 'Evenet Regist',
             meta: {
-              title: '행사신청',
+              title: '행사신청'
             },
-            component: () =>
-              import('@/views/news/EventRegist'),
-          },
-        ],
+            component: () => import('@/views/news/EventRegist')
+          }
+        ]
       },
       {
         path: '/suggest',
@@ -141,7 +140,6 @@ const routes = [
         component: () => import('@/views/suggest/index.vue')
       },
       { path: '/:path(.*)', component: NotFound }
-
     ]
   }
 ]

@@ -11,8 +11,7 @@ import TestimonialV1 from '@/components/testimonial/Testimonial-v1.vue'
 
 <template>
   <v-container>
-보고서
-
+    보고서
 
     <GalleryV1 />
 

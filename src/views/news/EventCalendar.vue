@@ -2,18 +2,15 @@
 import { ref } from 'vue'
 import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import koLocale from '@fullcalendar/core/locales/ko';
+import koLocale from '@fullcalendar/core/locales/ko'
 
 const calendarOptions = ref({
   plugins: [dayGridPlugin],
   initialView: 'dayGridMonth',
   weekends: true,
   locale: koLocale,
-  events: [
-    { title: 'Meeting', start: new Date() }
-  ]
+  events: [{ title: 'Meeting', start: new Date() }]
 })
-
 </script>
 
 <template>
@@ -30,33 +27,15 @@ const calendarOptions = ref({
 
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
-          <v-btn
-            href="/news/notice"
-            min-width="164"
-            rel="noopener noreferrer"
-            variant="text"
-          >
-            <v-icon
-              icon="mdi-view-dashboard"
-              size="large"
-              start
-            />
+          <v-btn href="/news/notice" min-width="164" rel="noopener noreferrer" variant="text">
+            <v-icon icon="mdi-view-dashboard" size="large" start />
             공지사항
           </v-btn>
         </v-col>
 
         <v-col cols="auto">
-          <v-btn
-            href="/news/event"
-            min-width="164"
-            rel="noopener noreferrer"
-            variant="text"
-          >
-            <v-icon
-              icon="mdi-account-group"
-              size="large"
-              start
-            />
+          <v-btn href="/news/event" min-width="164" rel="noopener noreferrer" variant="text">
+            <v-icon icon="mdi-account-group" size="large" start />
             관련행사
           </v-btn>
         </v-col>
@@ -68,34 +47,20 @@ const calendarOptions = ref({
             rel="noopener noreferrer"
             variant="text"
           >
-            <v-icon
-              icon="mdi-account-group"
-              size="large"
-              start
-            />
+            <v-icon icon="mdi-account-group" size="large" start />
             행사캘린더
           </v-btn>
-        </v-col>   
+        </v-col>
 
         <v-col cols="auto">
-          <v-btn
-            href="/news/eventRegist"
-            min-width="164"
-            rel="noopener noreferrer"
-            variant="text"
-          >
-            <v-icon
-              icon="mdi-account-group"
-              size="large"
-              start
-            />
+          <v-btn href="/news/eventRegist" min-width="164" rel="noopener noreferrer" variant="text">
+            <v-icon icon="mdi-account-group" size="large" start />
             행사신청
           </v-btn>
-        </v-col>               
+        </v-col>
       </v-row>
 
-      <FullCalendar :options='calendarOptions' />
-
+      <FullCalendar :options="calendarOptions" />
     </v-responsive>
   </v-container>
 </template>
