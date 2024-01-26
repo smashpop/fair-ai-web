@@ -1,18 +1,15 @@
 <script setup>
 // Components
-import DefaultSystemBar from './SystemBar.vue'
-import DefaultView from './View.vue'
+import Header from './Header.vue'
+import MainView from './MainView.vue'
 
 // Utilities
-import { shallowRef } from 'vue'
-
-const drawer = shallowRef(null)
 </script>
 
 <template>
   <v-app>
-    <default-system-bar @click:toggle="drawer = !drawer" />
+    <Header />
 
-    <default-view />
+    <MainView />
   </v-app>
 </template>

@@ -7,6 +7,8 @@
 // Components
 import NotFound from '@/views/NotFound'
 import Default from '@/layouts/default/Default'
+import Home from '@/views/Home'
+import Introduce from '@/views/introduce/index'
 import Archive from '@/views/archive/index'
 
 // Composables
@@ -22,17 +24,18 @@ const routes = [
       {
         path: '/home',
         name: 'Home',
-        component: () => import('@/views/Home.vue')
+        component: Home
       },
       {
         path: '/introduce',
         name: 'Introduce',
-        component: () => import('@/views/introduce/index.vue')
+        component: Introduce
       },
       {
         path: '/archive',
-        name: 'Archive',
+        name: '자료실',
         component: Archive,
+        redirect: '/archive/thesis',
         meta: {
           title: 'Archive'
         },
