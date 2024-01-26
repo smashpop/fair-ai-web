@@ -5,39 +5,24 @@ const { mdAndUp } = useDisplay()
 </script>
 
 <template>
-  <v-card
-    theme="dark"
-    color="#0d2141"
-  >
+  <v-card theme="dark" color="#0d2141">
     <v-layout class="fill-height">
-      <v-app-bar
-        color="transparent"
-        flat
-        height="48"
-      >
-        <template
-          v-if="mdAndUp"
-          #prepend
-        >
+      <v-app-bar color="transparent" flat height="48">
+        <template v-if="mdAndUp" #prepend>
           <logo />
         </template>
 
         <template #append>
           <div v-if="mdAndUp">
-            <v-btn text="Home" />
-            <v-btn text="About us" />
-            <v-btn text="Portfolio" />
-            <v-btn text="Services" />
-            <v-btn text="Contact" />
+            <v-btn text="FAIR AI 소개" to="introduce" />
+            <v-btn text="최신자료" to="archive" />
+            <v-btn text="소식" to="news" />
+            <v-btn text="문의/제안" to="suggest" />
           </div>
         </template>
       </v-app-bar>
 
-      <v-main>
-       
-      </v-main>
+      <v-main> </v-main>
     </v-layout>
   </v-card>
 </template>
-
-

@@ -15,23 +15,11 @@
 
       <template #append>
         <template v-if="mdAndUp">
-          <v-icon
-            icon="mdi-twitter"
-            color="disabled"
-            class="me-2"
-          />
+          <v-icon icon="mdi-twitter" color="disabled" class="me-2" />
 
-          <v-icon
-            icon="mdi-facebook"
-            color="disabled"
-            class="me-2"
-          />
+          <v-icon icon="mdi-facebook" color="disabled" class="me-2" />
 
-          <v-icon
-            icon="mdi-linkedin"
-            color="disabled"
-            class="me-2"
-          />
+          <v-icon icon="mdi-linkedin" color="disabled" class="me-2" />
         </template>
 
         <v-btn

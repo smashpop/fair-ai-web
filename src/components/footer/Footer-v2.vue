@@ -16,10 +16,7 @@
         />
       </div>
 
-      <div
-        class="text-center mt-10 text-grey-darken-1"
-        cols="12"
-      >
+      <div class="text-center mt-10 text-grey-darken-1" cols="12">
         All rights are reserved &copy;
         {{ new Date().getFullYear() }}, Vuetify, LLC
       </div>
@@ -28,11 +25,5 @@
 </template>
 
 <script setup>
-const links = [
-  'Home',
-  'About Us',
-  'Portfolio',
-  'Services',
-  'Contact'
-]
+const links = ['Home', 'About Us', 'Portfolio', 'Services', 'Contact']
 </script>

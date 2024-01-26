@@ -1,15 +1,7 @@
 <template>
   <v-container>
     <v-row align="center">
-      <v-col
-        v-for="(plan, i) in plans"
-        :key="i"
-        cols="12"
-        sm="9"
-        md="9"
-        lg="4"
-        class="pa-lg-0"
-      >
+      <v-col v-for="(plan, i) in plans" :key="i" cols="12" sm="9" md="9" lg="4" class="pa-lg-0">
         <v-card
           :class="plan.current && 'py-16'"
           :color="plan.current ? 'primary' : 'white'"
@@ -18,11 +10,7 @@
           class="py-9"
         >
           <div class="text-center">
-            <v-img
-              :src="plan.logo"
-              :height="60"
-              class="mx-auto mb-8"
-            />
+            <v-img :src="plan.logo" :height="60" class="mx-auto mb-8" />
 
             <div class="d-flex justify-center align-center mb-4">
               <h1 class="text-h4 font-weight-bold">
@@ -79,24 +67,14 @@ const plans = [
     monthlyPrice: 'Free',
     current: false,
     free: true,
-    features: [
-      '1 Project',
-      '100 Mb of Storage',
-      '0 Team Members',
-      'Single License'
-    ]
+    features: ['1 Project', '100 Mb of Storage', '0 Team Members', 'Single License']
   },
   {
     name: 'Premium Plan',
     logo: CurrentPriceIcon,
     monthlyPrice: 4.95,
     current: true,
-    features: [
-      '10 Project',
-      '250 Gb of Storage',
-      '10 Team Members',
-      'Team License'
-    ]
+    features: ['10 Project', '250 Gb of Storage', '10 Team Members', 'Team License']
   },
   {
     name: 'Super Plan',

@@ -14,13 +14,7 @@
           <v-btn text="Contact" />
         </v-toolbar-items>
 
-        <v-btn
-          class="ms-6 me-2"
-          color="primary"
-          icon="mdi-menu"
-          variant="elevated"
-          text="Signup"
-        />
+        <v-btn class="ms-6 me-2" color="primary" icon="mdi-menu" variant="elevated" text="Signup" />
       </template>
     </v-app-bar>
 

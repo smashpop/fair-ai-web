@@ -1,8 +1,6 @@
 <template>
   <v-card class="text-start pa-10">
-    <h2 class="text-grey-darken-1 font-weight-regular">
-      Introducing new
-    </h2>
+    <h2 class="text-grey-darken-1 font-weight-regular">Introducing new</h2>
 
     <h2>
       <b> FAIR-AI</b>

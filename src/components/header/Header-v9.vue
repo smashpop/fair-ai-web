@@ -13,7 +13,7 @@
           placeholder="Type to search..."
           variant="outlined"
           hide-details
-          style="width: 256px;"
+          style="width: 256px"
         />
 
         <template v-if="mdAndUp">
@@ -27,12 +27,7 @@
             width="128"
           />
 
-          <v-btn
-            class="mx-2"
-            color="primary"
-            icon="mdi-menu"
-            variant="elevated"
-          />
+          <v-btn class="mx-2" color="primary" icon="mdi-menu" variant="elevated" />
         </template>
       </template>
     </v-app-bar>

@@ -2,19 +2,12 @@
   <v-layout>
     <v-app-bar height="96">
       <template #prepend>
-        <v-btn
-          class="mx-2"
-          icon="mdi-menu"
-          variant="elevated"
-        />
+        <v-btn class="mx-2" icon="mdi-menu" variant="elevated" />
       </template>
 
       <logo />
 
-      <template
-        v-if="mdAndUp"
-        #append
-      >
+      <template v-if="mdAndUp" #append>
         <v-btn
           class="ms-6 me-2"
           color="surface-variant"

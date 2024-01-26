@@ -4,11 +4,12 @@
       <v-app-bar color="transparent" flat height="48">
         <template #append>
           <div v-if="mdAndUp">
-            <v-btn text="Home" />
-            <v-btn text="About us" />
-            <v-btn text="Portfolio" />
-            <v-btn text="Services" />
-            <v-btn text="Contact" />
+            <v-btn text="논문" />
+            <v-btn text="보고서" />
+            <v-btn text="기사" />
+            <v-btn text="가이드라인" />
+            <v-btn text="교육커리큘럼" />
+            <v-btn text="참고사이트" />
           </div>
         </template>
       </v-app-bar>

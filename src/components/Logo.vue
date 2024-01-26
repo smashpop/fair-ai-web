@@ -1,13 +1,11 @@
 <template>
   <v-list-item
-    prepend-icon="mdi-lightning-bolt-circle"
-    slim
+    prepend-icon="mdi-lightning-bolt-circle" 
+    to="/" 
+    slim 
   >
     <template #prepend>
-      <v-icon
-        color="blue-grey"
-        size="30"
-      />
+      <v-icon color="blue-grey" size="30" />
     </template>
 
     <v-list-item-title class="text-h6">

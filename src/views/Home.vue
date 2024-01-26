@@ -24,7 +24,7 @@ import TestimonialV1 from '@/components/testimonial/Testimonial-v1.vue'
 
     <FeaturesV1 />
 
-<div class="py-1" />
+    <div class="py-1" />
 
     <TestimonialV1 />
 

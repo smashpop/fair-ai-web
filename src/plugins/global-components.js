@@ -11,6 +11,5 @@ import Logo from '@/components/Logo.vue'
 // import app from 'vue'
 
 export default function (app) {
-  app
-    .component('Logo', Logo)
+  app.component('Logo', Logo)
 }
