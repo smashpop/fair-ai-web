@@ -2,8 +2,8 @@
 // Components
 import FooterV1 from '@/components/footer/Footer-v1'
 import GalleryV1 from '@/components/gallery/Gallery-v1'
-import ArticleView from '@/views/archive/components/ArticleView'
-import NoticeView from '@/views/news/components/NoticeView.vue'
+import ArticleView from '@/components/app/ArticleView'
+import NoticeView from '@/components/app/NoticeView.vue'
 
 </script>
 

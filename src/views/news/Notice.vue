@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import NoticeView from '@/views/news/components/NoticeView.vue'
+import NoticeView from '@/components/app/NoticeView.vue'
 </script>
 
 <template>

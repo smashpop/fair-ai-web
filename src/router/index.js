@@ -69,7 +69,7 @@ const routes = [
             meta: {
               title: '논문 관리'
             },
-            component: () => import('@/views/archive/Thesis')
+            component: () => import('@/views/archive/thesis/index')
           },
           {
             path: '/archive/report',
@@ -77,7 +77,7 @@ const routes = [
             meta: {
               title: '보고서 관리'
             },
-            component: () => import('@/views/archive/Report')
+            component: () => import('@/views/archive/report/index')
           },
           {
             path: '/archive/article',
@@ -85,7 +85,7 @@ const routes = [
             meta: {
               title: '기사 관리'
             },
-            component: () => import('@/views/archive/Article')
+            component: () => import('@/views/archive/article/index')
           },
           {
             path: '/archive/guideline',
@@ -93,7 +93,7 @@ const routes = [
             meta: {
               title: '가이드라인 관리'
             },
-            component: () => import('@/views/archive/Guideline')
+            component: () => import('@/views/archive/guideline/index')
           },
           {
             path: '/archive/refSite',
@@ -101,7 +101,7 @@ const routes = [
             meta: {
               title: '참고사이트 관리'
             },
-            component: () => import('@/views/archive/refSite')
+            component: () => import('@/views/archive/refSite/index')
           },
           {
             path: '/archive/curriculum',
@@ -109,7 +109,7 @@ const routes = [
             meta: {
               title: '교육커리큘럼 관리'
             },
-            component: () => import('@/views/archive/Curriculum')
+            component: () => import('@/views/archive/curriculum/index')
           }
         ]
       },

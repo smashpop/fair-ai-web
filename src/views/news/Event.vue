@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import EventView from '@/views/news/components/EventView.vue'
+import EventView from '@/components/app/EventView.vue'
 </script>
 
 <template>
