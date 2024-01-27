@@ -5,7 +5,6 @@ import ArticleCard from '@/components/app/ArticleCard'
 // Utilities
 import { ref, watch } from 'vue'
 import { fetchList } from '@/apis/article'
-import { parseDate } from '@/utils/util'
 
 const items = ref([])
 const loading = ref(false)
@@ -49,7 +48,7 @@ watch(
   <div v-for="(item, index) in items" :key="index">
     <ArticleCard 
       :title="item.title" 
-      :text="item.previewText.substring(0, 250)"
+      :text="item.previewText ? item.previewText.substring(0, 250) : null"
     />
     <div class="py-1" />
   </div>

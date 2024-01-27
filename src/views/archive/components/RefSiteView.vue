@@ -5,7 +5,6 @@ import RefSiteCard from '@/components/app/RefSiteCard'
 // Utilities
 import { ref, watch } from 'vue'
 import { fetchList } from '@/apis/refSite'
-import { parseDate } from '@/utils/util'
 
 const items = ref([])
 const loading = ref(false)
@@ -50,7 +49,7 @@ watch(
     <RefSiteCard 
       :name="item.siteName" 
       :url="item.url"
-      :description="item.description.substring(0, 250)"
+      :description="item.description ? item.description.substring(0, 250) : null"
     />
     <div class="py-1" />
   </div>

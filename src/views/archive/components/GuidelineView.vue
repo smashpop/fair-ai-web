@@ -1,8 +1,10 @@
 <script setup>
+// Components
+import GuidelineCard from '@/components/app/GuidelineCard'
+
 // Utilities
 import { ref, watch } from 'vue'
 import { fetchList } from '@/apis/guideline'
-import { parseDate } from '@/utils/util'
 
 const items = ref([])
 const loading = ref(false)
@@ -43,33 +45,14 @@ watch(
 </script>
 
 <template>
-  <BaseCard>
-    <div class="d-flex justify-space-between">
-      <v-card-title class="pa-0 mb-4 text-h6 font-weight-bold"> 가이드라인 </v-card-title>
-      <v-btn size="small" flat class="text-primary text-capitalize"> View All </v-btn>
-    </div>
-
-    <v-divider class="mb-2"></v-divider>
-
-    <v-list density="compact">
-      <v-list-item v-for="(item, index) in items" :key="index">
-        <div class="d-flex justify-space-between align-center">
-          <div class="d-flex align-baseline flex-1">
-            <div class="bg-info pa-1 rounded-circle me-2"></div>
-            <div>
-              <div class="text-body-2 font-weight-medium">
-                {{ item.url }}
-              </div>
-            </div>
-          </div>
-
-          <div class="text-body-2">
-            {{ item.updatedAt ? parseDate(item.updatedAt) : parseDate(item.createdAt) }}
-          </div>
-        </div>
-      </v-list-item>
-    </v-list>
-  </BaseCard>
+  <div v-for="(item, index) in items" :key="index">
+    <GuidelineCard 
+      :name="item.nation ? item.nation.name : item.organization.name" 
+      :url="item.url"
+      :summary="item.summary ? item.summary.substring(0, 250) : null"
+    />
+    <div class="py-1" />
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
