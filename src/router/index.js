@@ -4,6 +4,13 @@
  * This file is used to register all routes
  * Documentation: https://router.vuejs.org/
  */
+// Components
+import NotFound from '@/views/NotFound'
+import Default from '@/layouts/default/Default'
+import Home from '@/views/Home'
+import Introduce from '@/views/introduce/index'
+import Archive from '@/views/archive/index'
+import News from '@/views/news/index'
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
@@ -11,88 +18,150 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/default/Default.vue'),
+    component: Default,
+    redirect: '/home',
+
     children: [
       {
-        path: '',
+        path: '/home',
         name: 'Home',
-        component: () => import('@/views/Home.vue')
+        component: Home
       },
       {
-        path: '/sink',
-        name: 'Sink',
-        component: () => import('@/views/Sink.vue')
+        path: '/introduce',
+        name: 'Introduce',
+        component: Introduce,
+        redirect: '/introduce/introduce',
+        meta: {
+          title: '소개'
+        },
+        children: [
+          {
+            path: '/introduce/introduce',
+            name: 'Introduce',
+            meta: {
+              title: '재단소개'
+            },
+            component: () => import('@/views/introduce/Introduce')
+          },
+          {
+            path: '/introduce/ai-ethics',
+            name: 'AiEthics',
+            meta: {
+              title: 'AI윤리'
+            },
+            component: () => import('@/views/introduce/AiEthics')
+          }
+        ]
       },
       {
-        path: 'headers',
-        name: 'Headers',
-        component: () => import('@/views/headers/index.vue')
+        path: '/archive',
+        name: '자료실',
+        component: Archive,
+        redirect: '/archive/thesis',
+        meta: {
+          title: 'Archive'
+        },
+        children: [
+          {
+            path: '/archive/thesis',
+            name: 'Thesis List',
+            meta: {
+              title: '논문 관리'
+            },
+            component: () => import('@/views/archive/thesis/index')
+          },
+          {
+            path: '/archive/report',
+            name: 'Report List',
+            meta: {
+              title: '보고서 관리'
+            },
+            component: () => import('@/views/archive/report/index')
+          },
+          {
+            path: '/archive/article',
+            name: 'Article List',
+            meta: {
+              title: '기사 관리'
+            },
+            component: () => import('@/views/archive/article/index')
+          },
+          {
+            path: '/archive/guideline',
+            name: 'Guideline List',
+            meta: {
+              title: '가이드라인 관리'
+            },
+            component: () => import('@/views/archive/guideline/index')
+          },
+          {
+            path: '/archive/refSite',
+            name: 'ReferenceSite List',
+            meta: {
+              title: '참고사이트 관리'
+            },
+            component: () => import('@/views/archive/refSite/index')
+          },
+          {
+            path: '/archive/curriculum',
+            name: 'Curriculum List',
+            meta: {
+              title: '교육커리큘럼 관리'
+            },
+            component: () => import('@/views/archive/curriculum/index')
+          }
+        ]
       },
       {
-        path: 'heroheaders',
-        name: 'Heroheaders',
-        component: () => import('@/views/hero-headers/index.vue')
+        path: '/news',
+        name: 'News',
+        component: News,
+        redirect: '/news/notice',
+        meta: {
+          title: '소식'
+        },
+        children: [
+          {
+            path: '/news/notice',
+            name: 'Notice',
+            meta: {
+              title: '공지사항'
+            },
+            component: () => import('@/views/news/Notice')
+          },
+          {
+            path: '/news/event',
+            name: 'Event',
+            meta: {
+              title: '관련행사'
+            },
+            component: () => import('@/views/news/Event')
+          },
+          {
+            path: '/news/eventCalendar',
+            name: 'Event Calendar',
+            meta: {
+              title: '행사캘린더'
+            },
+            component: () => import('@/views/news/EventCalendar')
+          },
+          {
+            path: '/news/eventRegist',
+            name: 'Evenet Regist',
+            meta: {
+              title: '행사신청'
+            },
+            component: () => import('@/views/news/EventRegist')
+          }
+        ]
       },
       {
-        path: 'content',
-        name: 'Content',
-        component: () => import('@/views/content/index.vue')
+        path: '/suggest',
+        name: 'Suggest',
+        component: () => import('@/views/suggest/index')
       },
-      {
-        path: 'features',
-        name: 'Features',
-        component: () => import('@/views/features/index.vue')
-      },
-      {
-        path: 'calltoaction',
-        name: 'Call to Action',
-        component: () => import('@/views/call-to-action/index.vue')
-      },
-      {
-        path: 'gallery',
-        name: 'Gallery',
-        component: () => import('@/views/gallery/index.vue')
-      },
-      {
-        path: 'blog',
-        name: 'Blog',
-        component: () => import('@/views/blog/index.vue')
-      },
-      {
-        path: 'testimonial',
-        name: 'Testimonial',
-        component: () => import('@/views/testimonial/index.vue')
-      },
-      {
-        path: 'ecommerce',
-        name: 'Ecommerce',
-        component: () => import('@/views/ecommerce/index.vue')
-      },
-      {
-        path: 'pricing',
-        name: 'Pricing',
-        component: () => import('@/views/pricing/index.vue')
-      },
-      {
-        path: 'team',
-        name: 'Team',
-        component: () => import('@/views/team/index.vue')
-      },
-      {
-        path: 'contact',
-        name: 'Contact',
-        component: () => import('@/views/contact/index.vue')
-      },
-      {
-        path: 'title',
-        name: 'Title',
-        component: () => import('@/views/title/index.vue')
-      },
-      {
-        path: 'footer',
-        name: 'Footer',
-        component: () => import('@/views/footer/index.vue')
-      }
+      { path: '/:path(.*)', component: NotFound }
     ]
   }
 ]

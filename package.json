@@ -7,18 +7,24 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
-    "postversion": "node ./scripts/postversion.cjs"
+    "postversion": "node ./scripts/postversion.cjs",
+    "format": "prettier --write src/ src/layouts/ src/views/"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
+    "@fullcalendar/vue3": "^6.1.10",
     "@mdi/font": "7.4.47",
+    "axios": "^1.6.7",
     "core-js": "^3.35.1",
+    "js-file-download": "^0.4.12",
     "roboto-fontface": "*",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
     "vuetify": "^3.5.1"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.7.1",
+    "@rushstack/eslint-patch": "^1.7.2",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vue/eslint-config-prettier": "^9.0.0",
     "archiver": "^6.0.1",

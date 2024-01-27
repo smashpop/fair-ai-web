@@ -24,14 +24,10 @@ export default createVuetify({
           primary: '#472AB2',
           secondary: '#4AEAD8'
         }
-      },
-      dark: {
-        dark: true,
-        colors: {
-          primary: '#472AB2',
-          secondary: '#4AEAD8'
-        }
       }
     }
+  },
+  icons: {
+    defaultSet: 'mdi'
   }
 })

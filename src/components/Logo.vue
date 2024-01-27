@@ -1,23 +1,12 @@
 <template>
-  <v-list-item
-    prepend-icon="mdi-lightning-bolt-circle"
-    slim
-  >
+  <v-btn prepend-icon="mdi-lightning-bolt-circle" href="/home">
     <template #prepend>
-      <v-icon
-        color="blue-grey"
-        size="30"
-      />
+      <v-icon color="blue-grey" size="30" />
     </template>
-
-    <v-list-item-title class="text-h6">
-      <strong class="font-weight-black">NEBULA</strong>
-
-      UI KIT
-    </v-list-item-title>
-  </v-list-item>
+    <strong class="text-h6 font-weight-black">FAIR-AI</strong>
+  </v-btn>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 //
 </script>

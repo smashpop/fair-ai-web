@@ -1,43 +1,26 @@
+<script setup>
+const links = ['Home', 'About Us', 'Portfolio', 'Services', 'Contact']
+</script>
+
 <template>
   <v-card>
     <v-container class="pa-8">
       <v-row>
-        <v-col
-          cols="12"
-          class="d-flex justify-space-between mb-12"
-        >
+        <v-col cols="12" class="d-flex justify-space-between mb-12">
           <logo />
 
           <div class="d-flex flex-wrap ga-4 justify-end">
-            <v-btn
-              color="primary"
-              text="Signup"
-              variant="flat"
-            />
+            <v-btn color="primary" text="Signup" variant="flat" />
 
-            <v-btn
-              color="primary"
-              text="Login"
-              variant="outlined"
-            />
+            <v-btn color="primary" text="Login" variant="outlined" />
           </div>
         </v-col>
 
-        <v-col
-          cols="12"
-          md="5"
-          class="text-grey-darken-1 d-flex justify-md-start justify-end"
-        >
-          <div class="px-4">
-            &copy; {{ new Date().getFullYear() }}, Vuetify, LLC
-          </div>
+        <v-col cols="12" md="5" class="text-grey-darken-1 d-flex justify-md-start justify-end">
+          <div class="px-4">&copy; {{ new Date().getFullYear() }}, Infix, LLC</div>
         </v-col>
 
-        <v-col
-          cols="12"
-          md="7"
-          class="text-end"
-        >
+        <v-col cols="12" md="7" class="text-end">
           <v-btn
             v-for="link in links"
             :key="link"
@@ -52,13 +35,3 @@
     </v-container>
   </v-card>
 </template>
-
-<script lang="ts" setup>
-const links = [
-  'Home',
-  'About Us',
-  'Portfolio',
-  'Services',
-  'Contact'
-]
-</script>
