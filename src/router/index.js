@@ -35,7 +35,7 @@ const routes = [
       },
       {
         path: '/introduce',
-        name: 'Introduce',
+        name: 'introduce',
         component: Introduce,
         redirect: '/introduce/introduce',
         meta: {
@@ -164,8 +164,30 @@ const routes = [
       },
       {
         path: '/suggest',
-        name: 'Suggest',
-        component: () => import('@/views/suggest/index')
+        name: 'suggest',
+        component: () => import('@/views/suggest/index'),
+        redirect: '/suggest/faq',
+        meta: {
+          title: '문의/제안'
+        },
+        children: [
+          {
+            path: '/suggest/faq',
+            name: 'FAQ',
+            meta: {
+              title: 'FAQ'
+            },
+            component: () => import('@/views/suggest/faq/index')
+          },
+          {
+            path: '/suggest/suggest',
+            name: 'Suggest',
+            meta: {
+              title: '문의/제안'
+            },
+            component: () => import('@/views/suggest/suggest/index')
+          }
+        ]
       },
       { path: '/:path(.*)', component: NotFound }
     ]

@@ -1,8 +1,10 @@
 <script setup>
 // Components
-import Suggest from '@/views/suggest/components/Suggest'
+import Headers from '@/views/suggest/components/Headers'
 </script>
 
 <template>
-  <Suggest />
+  <Headers />
+
+  <router-view />
 </template>
