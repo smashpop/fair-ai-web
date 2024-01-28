@@ -17,6 +17,7 @@ function searchClick(keyword) {
     placeholder="검색"
     class="mr-16"
     color="primary"
+    bg-color="white"
     style="max-width: 600px"
     variant="outlined"
     rounded

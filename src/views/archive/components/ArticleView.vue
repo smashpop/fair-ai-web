@@ -46,11 +46,7 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <ArticleCard
-      :title="item.title"
-      :text="item.previewText ? item.previewText.substring(0, 250) : null"
-      :thumbnail="item.thumbnailUrl"
-    />
+    <ArticleCard :article="item" />
     <div class="py-1" />
   </div>
 </template>

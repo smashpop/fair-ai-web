@@ -3,8 +3,8 @@
 import ThesisView from '@/views/archive/components/ThesisView.vue'
 
 // Utilities
-const { dataObj } = history.state; 
-console.log(dataObj); 
+const { dataObj } = history.state
+console.log(dataObj)
 </script>
 
 <template>

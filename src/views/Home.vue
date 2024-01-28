@@ -16,8 +16,8 @@ function searchProc(keyword) {
   console.log('keyword=', keyword)
   router.push({
     name: 'Result',
-    state: { 
-      dataObj : { searchStr: keyword },
+    state: {
+      dataObj: { searchStr: keyword }
     }
   })
 }
