@@ -5,9 +5,15 @@ import ArticleView from '@/views/archive/components/ArticleView'
 
 <template>
   <v-container>
-    <strong class="text-h4 font-weight-bold">기사</strong>
+    <strong class="text-h5 font-weight-bold">기사</strong>
+    <v-row>
+      <v-col cols="12" md="2">
+        <v-card title="Filter section" color="white" height="700px" class="pa-2" flat> </v-card>
+      </v-col>
 
-    <div class="py-1" />
-    <ArticleView />
+      <v-col cols="12" md="10">
+        <ArticleView />
+      </v-col>
+    </v-row>
   </v-container>
 </template>

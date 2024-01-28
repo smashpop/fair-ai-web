@@ -48,7 +48,7 @@ const routes = [
             meta: {
               title: '재단소개'
             },
-            component: () => import('@/views/introduce/Introduce')
+            component: () => import('@/views/introduce/introduce/index')
           },
           {
             path: '/introduce/ai-ethics',
@@ -56,7 +56,7 @@ const routes = [
             meta: {
               title: 'AI윤리'
             },
-            component: () => import('@/views/introduce/AiEthics')
+            component: () => import('@/views/introduce/aiEthics/index')
           }
         ]
       },

@@ -7,8 +7,6 @@ const props = defineProps({
     default: null
   }
 })
-
-
 </script>
 
 <template>
@@ -21,8 +19,6 @@ const props = defineProps({
           </h1>
 
           <div class="text-medium-emphasis text-body-2">{{ props.faq.contents }}...</div>
-
-          
         </v-container>
       </v-col>
 
