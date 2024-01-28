@@ -128,7 +128,7 @@ const routes = [
             meta: {
               title: '공지사항'
             },
-            component: () => import('@/views/news/Notice')
+            component: () => import('@/views/news/notice/index')
           },
           {
             path: '/news/event',
@@ -136,7 +136,7 @@ const routes = [
             meta: {
               title: '관련행사'
             },
-            component: () => import('@/views/news/Event')
+            component: () => import('@/views/news/event/index')
           },
           {
             path: '/news/eventCalendar',
@@ -144,7 +144,7 @@ const routes = [
             meta: {
               title: '행사캘린더'
             },
-            component: () => import('@/views/news/EventCalendar')
+            component: () => import('@/views/news/eventCalendar/index')
           },
           {
             path: '/news/eventRegist',
@@ -152,7 +152,7 @@ const routes = [
             meta: {
               title: '행사신청'
             },
-            component: () => import('@/views/news/EventRegist')
+            component: () => import('@/views/news/eventRegist/index')
           }
         ]
       },

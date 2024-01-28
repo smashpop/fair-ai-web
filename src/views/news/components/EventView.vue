@@ -1,10 +1,10 @@
 <script setup>
 // Components
-import ArticleCard from '@/components/app/ArticleCard'
+import EventCard from '@/components/app/EventCard'
 
 // Utilities
 import { ref, watch } from 'vue'
-import { fetchList } from '@/apis/article'
+import { fetchList } from '@/apis/event'
 
 const items = ref([])
 const loading = ref(false)
@@ -46,10 +46,9 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <ArticleCard 
-      :title="item.title" 
-      :text="item.previewText ? item.previewText.substring(0, 250) : null"
-      :thumbnail="item.thumbnailUrl"
+    <EventCard 
+      :title="item.eventName" 
+      :text="item.contents ? item.contents.substring(0, 250) : null"
     />
     <div class="py-1" />
   </div>
