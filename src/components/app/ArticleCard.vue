@@ -31,11 +31,7 @@ const props = defineProps({
       </v-col>
       <v-spacer></v-spacer>
       <v-col cols="12" md="3">
-        <v-img 
-          :src="props.thumbnail"
-          height="150" 
-          class="rounded"
-        />
+        <v-img :src="props.thumbnail" height="150" class="rounded" />
       </v-col>
     </v-row>
   </v-card>

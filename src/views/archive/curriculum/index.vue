@@ -5,10 +5,9 @@ import CurriculumView from '@/views/archive/components/CurriculumView.vue'
 
 <template>
   <v-container>
-      <strong class="text-h5 font-weight-bold">교육 커리큘럼</strong>
-      <div class="py-1" />
+    <strong class="text-h5 font-weight-bold">교육 커리큘럼</strong>
+    <div class="py-1" />
 
-      <CurriculumView />
-
+    <CurriculumView />
   </v-container>
 </template>

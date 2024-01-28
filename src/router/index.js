@@ -8,6 +8,7 @@
 import NotFound from '@/views/NotFound'
 import Default from '@/layouts/default/Default'
 import Home from '@/views/Home'
+import Result from '@/views/result/index'
 import Introduce from '@/views/introduce/index'
 import Archive from '@/views/archive/index'
 import News from '@/views/news/index'
@@ -26,6 +27,11 @@ const routes = [
         path: '/home',
         name: 'Home',
         component: Home
+      },
+      {
+        path: '/result',
+        name: 'Result',
+        component: Result
       },
       {
         path: '/introduce',

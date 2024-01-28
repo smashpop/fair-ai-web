@@ -5,9 +5,9 @@ import NoticeView from '@/views/news/components/NoticeView'
 
 <template>
   <v-container>
-      <strong class="text-h5 font-weight-bold">공지사항</strong>
-      <div class="py-1" />
+    <strong class="text-h5 font-weight-bold">공지사항</strong>
+    <div class="py-1" />
 
-      <NoticeView />
+    <NoticeView />
   </v-container>
 </template>

@@ -5,10 +5,9 @@ import GuidelineView from '@/views/archive/components/GuidelineView.vue'
 
 <template>
   <v-container>
-      <strong class="text-h5 font-weight-bold">가이드라인</strong>
-      <div class="py-1" />
+    <strong class="text-h5 font-weight-bold">가이드라인</strong>
+    <div class="py-1" />
 
-      <GuidelineView />
-  
+    <GuidelineView />
   </v-container>
 </template>

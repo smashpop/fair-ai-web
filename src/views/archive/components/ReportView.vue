@@ -46,8 +46,8 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <ReportCard 
-      :title="item.title" 
+    <ReportCard
+      :title="item.title"
       :url="item.url"
       :abstract="item.abstract ? item.abstract.substring(0, 250) : null"
     />

@@ -1,25 +1,33 @@
 <script setup>
 // Components
+import SearchField from '@/components/app/SearchField'
+import ArticleView from '@/components/app/ArticleView'
+import NoticeView from '@/components/app/NoticeView'
+import EventView from '@/components/app/EventView'
 import FooterV1 from '@/components/footer/Footer-v1'
 import GalleryV1 from '@/components/gallery/Gallery-v1'
-import ArticleView from '@/components/app/ArticleView'
-import NoticeView from '@/components/app/NoticeView.vue'
 
+// Utilities
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function searchProc(keyword) {
+  console.log('keyword=', keyword)
+  router.push({
+    name: 'Result',
+    state: { 
+      dataObj : { searchStr: keyword },
+    }
+  })
+}
 </script>
 
 <template>
   <v-container>
     <div class="py-2" />
     <div class="d-flex justify-center">
-      <v-text-field
-        append-inner-icon="mdi-magnify"
-        rounded
-        density="comfortable"
-        placeholder="Type to search..."
-        variant="outlined"
-        hide-details
-        style="width: 500px"
-      />
+      <SearchField class="ms-2" @search="searchProc" />
     </div>
     <div class="py-2" />
     <GalleryV1 />
@@ -29,6 +37,9 @@ import NoticeView from '@/components/app/NoticeView.vue'
 
     <div class="py-1" />
     <NoticeView />
+
+    <div class="py-1" />
+    <EventView />
 
     <div class="py-1" />
     <FooterV1 />

@@ -46,8 +46,8 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <EventCard 
-      :title="item.eventName" 
+    <EventCard
+      :title="item.eventName"
       :text="item.contents ? item.contents.substring(0, 250) : null"
     />
     <div class="py-1" />

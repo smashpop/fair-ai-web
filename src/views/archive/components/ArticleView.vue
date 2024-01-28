@@ -46,8 +46,8 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <ArticleCard 
-      :title="item.title" 
+    <ArticleCard
+      :title="item.title"
       :text="item.previewText ? item.previewText.substring(0, 250) : null"
       :thumbnail="item.thumbnailUrl"
     />

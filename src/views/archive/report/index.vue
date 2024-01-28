@@ -5,9 +5,9 @@ import ReportView from '@/views/archive/components/ReportView.vue'
 
 <template>
   <v-container>
-      <strong class="text-h5 font-weight-bold">보고서</strong>
-      <div class="py-1" />
+    <strong class="text-h5 font-weight-bold">보고서</strong>
+    <div class="py-1" />
 
-      <ReportView />
+    <ReportView />
   </v-container>
 </template>

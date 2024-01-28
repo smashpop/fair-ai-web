@@ -9,6 +9,5 @@ import ArticleView from '@/views/archive/components/ArticleView'
 
     <div class="py-1" />
     <ArticleView />
-
   </v-container>
 </template>

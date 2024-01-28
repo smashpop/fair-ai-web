@@ -9,6 +9,5 @@ import RefSiteView from '@/views/archive/components/RefSiteView.vue'
 
     <div class="py-1" />
     <RefSiteView />
-
   </v-container>
 </template>

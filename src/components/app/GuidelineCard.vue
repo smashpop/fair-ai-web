@@ -29,7 +29,7 @@ const props = defineProps({
           </div>
           <h1 class="text-body-1 mb-4">
             {{ props.url }}
-          </h1>         
+          </h1>
         </v-container>
       </v-col>
       <v-spacer></v-spacer>

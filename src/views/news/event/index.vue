@@ -5,9 +5,9 @@ import EventView from '@/views/news/components/EventView'
 
 <template>
   <v-container>
-      <strong class="text-h5 font-weight-bold">관련행사</strong>
-      <div class="py-1" />
+    <strong class="text-h5 font-weight-bold">관련행사</strong>
+    <div class="py-1" />
 
-      <EventView />
+    <EventView />
   </v-container>
 </template>
