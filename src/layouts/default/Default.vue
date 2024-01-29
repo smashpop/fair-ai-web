@@ -2,6 +2,7 @@
 // Components
 import Header from './Header'
 import MainView from './MainView'
+import Footer from './Footer'
 
 // Utilities
 </script>
@@ -11,5 +12,7 @@ import MainView from './MainView'
     <Header />
 
     <MainView />
+
+    <Footer />
   </v-app>
 </template>

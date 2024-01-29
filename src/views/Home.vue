@@ -4,7 +4,6 @@ import SearchField from '@/components/app/SearchField'
 import ArticleView from '@/components/app/ArticleView'
 import NoticeView from '@/components/app/NoticeView'
 import EventView from '@/components/app/EventView'
-import FooterV1 from '@/components/footer/Footer-v1'
 import GalleryV1 from '@/components/gallery/Gallery-v1'
 
 // Utilities
@@ -42,6 +41,5 @@ function searchProc(keyword) {
     <EventView />
 
     <div class="py-1" />
-    <FooterV1 />
   </v-container>
 </template>
