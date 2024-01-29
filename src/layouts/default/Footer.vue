@@ -54,6 +54,7 @@
               </v-btn>
             </v-col>
           </v-row>
+          
           <v-row dense>
             <v-col cols="12">
               <v-btn to="/privacyPolocy" variant="text" density="compact">

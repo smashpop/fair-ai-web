@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import PrivacyPolicyView from '@/components/app/PrivacyPolicyView'
+import PrivacyPolicyView from '@/views/privacyPolicy/components/PrivacyPolicyView'
 
 // Utilities
 </script>
@@ -10,6 +10,5 @@ import PrivacyPolicyView from '@/components/app/PrivacyPolicyView'
     <div class="py-2" />
 
     <PrivacyPolicyView />
-
   </v-container>
 </template>

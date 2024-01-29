@@ -18,8 +18,12 @@
     "axios": "^1.6.7",
     "core-js": "^3.35.1",
     "js-file-download": "^0.4.12",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "roboto-fontface": "*",
     "vue": "^3.4.15",
+    "vue-detect-browser": "^1.0.4",
+    "vue-json-excel3": "^1.0.19",
     "vue-router": "^4.2.5",
     "vuetify": "^3.5.1"
   },
