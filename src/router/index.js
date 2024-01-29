@@ -9,6 +9,7 @@ import NotFound from '@/views/NotFound'
 import Default from '@/layouts/default/Default'
 import Home from '@/views/Home'
 import Result from '@/views/result/index'
+import PrivacyPolocy from '@/views/privacyPolicy/index'
 import Introduce from '@/views/introduce/index'
 import Archive from '@/views/archive/index'
 import News from '@/views/news/index'
@@ -32,6 +33,11 @@ const routes = [
         path: '/result',
         name: 'Result',
         component: Result
+      },
+      {
+        path: '/privacyPolocy',
+        name: 'PrivacyPolocy',
+        component: PrivacyPolocy
       },
       {
         path: '/introduce',

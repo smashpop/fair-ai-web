@@ -56,7 +56,7 @@
           </v-row>
           <v-row dense>
             <v-col cols="12">
-              <v-btn to="/suggest" variant="text" density="compact">
+              <v-btn to="/privacyPolocy" variant="text" density="compact">
                 <strong class="text-subtitle-1 font-weight-bold text-grey-darken-1"
                   >개인정보처리방침</strong
                 >
@@ -73,24 +73,13 @@
             density="compact"
           >
             <template #label>
-              <strong class="text-subtitle-1 font-weight-bold">
-              관련사이트
-              </strong>
+              <strong class="text-subtitle-1 font-weight-bold"> 관련사이트 </strong>
             </template>
           </v-select>
 
           <div class="d-flex flex-wrap mt-4 justify-end">
-            <v-btn
-              class="mx-3"
-              color="grey"
-              icon="mdi-facebook"
-              variant="outlined" 
-            />
-            <v-btn
-                color="grey"
-                icon="mdi-youtube"
-                variant="outlined" 
-              />
+            <v-btn class="mx-3" color="grey" icon="mdi-facebook" variant="outlined" />
+            <v-btn color="grey" icon="mdi-youtube" variant="outlined" />
           </div>
         </v-col>
       </v-row>
