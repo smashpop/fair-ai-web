@@ -52,7 +52,7 @@ function clickProc(value) {
         :value="item.value"
         density="compact"
         min-height="5"
-        @click="clickProc(item.value)"
+        @click="clickProc(item)"
       >
         <span class="date_item">{{ parseDate(item.title) }}</span>
       </v-list-item>
