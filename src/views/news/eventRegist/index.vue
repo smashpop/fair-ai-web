@@ -33,7 +33,7 @@
         </v-col>
 
         <v-col cols="auto">
-          <v-btn href="/news/eventRegist" min-width="164" rel="noopener noreferrer" variant="text">
+          <v-btn href="/news/event-regist" min-width="164" rel="noopener noreferrer" variant="text">
             <v-icon icon="mdi-account-group" size="large" start />
             행사신청
           </v-btn>

@@ -47,9 +47,11 @@
         <v-col cols="12" md="3">
           <v-row dense>
             <v-col cols="12">
-              <v-btn to="/news/eventRegist" variant="text" density="compact">
+              <v-btn to="/news/event-regist" variant="text" density="compact">
                 <strong class="text-subtitle-1 font-weight-bold text-grey-darken-1"
-                  >행사등록 신청</strong
+                  >
+                  행사등록 신청
+                  </strong
                 >
               </v-btn>
             </v-col>
@@ -57,7 +59,7 @@
           
           <v-row dense>
             <v-col cols="12">
-              <v-btn to="/privacyPolocy" variant="text" density="compact">
+              <v-btn to="/privacy-polocy" variant="text" density="compact">
                 <strong class="text-subtitle-1 font-weight-bold text-grey-darken-1"
                   >개인정보처리방침</strong
                 >

@@ -5,14 +5,15 @@
  * Documentation: https://router.vuejs.org/
  */
 // Components
-import NotFound from '@/views/NotFound'
-import Default from '@/layouts/default/Default'
+import Default from '@/layouts/default'
 import Home from '@/views/Home'
-import Result from '@/views/result/index'
-import PrivacyPolocy from '@/views/privacyPolicy/index'
-import Introduce from '@/views/introduce/index'
-import Archive from '@/views/archive/index'
-import News from '@/views/news/index'
+import Result from '@/views/result'
+import PrivacyPolocy from '@/views/privacyPolicy'
+import Introduce from '@/views/introduce'
+import Archive from '@/views/archive'
+import News from '@/views/news'
+
+import NotFound from '@/views/NotFound'
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
@@ -20,27 +21,31 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
+    name: 'Home',
+    meta: {
+      title: 'Home'
+    },
     component: Default,
     redirect: '/home',
 
     children: [
       {
-        path: '/home',
+        path: 'home',
         name: 'Home',
         component: Home
       },
       {
-        path: '/result',
+        path: 'result',
         name: 'Result',
         component: Result
       },
       {
-        path: '/privacyPolocy',
+        path: 'privacy-polocy',
         name: 'PrivacyPolocy',
         component: PrivacyPolocy
       },
       {
-        path: '/introduce',
+        path: 'introduce',
         name: 'introduce',
         component: Introduce,
         redirect: '/introduce/introduce',
@@ -49,25 +54,25 @@ const routes = [
         },
         children: [
           {
-            path: '/introduce/introduce',
+            path: 'introduce',
             name: 'Introduce',
             meta: {
               title: '재단소개'
             },
-            component: () => import('@/views/introduce/introduce/index')
+            component: () => import('@/views/introduce/introduce')
           },
           {
-            path: '/introduce/ai-ethics',
+            path: 'ai-ethics',
             name: 'AiEthics',
             meta: {
               title: 'AI윤리'
             },
-            component: () => import('@/views/introduce/aiEthics/index')
+            component: () => import('@/views/introduce/aiEthics')
           }
         ]
       },
       {
-        path: '/archive',
+        path: 'archive',
         name: '자료실',
         component: Archive,
         redirect: '/archive/thesis',
@@ -76,36 +81,36 @@ const routes = [
         },
         children: [
           {
-            path: '/archive/thesis',
+            path: 'thesis',
             name: 'Thesis List',
             meta: {
               title: '논문 관리'
             },
-            component: () => import('@/views/archive/thesis/index')
+            component: () => import('@/views/archive/thesis')
           },
           {
-            path: '/archive/report',
+            path: 'report',
             name: 'Report List',
             meta: {
               title: '보고서 관리'
             },
-            component: () => import('@/views/archive/report/index')
+            component: () => import('@/views/archive/report')
           },
           {
-            path: '/archive/article',
+            path: 'article',
             name: 'Article List',
             meta: {
               title: '기사 관리'
             },
-            component: () => import('@/views/archive/article/index')
+            component: () => import('@/views/archive/article')
           },
           {
-            path: '/archive/guideline',
+            path: 'guideline',
             name: 'Guideline List',
             meta: {
               title: '가이드라인 관리'
             },
-            component: () => import('@/views/archive/guideline/index')
+            component: () => import('@/views/archive/guideline')
           },
           {
             path: '/archive/refSite',
@@ -116,17 +121,17 @@ const routes = [
             component: () => import('@/views/archive/refSite/index')
           },
           {
-            path: '/archive/curriculum',
+            path: 'curriculum',
             name: 'Curriculum List',
             meta: {
               title: '교육커리큘럼 관리'
             },
-            component: () => import('@/views/archive/curriculum/index')
+            component: () => import('@/views/archive/curriculum')
           }
         ]
       },
       {
-        path: '/news',
+        path: 'news',
         name: 'News',
         component: News,
         redirect: '/news/notice',
@@ -135,63 +140,63 @@ const routes = [
         },
         children: [
           {
-            path: '/news/notice',
+            path: 'notice',
             name: 'Notice',
             meta: {
               title: '공지사항'
             },
-            component: () => import('@/views/news/notice/index')
+            component: () => import('@/views/news/notice')
           },
           {
-            path: '/news/event',
+            path: 'event',
             name: 'Event',
             meta: {
               title: '관련행사'
             },
-            component: () => import('@/views/news/event/index')
+            component: () => import('@/views/news/event')
           },
           {
-            path: '/news/eventCalendar',
+            path: 'eventCalendar',
             name: 'Event Calendar',
             meta: {
               title: '행사캘린더'
             },
-            component: () => import('@/views/news/eventCalendar/index')
+            component: () => import('@/views/news/eventCalendar')
           },
           {
-            path: '/news/eventRegist',
+            path: 'event-regist',
             name: 'Evenet Regist',
             meta: {
               title: '행사신청'
             },
-            component: () => import('@/views/news/eventRegist/index')
+            component: () => import('@/views/news/eventRegist')
           }
         ]
       },
       {
-        path: '/suggest',
+        path: 'suggest',
         name: 'suggest',
-        component: () => import('@/views/suggest/index'),
+        component: () => import('@/views/suggest'),
         redirect: '/suggest/faq',
         meta: {
           title: '문의/제안'
         },
         children: [
           {
-            path: '/suggest/faq',
+            path: 'faq',
             name: 'FAQ',
             meta: {
               title: 'FAQ'
             },
-            component: () => import('@/views/suggest/faq/index')
+            component: () => import('@/views/suggest/faq')
           },
           {
-            path: '/suggest/suggest',
+            path: 'suggest',
             name: 'Suggest',
             meta: {
               title: '문의/제안'
             },
-            component: () => import('@/views/suggest/suggest/index')
+            component: () => import('@/views/suggest/suggest')
           }
         ]
       },

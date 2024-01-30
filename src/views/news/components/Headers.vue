@@ -9,10 +9,10 @@
       <v-btn to="/news/event">
         <strong class="text-subtitle-1 font-weight-bold">관련행사</strong>
       </v-btn>
-      <v-btn to="/news/eventCalendar">
+      <v-btn to="/news/event-calendar">
         <strong class="text-subtitle-1 font-weight-bold">행사캘린더</strong>
       </v-btn>
-      <v-btn to="/news/eventRegist">
+      <v-btn to="/news/event-regist">
         <strong class="text-subtitle-1 font-weight-bold">행사신청</strong>
       </v-btn>
     </v-row>
