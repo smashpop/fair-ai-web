@@ -34,7 +34,7 @@ function searchProc(keyword) {
     <div class="py-1" />
     <ArticleView />
 
-    <div class="py-1" />
+    <div class="py-2" />
     <EventView />
 
     <div class="py-4" />
