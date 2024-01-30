@@ -156,7 +156,7 @@ const routes = [
             component: () => import('@/views/news/event')
           },
           {
-            path: 'eventCalendar',
+            path: 'event-calendar',
             name: 'Event Calendar',
             meta: {
               title: '행사캘린더'
