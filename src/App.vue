@@ -7,7 +7,6 @@ import { usePrivacyPolicys } from '@/stores/privacyPolicy'
 const privacyPolicys = usePrivacyPolicys()
 
 privacyPolicys.loadPrivacyPolicys()
-
 </script>
 
 <template>
@@ -15,4 +14,3 @@ privacyPolicys.loadPrivacyPolicys()
 </template>
 
 <style lang="scss" scoped></style>
-

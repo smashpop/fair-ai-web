@@ -12,7 +12,5 @@ import BaseCard from '@/components/ui/cards/BaseCard'
 // import app from 'vue'
 
 export default function (app) {
-  app
-    .component('Logo', Logo)
-    .component('BaseCard', BaseCard)
+  app.component('Logo', Logo).component('BaseCard', BaseCard)
 }

@@ -21,16 +21,16 @@ function setPrivacyPolicy(value) {
       <v-card-title class="pa-0 mb-4 text-h6 font-weight-bold"> 개인정보처리방침 </v-card-title>
     </div>
 
-      <div class="d-flex flex-wrap justify-end" style="width: 250px">
-        <SelectEnforceDate
-          v-model="selectItem"
-          :items="privacyPolicys.list"
-          class="ms-2 select"
-          @update:model-value="setPrivacyPolicy(value)"
-        />
-      </div>
+    <div class="d-flex flex-wrap justify-end" style="width: 250px">
+      <SelectEnforceDate
+        v-model="selectItem"
+        :items="privacyPolicys.list"
+        class="ms-2 select"
+        @update:model-value="setPrivacyPolicy(value)"
+      />
+    </div>
 
-      <div class="py-1" />
+    <div class="py-1" />
 
     <v-sheet class="pa-2" color="grey-lighten-4" border rounded min-height="300">
       <span

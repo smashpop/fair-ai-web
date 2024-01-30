@@ -41,11 +41,7 @@ watch(
 </script>
 
 <template>
-  <v-card 
-    class="mx-6" 
-    elevation="0"
-    flat
-  >
+  <v-card class="mx-6" elevation="0" flat>
     <v-divider class="mb-1"></v-divider>
     <div class="d-flex justify-space-between">
       <v-card-title class="pa-0 my-2 text-h6 font-weight-bold"> 공지사항 </v-card-title>
@@ -56,8 +52,7 @@ watch(
     <v-list>
       <v-list-item v-for="(item, index) in items" :key="index">
         <div class="d-flex justify-space-between align-center">
-
-          <div class="d-flex align-baseline flex-1">           
+          <div class="d-flex align-baseline flex-1">
             <div class="text-body-2 font-weight-medium">
               {{ item.title }}
             </div>
@@ -68,7 +63,6 @@ watch(
           </div>
         </div>
         <v-divider class="my-2"></v-divider>
-
       </v-list-item>
     </v-list>
   </v-card>

@@ -39,6 +39,5 @@ function searchProc(keyword) {
 
     <div class="py-4" />
     <NoticeView />
-
   </v-container>
 </template>

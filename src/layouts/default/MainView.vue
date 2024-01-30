@@ -3,7 +3,7 @@
 import { ref } from 'vue'
 const scrollInvoked = ref(0)
 
-function onScroll () {
+function onScroll() {
   scrollInvoked.value++
   console.log('scrollInvoked.value=', scrollInvoked.value)
 }

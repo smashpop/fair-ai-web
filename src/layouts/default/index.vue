@@ -8,7 +8,7 @@ import Footer from './Footer'
 </script>
 
 <template>
-  <v-app >
+  <v-app>
     <div class="bg_image">
       <Header />
 
@@ -26,4 +26,3 @@ import Footer from './Footer'
   height: 100vh;
 }
 </style>
-

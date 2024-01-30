@@ -14,7 +14,6 @@ const props = defineProps({
   }
 })
 
-
 const emit = defineEmits(['update:modelValue'])
 const model = computed({
   get() {
@@ -59,7 +58,7 @@ function clickProc(value) {
     </template>
 
     <template #selection="{ item }">
-      <span>{{ parseDate(item.title)  }}</span>
+      <span>{{ parseDate(item.title) }}</span>
     </template>
   </v-select>
 </template>
