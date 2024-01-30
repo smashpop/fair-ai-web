@@ -16,7 +16,6 @@ import Footer from './Footer'
 
       <Footer />
     </div>
-
   </v-app>
 </template>
 

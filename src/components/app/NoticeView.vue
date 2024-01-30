@@ -41,23 +41,25 @@ watch(
 </script>
 
 <template>
-  <BaseCard>
+  <v-card 
+    class="mx-6" 
+    elevation="0"
+    flat
+  >
+    <v-divider class="mb-1"></v-divider>
     <div class="d-flex justify-space-between">
-      <v-card-title class="pa-0 mb-4 text-h6 font-weight-bold"> 공지사항 </v-card-title>
+      <v-card-title class="pa-0 my-2 text-h6 font-weight-bold"> 공지사항 </v-card-title>
       <v-btn size="small" flat class="text-primary text-capitalize"> View All </v-btn>
     </div>
+    <v-divider class="mb-1"></v-divider>
 
-    <v-divider class="mb-2"></v-divider>
-
-    <v-list density="compact">
+    <v-list>
       <v-list-item v-for="(item, index) in items" :key="index">
         <div class="d-flex justify-space-between align-center">
-          <div class="d-flex align-baseline flex-1">
-            <div class="bg-info pa-1 rounded-circle me-2"></div>
-            <div>
-              <div class="text-body-2 font-weight-medium">
-                {{ item.title }}
-              </div>
+
+          <div class="d-flex align-baseline flex-1">           
+            <div class="text-body-2 font-weight-medium">
+              {{ item.title }}
             </div>
           </div>
 
@@ -65,9 +67,11 @@ watch(
             {{ item.updatedAt ? parseDate(item.updatedAt) : parseDate(item.createdAt) }}
           </div>
         </div>
+        <v-divider class="my-2"></v-divider>
+
       </v-list-item>
     </v-list>
-  </BaseCard>
+  </v-card>
 </template>
 
 <style lang="scss" scoped></style>

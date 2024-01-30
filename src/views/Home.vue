@@ -35,11 +35,10 @@ function searchProc(keyword) {
     <ArticleView />
 
     <div class="py-1" />
-    <NoticeView />
-
-    <div class="py-1" />
     <EventView />
 
-    <div class="py-1" />
+    <div class="py-4" />
+    <NoticeView />
+
   </v-container>
 </template>

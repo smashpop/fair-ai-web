@@ -2,9 +2,10 @@
 
 <template>
   <v-card color="#F4F4F4">
-    <v-container class="pa-8">
+    <v-container>
+    <div class="pa-4 mx-8">
       <v-row dense>
-        <v-col cols="12" md="3" class="mb-12">
+        <v-col cols="12" md="3">
           <logo />
         </v-col>
 
@@ -12,7 +13,7 @@
           <v-row dense>
             <v-col cols="12">
               <v-btn to="/introduce" variant="text" density="compact">
-                <strong class="text-subtitle-1 font-weight-bold text-grey-darken-1">소개</strong>
+                <strong class="text-subtitle-2 font-weight-bold text-grey-darken-1">소개</strong>
               </v-btn>
             </v-col>
           </v-row>
@@ -86,6 +87,7 @@
           </div>
         </v-col>
       </v-row>
+    </div>
     </v-container>
   </v-card>
 </template>
