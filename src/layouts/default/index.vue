@@ -8,11 +8,23 @@ import Footer from './Footer'
 </script>
 
 <template>
-  <v-app>
-    <Header />
+  <v-app >
+    <div class="bg_image">
+      <Header />
 
-    <MainView />
+      <MainView />
 
-    <Footer />
+      <Footer />
+    </div>
+
   </v-app>
 </template>
+
+<style lang="scss" scoped>
+.bg_image {
+  background: url('../../assets/GettyImages.png');
+  background-size: cover;
+  height: 100vh;
+}
+</style>
+

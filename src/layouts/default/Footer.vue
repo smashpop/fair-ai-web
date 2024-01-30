@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <v-card>
+  <v-card color="#F4F4F4">
     <v-container class="pa-8">
       <v-row dense>
         <v-col cols="12" md="3" class="mb-12">
