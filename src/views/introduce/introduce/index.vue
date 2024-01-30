@@ -16,7 +16,7 @@ import ContentV1 from '@/components/content/Content-v1'
         <v-container>
           <v-row justify="space-between">
             <v-col cols="auto">
-              <v-responsive width="350">
+              <v-responsive width="850">
                 <h2 class="text-h4">FAIR AI system</h2>
 
                 <p class="text-success mt-3">Global Defaults</p>
