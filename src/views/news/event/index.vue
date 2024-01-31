@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import EventView from '@/views/news/components/EventView'
+import EventView from './EventView'
 </script>
 
 <template>

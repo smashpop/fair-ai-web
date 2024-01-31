@@ -10,7 +10,7 @@ function onScroll() {
 </script>
 
 <template>
-  <v-app-bar v-scroll.self="onScroll" color="transparent" flat height="48">
+  <v-app-bar v-scroll.self="onScroll" color="transparent" flat height="60">
     <template #prepend>
       <logo />
 

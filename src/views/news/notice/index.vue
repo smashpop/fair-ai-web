@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import NoticeView from '@/views/news/components/NoticeView'
+import NoticeView from './NoticeView'
 </script>
 
 <template>
