@@ -37,11 +37,11 @@ loadFromServer()
         <v-col cols="12" md="4">
           <ThesisCard :card="items[0]" />
         </v-col>
-
+        <v-divider class="my-9" vertical />
         <v-col cols="12" md="4">
           <ThesisCard :card="items[1]" />
         </v-col>
-
+        <v-divider class="my-9" vertical />
         <v-col cols="12" md="4">
           <ThesisCard :card="items[2]" />
         </v-col>

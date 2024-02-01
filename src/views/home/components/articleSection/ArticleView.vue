@@ -37,7 +37,7 @@ loadFromServer()
         <v-col cols="12" md="6">
           <ArticleCard :card="items[0]" />
         </v-col>
-
+        <v-divider class="my-9" vertical />
         <v-col cols="12" md="6">
           <ArticleCard :card="items[1]" />
         </v-col>
