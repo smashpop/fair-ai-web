@@ -1,6 +1,5 @@
 <script setup>
 // Utilities
-import { cardImageSrc } from '@/utils/common'
 
 const props = defineProps({
   card: {
@@ -14,22 +13,20 @@ const props = defineProps({
   <v-container>
     <v-sheet v-if="props.card" class="pa-4" elevation="0">
       <div>
-        <v-img height="200" :src="cardImageSrc(props.card.id)" />
+        <v-img height="250" aspect-ratio="16/9" cover :src="props.card.thumbnailUrl" />
       </div>
       <div>
-        <v-sheet height="150" elevation="0">
-          <strong class="text-h5" font-weight-bold>
+        <v-sheet class="my-4" height="100" elevation="0">
+          <strong class="text-h5 font-weight-black" >
             {{ props.card ? props.card.title : '' }}
           </strong>
         </v-sheet>
       </div>
 
       <div>
-        <strong class="text-subtitle-1 mb-4">저자</strong>
+        <strong class="text-subtitle-1 mb-4">매일경제 자세히보기</strong>
       </div>
-      <div>
-        <strong class="text-subtitle-1 mb-4">발행</strong>
-      </div>
+
     </v-sheet>
   </v-container>
 </template>

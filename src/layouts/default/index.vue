@@ -21,7 +21,7 @@ import Footer from './Footer'
 
 <style lang="scss" scoped>
 .bg_image {
-  background: url('../../assets/GettyImages.png');
+  background: url('../../assets/images/GettyImages.png');
   background-size: cover;
   height: 100vh;
 }
