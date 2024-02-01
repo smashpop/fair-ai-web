@@ -1,0 +1,51 @@
+<script setup>
+// Components
+import ThesisCard from '../ThesisCard'
+
+// Utilities
+import { ref } from 'vue'
+import { fetchList } from '@/apis/card'
+
+const items = ref([])
+const loading = ref(false)
+const serverItemsLength = ref(0)
+
+async function loadFromServer() {
+  loading.value = true
+
+  await fetchList()
+    .then((response) => {
+      items.value = response.data.items
+      serverItemsLength.value = response.data.total
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+
+  loading.value = false
+  console.log('card items=', items.value)
+}
+
+// initial load
+loadFromServer()
+</script>
+
+<template>
+  <v-sheet class="mx-16" elevation="0">
+    <div class="mx-16">
+      <v-row no-gutters>
+        <v-col cols="12" md="4">
+          <ThesisCard :card="items[0]" />
+        </v-col>
+
+        <v-col cols="12" md="4">
+          <ThesisCard :card="items[1]" />
+        </v-col>
+
+        <v-col cols="12" md="4">
+          <ThesisCard :card="items[2]" />
+        </v-col>
+      </v-row>
+    </div>
+  </v-sheet>
+</template>

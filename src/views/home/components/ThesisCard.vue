@@ -1,6 +1,9 @@
 <script setup>
+// Utilities
+import { cardImageSrc } from '@/utils/common'
+
 const props = defineProps({
-  thesis: {
+  card: {
     type: Object,
     default: null
   }
@@ -9,7 +12,7 @@ const props = defineProps({
 
 <template>
   <v-container>
-    <v-sheet class="pa-4" elevation="0">
+    <v-sheet v-if="props.card" class="pa-4" elevation="0">
       <div>
         <h6 class="text-subtitle-1 mb-4">논문 해외</h6>
       </div>
@@ -17,9 +20,7 @@ const props = defineProps({
       <div>
         <v-sheet height="150" elevation="0">
           <strong class="text-h5" font-weight-bold>
-            Navigating the generative AI era: Introducing the AI assessment scale for ethical GenAI
-            assessment
-            {{ props.thesis ? props.thesis.title : '' }}
+            {{ props.card.thesis ? props.card.thesis.title : '' }}
           </strong>
         </v-sheet>
       </div>
@@ -27,8 +28,9 @@ const props = defineProps({
       <div>
         <v-row>
           <v-col cols="12" md="5">
-            <v-img height="200" gradient="#262626, #262626" class="rounded elevation-5" />
+            <v-img height="200" :src="cardImageSrc(props.card.id)" />
           </v-col>
+
           <v-col cols="12" md="7">
             <div>
               <strong class="text-subtitle-1 mb-4">저자</strong>
