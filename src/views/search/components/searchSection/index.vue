@@ -101,7 +101,7 @@ function clickProc(keyword) {
                     <v-col>
                       <v-row dense>
                         <v-col cols="2">
-                          <div class="ml-3">전체</div>
+                          <div class="ml-6">전체</div>
                         </v-col>
                         <v-col cols="7">
                           <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
@@ -139,7 +139,7 @@ function clickProc(keyword) {
                     <v-col>
                       <v-row dense>
                         <v-col cols="2">
-                          <div class="ml-4">저자</div>
+                          <div class="ml-6">저자</div>
                         </v-col>
                         <v-col cols="7">
                           <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
@@ -161,10 +161,10 @@ function clickProc(keyword) {
                   <v-row dense>
                     <v-col>
                       <v-row dense>
-                        <v-col cols="3">
+                        <v-col cols="2">
                           발행기관
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="7">
                           <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
                         </v-col>
                         <v-col cols="3">
@@ -180,10 +180,10 @@ function clickProc(keyword) {
 
                     <v-col>
                       <v-row dense>
-                        <v-col cols="3">
-                          초록
+                        <v-col cols="2">
+                          <div class="ml-6">초록</div>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="7">
                           <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
                         </v-col>
                         <v-col cols="3">
@@ -199,10 +199,10 @@ function clickProc(keyword) {
 
                     <v-col>
                       <v-row dense>
-                        <v-col cols="3">
+                        <v-col cols="2">
                           발행년도
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="7">
                           <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
                         </v-col>
                         <v-col cols="3">
@@ -222,10 +222,10 @@ function clickProc(keyword) {
                   <v-row dense>
                     <v-col>
                       <v-row dense>
-                        <v-col cols="3">
-                          국내
+                        <v-col cols="2">
+                          <div class="ml-6">국내</div>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="7">
                           <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
                         </v-col>
                         <v-col cols="3">
@@ -241,10 +241,10 @@ function clickProc(keyword) {
 
                     <v-col>
                       <v-row dense>
-                        <v-col cols="3">
-                          인용수
+                        <v-col cols="2">
+                          <div class="ml-4">인용수</div>
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="7">
                           <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
                         </v-col>
                         <v-col cols="3">
@@ -260,10 +260,10 @@ function clickProc(keyword) {
 
                     <v-col>
                       <v-row dense>
-                        <v-col cols="3">
+                        <v-col cols="2">
                           작성언어
                         </v-col>
-                        <v-col cols="6">
+                        <v-col cols="7">
                           <v-text-field label="선택하세요" variant="outlined" density="compact"></v-text-field>
                         </v-col>
                         <v-col cols="3">
