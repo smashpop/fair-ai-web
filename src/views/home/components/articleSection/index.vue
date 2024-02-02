@@ -17,33 +17,33 @@ import ArticleView from './ArticleView'
           </div>
 
           <div>
-            <v-btn rounded="xl" size="x-large" variant="outlined">
-              <p class="text-subtitle-1 font-weight-black text-disabled">#AI윤리</p>
+            <v-btn class="ma-2" rounded="xl" variant="outlined">
+              <strong class="text-subtitle-1 font-weight-black text-disabled">#AI윤리</strong>
             </v-btn>
           </div>
           <div>
-            <v-btn rounded="xl" size="x-large" variant="outlined">
-              <p class="text-subtitle-1 font-weight-black text-disabled">#CES2024</p>
+            <v-btn class="ma-2" rounded="xl" variant="outlined">
+              <strong class="text-subtitle-1 font-weight-black text-disabled">#CES2024</strong>
             </v-btn>
+            <v-btn class="ma-2" rounded="xl" variant="outlined">
+              <strong class="text-subtitle-1 font-weight-black text-disabled">#의료AI</strong>
+            </v-btn>
+          </div>
+          <div>
+            <v-btn class="ma-2" rounded="xl" variant="outlined">
+              <strong class="text-subtitle-1 font-weight-black text-disabled">#자율주행</strong>
+            </v-btn>
+            <v-btn class="ma-2" rounded="xl" variant="outlined">
+              <strong class="text-subtitle-1 font-weight-black text-disabled">#강인공지능</strong>
+            </v-btn>
+          </div>
 
-            <v-btn rounded="xl" size="x-large" variant="outlined">
-              <p class="text-subtitle-1 font-weight-black text-disabled">#의료AI</p>
-            </v-btn>
-          </div>
           <div>
-            <v-btn rounded="xl" size="x-large" variant="outlined">
-              <p class="text-subtitle-1 font-weight-black text-disabled">#자율주행</p>
+            <v-btn calss="ma-2" rounded="xl" variant="outlined">
+              <strong class="text-subtitle-1 font-weight-black text-disabled">#딥러닝</strong>
             </v-btn>
-            <v-btn rounded="xl" size="x-large" variant="outlined">
-              <p class="text-subtitle-1 font-weight-black text-disabled">#강인공지능</p>
-            </v-btn>
-          </div>
-          <div>
-            <v-btn calss="ma-2" rounded="xl" size="x-large" variant="outlined">
-              <p class="text-subtitle-1 font-weight-black text-disabled">#딥러닝</p>
-            </v-btn>
-            <v-btn calss="ma-2" rounded="xl" size="x-large" variant="outlined">
-              <p class="text-subtitle-1 font-weight-black text-disabled">#게임형 학습 콘텐츠</p>
+            <v-btn calss="ma-2" rounded="xl" variant="outlined">
+              <strong class="text-subtitle-1 font-weight-black text-disabled">#학습 콘텐츠</strong>
             </v-btn>
           </div>
         </v-container>

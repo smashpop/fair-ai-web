@@ -21,9 +21,7 @@
             <v-row dense>
               <v-col cols="12">
                 <v-btn to="/archive" variant="text" density="compact">
-                  <strong class="text-20 font-weight-bold text-grey-darken-1"
-                    >자료실</strong
-                  >
+                  <strong class="text-20 font-weight-bold text-grey-darken-1">자료실</strong>
                 </v-btn>
               </v-col>
             </v-row>
@@ -39,9 +37,7 @@
             <v-row dense>
               <v-col cols="12">
                 <v-btn to="/suggest" variant="text" density="compact">
-                  <strong class="text-20 font-weight-bold text-grey-darken-1"
-                    >문의/제안</strong
-                  >
+                  <strong class="text-20 font-weight-bold text-grey-darken-1">문의/제안</strong>
                 </v-btn>
               </v-col>
             </v-row>

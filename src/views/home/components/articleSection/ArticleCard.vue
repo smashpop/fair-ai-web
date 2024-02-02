@@ -13,7 +13,7 @@ const props = defineProps({
   <v-container>
     <v-sheet v-if="props.card" class="pa-4" elevation="0">
       <div>
-        <v-img width="410" height="226"  cover :src="props.card.thumbnailUrl" />
+        <v-img width="410" height="226" cover :src="props.card.thumbnailUrl" />
       </div>
       <div>
         <v-sheet class="my-4" height="100" elevation="0">

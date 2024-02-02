@@ -32,18 +32,18 @@ loadFromServer()
 
 <template>
   <v-sheet class="mx-0" elevation="0">
-      <v-row no-gutters>
-        <v-divider :thickness="3" />
+    <v-row no-gutters>
+      <v-divider :thickness="3" />
 
-        <v-col cols="12" md="6">
-          <ArticleCard :card="items[0]" />
-        </v-col>
+      <v-col cols="12" md="6">
+        <ArticleCard :card="items[0]" />
+      </v-col>
 
-        <v-divider class="my-9" vertical />
-        
-        <v-col cols="12" md="6">
-          <ArticleCard :card="items[1]" />
-        </v-col>
-      </v-row>
+      <v-divider class="my-9" vertical />
+
+      <v-col cols="12" md="6">
+        <ArticleCard :card="items[1]" />
+      </v-col>
+    </v-row>
   </v-sheet>
 </template>

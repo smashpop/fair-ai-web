@@ -7,6 +7,7 @@
 // Components
 import Default from '@/layouts/default'
 import Home from '@/views/Home'
+import Search from '@/views/search'
 import Result from '@/views/result'
 import PrivacyPolocy from '@/views/privacyPolicy'
 import Introduce from '@/views/introduce'
@@ -33,6 +34,11 @@ const routes = [
         path: 'home',
         name: 'Home',
         component: Home
+      },
+      {
+        path: 'search',
+        name: 'Search',
+        component: Search
       },
       {
         path: 'result',

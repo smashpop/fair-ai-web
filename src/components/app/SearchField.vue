@@ -3,11 +3,16 @@
 import { ref } from 'vue'
 
 const keyword = ref('')
-const emit = defineEmits(['search'])
+const emit = defineEmits(['search', 'click'])
 
 function searchClick(keyword) {
   console.log('searchClick()=', keyword)
   emit('search', keyword)
+}
+
+function clickProc() {
+  console.log('Click()=')
+  emit('click')
 }
 </script>
 
@@ -25,6 +30,8 @@ function searchClick(keyword) {
     append-inner-icon="mdi-magnify"
     single-line
     hide-details
+    autofocus
+    @click.stop="clickProc()"
     @keyup.enter.prevent="searchClick(keyword)"
   />
 </template>
