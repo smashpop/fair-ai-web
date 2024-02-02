@@ -19,7 +19,7 @@ const props = defineProps({
 
       <div>
         <v-sheet height="150" elevation="0">
-          <strong class="text-h5" font-weight-bold>
+          <strong class="text-30 letter" font-weight-bold>
             {{ props.card.thesis ? props.card.thesis.title : '' }}
           </strong>
         </v-sheet>
@@ -28,7 +28,7 @@ const props = defineProps({
       <div>
         <v-row>
           <v-col cols="12" md="5">
-            <v-img height="200" :src="cardImageSrc(props.card.id)" />
+            <v-img width="163" height="210" :src="cardImageSrc(props.card.id)" />
           </v-col>
 
           <v-col cols="12" md="7">
@@ -47,3 +47,10 @@ const props = defineProps({
     </v-sheet>
   </v-container>
 </template>
+
+<style lang="scss" scoped>
+.letter {
+  line-height: 1.3em;
+  letter-spacing: -0.0625em;
+}
+</style>

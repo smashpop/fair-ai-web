@@ -31,21 +31,19 @@ loadFromServer()
 </script>
 
 <template>
-  <v-sheet class="mx-16" elevation="0">
-    <div class="mx-16">
-      <v-row no-gutters>
-        <v-col cols="12" md="4">
-          <ThesisCard :card="items[0]" />
-        </v-col>
-        <v-divider class="my-9" vertical />
-        <v-col cols="12" md="4">
-          <ThesisCard :card="items[1]" />
-        </v-col>
-        <v-divider class="my-9" vertical />
-        <v-col cols="12" md="4">
-          <ThesisCard :card="items[2]" />
-        </v-col>
-      </v-row>
-    </div>
+  <v-sheet elevation="0">
+    <v-row no-gutters>
+      <v-col cols="12" md="4">
+        <ThesisCard :card="items[0]" />
+      </v-col>
+      <v-divider class="my-9" vertical />
+      <v-col cols="12" md="4">
+        <ThesisCard :card="items[1]" />
+      </v-col>
+      <v-divider class="my-9" vertical />
+      <v-col cols="12" md="4">
+        <ThesisCard :card="items[2]" />
+      </v-col>
+    </v-row>
   </v-sheet>
 </template>

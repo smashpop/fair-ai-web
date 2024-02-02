@@ -48,12 +48,11 @@ watch(
       <v-col cols="1"> </v-col>
 
       <v-col cols="2" class="mt-12">
-        <strong class="text-h3 font-weight-bold text-white">행사안내</strong>
+        <strong class="text-48 font-weight-bold text-white">행사안내</strong>
       </v-col>
 
       <v-col cols="9">
         <div class="py-6" />
-
         <EventPoster />
       </v-col>
     </v-row>

@@ -31,19 +31,17 @@ loadFromServer()
 </script>
 
 <template>
-  <div class="mx-16">
-    <v-row no-gutters>
-      <v-col cols="12" md="4">
-        <ThesisCard :card="items[0]" />
-      </v-col>
+  <v-row no-gutters>
+    <v-col cols="12" md="4">
+      <ThesisCard :card="items[0]" />
+    </v-col>
 
-      <v-col cols="12" md="4">
-        <ThesisCard :card="items[1]" />
-      </v-col>
+    <v-col cols="12" md="4">
+      <ThesisCard :card="items[1]" />
+    </v-col>
 
-      <v-col cols="12" md="4">
-        <ThesisCard :card="items[2]" />
-      </v-col>
-    </v-row>
-  </div>
+    <v-col cols="12" md="4">
+      <ThesisCard :card="items[2]" />
+    </v-col>
+  </v-row>
 </template>

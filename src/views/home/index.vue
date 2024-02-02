@@ -9,11 +9,9 @@ import NoticeSection from './components/noticeSection'
 </script>
 
 <template>
-  <v-container>
-    <div class="py-2" />
+  <v-container class="w-75">
     <SearchSection />
 
-    <div class="py-2" />
     <PopularitySection />
 
     <div class="py-1" />

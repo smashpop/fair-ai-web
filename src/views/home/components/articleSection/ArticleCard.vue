@@ -13,11 +13,11 @@ const props = defineProps({
   <v-container>
     <v-sheet v-if="props.card" class="pa-4" elevation="0">
       <div>
-        <v-img height="250" aspect-ratio="16/9" cover :src="props.card.thumbnailUrl" />
+        <v-img width="410" height="226"  cover :src="props.card.thumbnailUrl" />
       </div>
       <div>
         <v-sheet class="my-4" height="100" elevation="0">
-          <strong class="text-h5 font-weight-black" >
+          <strong class="text-30 font-weight-black">
             {{ props.card ? props.card.title : '' }}
           </strong>
         </v-sheet>
@@ -26,7 +26,6 @@ const props = defineProps({
       <div>
         <strong class="text-subtitle-1 mb-4">매일경제 자세히보기</strong>
       </div>
-
     </v-sheet>
   </v-container>
 </template>

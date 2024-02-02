@@ -43,19 +43,20 @@ watch(
 <template>
   <v-sheet class="mx-16" elevation="0">
     <div class="mx-16">
-      <v-divider class="mb-1"></v-divider>
-      <div class="d-flex justify-space-between">
-        <strong class="pa-0 my-2 text-h6 font-weight-bold"> 공지사항 </strong>
-        <v-btn size="small" flat class="text-primary text-capitalize"> View All </v-btn>
+      <v-divider class="mb-1" color="black" :thickness="3"></v-divider>
+
+      <div class="d-flex justify-space-between" style="height: 60px">
+        <strong class="text-20 font-weight-bold"> 공지사항 </strong>
+        <v-btn size="small" variant="flat" class="text-primary text-capitalize"> View All </v-btn>
       </div>
 
       <v-divider class="mb-1"></v-divider>
 
       <v-list>
         <v-list-item v-for="(item, index) in items" :key="index">
-          <div class="d-flex justify-space-between align-center">
+          <div class="d-flex justify-space-between align-center" style="height: 40px">
             <div class="d-flex align-baseline flex-1">
-              <div class="text-body-2 font-weight-medium">
+              <div class="text-16 font-weight-medium">
                 {{ item.title }}
               </div>
             </div>
