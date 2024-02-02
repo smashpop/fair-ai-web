@@ -81,8 +81,210 @@ function clickProc(keyword) {
               </template>
 
               <template #text>
-                11Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima
+                <v-container>
+                  <v-row>
+                    <v-col>
+                      <v-radio-group inline>
+                      <v-radio label="논문" value="one"></v-radio>
+                      <v-radio label="보고서" value="two"></v-radio>
+                      <v-radio label="기사" value="three"></v-radio>
+                      <v-radio label="가이드라인" value="one"></v-radio>
+                      <v-radio label="참고사이트" value="two"></v-radio>
+                      <v-radio label="교육커리큘럼" value="three"></v-radio>
+                      <v-radio label="행사" value="three"></v-radio>
+                    </v-radio-group>
+                    </v-col>
+                  </v-row>
+                  <v-divider />
 
+                  <v-row dense>
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="2">
+                          <div class="ml-3">전체</div>
+                        </v-col>
+                        <v-col cols="7">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="2">
+                          <div class="ml-3">논문명</div>
+                        </v-col>
+                        <v-col cols="7">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="2">
+                          <div class="ml-4">저자</div>
+                        </v-col>
+                        <v-col cols="7">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+
+                  <v-divider />
+
+                  <v-row dense>
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="3">
+                          발행기관
+                        </v-col>
+                        <v-col cols="6">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="3">
+                          초록
+                        </v-col>
+                        <v-col cols="6">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="3">
+                          발행년도
+                        </v-col>
+                        <v-col cols="6">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+
+                  <v-divider />
+
+                  <v-row dense>
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="3">
+                          국내
+                        </v-col>
+                        <v-col cols="6">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="3">
+                          인용수
+                        </v-col>
+                        <v-col cols="6">
+                          <v-text-field label="AI윤리" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col>
+                      <v-row dense>
+                        <v-col cols="3">
+                          작성언어
+                        </v-col>
+                        <v-col cols="6">
+                          <v-text-field label="선택하세요" variant="outlined" density="compact"></v-text-field>
+                        </v-col>
+                        <v-col cols="3">
+                          <v-select
+                            label="AND"
+                            :items="['AND', 'OR']"
+                            density="compact"
+                            variant="outlined"
+                          ></v-select>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+
+                  <v-divider />
+
+                  <v-row>
+                    <v-col>
+                    </v-col>
+                  </v-row>
+                </v-container>
               </template>
             </v-expansion-panel>
           </v-expansion-panels>
