@@ -9,30 +9,36 @@ import { usePrivacyPolicys } from '@/stores/privacyPolicy'
 const privacyPolicys = usePrivacyPolicys()
 const selectItem = ref(privacyPolicys.list[0])
 
-function setPrivacyPolicy(value) {
-  console.log('sel item=', value)
-  selectItem.value = value
+function setPrivacyPolicy(item) {
+  console.log('sel item=', item)
+  // selectItem.value = value
 }
 </script>
 
 <template>
   <BaseCard>
-    <div class="d-flex justify-space-between">
-      <v-card-title class="pa-0 mb-4 text-h6 font-weight-bold"> 개인정보처리방침 </v-card-title>
-    </div>
+    <v-row >
+      <v-col cols="10">
+        <strong class="pa-0 mb-4 text-h6 font-weight-bold"> 개인정보처리방침 </strong>
+      </v-col>
 
-    <div class="d-flex flex-wrap justify-end" style="width: 250px">
-      <SelectEnforceDate
-        v-model="selectItem"
-        :items="privacyPolicys.list"
-        class="ms-2 select"
-        @update:model-value="setPrivacyPolicy(value)"
-      />
-    </div>
+      <v-col cols="2">
+        <div class="d-flex flex-wrap mt-4 justify-end">
+
+        <SelectEnforceDate
+          v-model="selectItem"
+          :items="privacyPolicys.list"
+          class="ms-2 select"
+          @update:model-value="setPrivacyPolicy"
+        />
+      </div>
+
+      </v-col>
+    </v-row>
 
     <div class="py-1" />
 
-    <v-sheet class="pa-2" color="grey-lighten-4" border rounded min-height="300">
+    <v-sheet class="pa-2" color="grey-lighten-4" border rounded min-height="700">
       <span
         class="text-body-2"
         style="white-space: pre-line"

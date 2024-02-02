@@ -24,9 +24,9 @@ const model = computed({
   }
 })
 
-function clickProc(value) {
-  console.log('select value=', value)
-  model.value = value
+function clickProc(inx) {
+  console.log('select value=', inx)
+  model.value = props.items[inx]
 }
 </script>
 
@@ -45,13 +45,13 @@ function clickProc(value) {
     single-line
     hide-details
   >
-    <template #item="{ item }">
+    <template #item="{ item, index }">
       <v-list-item
         :key="item.title"
         :value="item.value"
         density="compact"
         min-height="5"
-        @click="clickProc(item)"
+        @click="clickProc(index)"
       >
         <span class="date_item">{{ parseDate(item.title) }}</span>
       </v-list-item>
