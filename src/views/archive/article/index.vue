@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import ArticleView from '@/views/archive/components/ArticleView'
+import ArticleView from './ArticleView'
 </script>
 
 <template>

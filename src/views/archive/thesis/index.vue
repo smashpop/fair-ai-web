@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import ThesisView from '@/views/archive/components/ThesisView.vue'
+import ThesisView from './ThesisView.vue'
 </script>
 
 <template>

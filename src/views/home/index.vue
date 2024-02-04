@@ -1,11 +1,11 @@
 <script setup>
 // Components
-import SearchSection from './components/searchSection'
-import PopularitySection from './components/popularitySection'
-import ArticleSection from './components/articleSection'
-import ThesisSection from './components/thesisSection'
-import EventSection from './components/eventSection'
-import NoticeSection from './components/noticeSection'
+import SearchSection from './searchSection'
+import PopularitySection from './popularitySection'
+import ArticleSection from './articleSection'
+import ThesisSection from './thesisSection'
+import EventSection from './eventSection'
+import NoticeSection from './noticeSection'
 </script>
 
 <template>

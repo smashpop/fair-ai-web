@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import GuidelineView from '@/views/archive/components/GuidelineView.vue'
+import GuidelineView from './GuidelineView.vue'
 </script>
 
 <template>

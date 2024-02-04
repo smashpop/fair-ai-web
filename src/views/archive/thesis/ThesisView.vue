@@ -1,11 +1,12 @@
 <script setup>
 // Components
-import FaqCard from './FaqCard'
+import ThesisCard from '@/components/app/ThesisCard'
 
 // Utilities
 import { ref, watch } from 'vue'
-import { fetchList } from '@/apis/faq'
+import { fetchList } from '@/apis/thesis'
 
+const page = ref(1)
 const items = ref([])
 const loading = ref(false)
 const serverItemsLength = ref(0)
@@ -46,8 +47,21 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <FaqCard :faq="item" />
+    <ThesisCard
+      :title="item.title"
+      :url="item.url"
+      :abstract="item.abstract ? item.abstract.substring(0, 250) : null"
+    />
     <div class="py-1" />
+  </div>
+  <div class="text-center">
+    <v-pagination
+      v-model="page"
+      class="my-4"
+      rounded="circle"
+      :length="15"
+      :total-visible="6"
+    ></v-pagination>
   </div>
 </template>
 

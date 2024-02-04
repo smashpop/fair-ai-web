@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import CurriculumView from '@/views/archive/components/CurriculumView.vue'
+import CurriculumView from './CurriculumView.vue'
 </script>
 
 <template>

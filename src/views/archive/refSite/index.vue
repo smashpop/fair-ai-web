@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import RefSiteView from '@/views/archive/components/RefSiteView.vue'
+import RefSiteView from './RefSiteView.vue'
 </script>
 
 <template>

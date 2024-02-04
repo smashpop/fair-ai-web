@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import ReportView from '@/views/archive/components/ReportView.vue'
+import ReportView from './ReportView.vue'
 </script>
 
 <template>
