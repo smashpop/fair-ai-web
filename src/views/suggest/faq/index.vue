@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import FaqView from '@/views/suggest/components/FaqView'
+import FaqView from './FaqView'
 </script>
 
 <template>

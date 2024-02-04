@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import SuggestView from '@/views/suggest/components/SuggestView'
+import SuggestView from './SuggestView'
 </script>
 
 <template>
