@@ -13,6 +13,7 @@ const calendarOptions = ref({
   initialView: 'dayGridMonth',
   weekends: true,
   locale: koLocale,
+  contentHeight: 740,
   events: [{ title: 'Meeting', start: new Date() }]
 })
 
@@ -40,15 +41,18 @@ loadFromServer()
 </script>
 
 <template>
-  <v-container class="fill-height">
+  <v-container fluid class="bg-white">
     <v-responsive class="align-center text-center fill-height">
       <v-row class="d-flex align-center justify-center">
         <v-col cols="2">
           <strong class="text-h4 font-weight-bold">행사캘린더</strong>
         </v-col>
       </v-row>
-
-      <FullCalendar :options="calendarOptions" />
+      <v-container>
+        <div class="mx-12">
+          <FullCalendar :options="calendarOptions" />
+        </div>
+      </v-container>
     </v-responsive>
   </v-container>
 </template>
