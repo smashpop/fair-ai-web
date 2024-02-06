@@ -1,54 +1,18 @@
 <script setup>
-//
+// Utilities
+import { ref } from 'vue'
+
+const category = ref(false)
+
 </script>
 
 <template>
-  <v-container class="fill-height">
-    <v-responsive class="align-center text-center fill-height">
-      <h1 class="text-h2 font-weight-bold">문의/제안</h1>
-    </v-responsive>
-    <v-sheet class="py-16" color="#181818">
-      <section id="grid">
-        <v-container>
-          <v-row justify="space-between">
-            <v-col cols="auto">
-              <v-responsive class="overflow-visible" width="350">
-                <h2 class="text-h4">Shape the future of Vuetify</h2>
-
-                <p class="text-success mt-3">Support Development</p>
-
-                <strong>Become a sponsor</strong>
-
-                <p class="mt-8">
-                  Vuetify is free to use software under the
-                  <a
-                    href="https://opensource.org/licenses/MIT"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >MIT</a
-                  >
-                  License and requires an extensive amount of time to maintain. Supporting
-                  development ensures Vuetify will be actively maintained.
-                </p>
-
-                <v-btn-alt
-                  class="mt-6"
-                  href="https://github.com/sponsors/johnleider"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  text="Support now"
-                  prepend-icon="$vuetify"
-                />
-              </v-responsive>
-            </v-col>
-
-            <v-img
-              max-width="400"
-              src="https://cdn.vuetifyjs.com/store/themes/vite-free/vuetify.png"
-            />
-          </v-row>
-        </v-container>
-      </section>
-    </v-sheet>
+  <v-container>
+    <p>담당자 검토를 거쳐 최종적으로 등록되며, 등록 후 입력하신 이메일이나, 연락처로 안내 드립니다.</p>
+    <v-radio-group v-model="category" inline density="compact" color="primary">
+      <v-radio label="시스템장애" value="시스템장애"></v-radio>
+      <v-radio label="자료등록 신청" value="자료등록 신청"></v-radio>
+      <v-radio label="기타" value="기타"></v-radio>
+    </v-radio-group>
   </v-container>
 </template>
