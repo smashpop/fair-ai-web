@@ -3,6 +3,8 @@
 import { ref } from 'vue'
 
 const category = ref(false)
+const tel = ref(null)
+const email = ref(null)
 
 </script>
 
@@ -14,5 +16,27 @@ const category = ref(false)
       <v-radio label="자료등록 신청" value="자료등록 신청"></v-radio>
       <v-radio label="기타" value="기타"></v-radio>
     </v-radio-group>
+
+    <v-row>
+      <v-col cols="6">
+        <v-text-field
+          v-model="email"
+          label="e-mail"
+          variant="outlined"
+          density="compact"
+        />
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="6">
+        <v-text-field
+          v-model="tel"
+          label="연락처"
+          variant="outlined"
+          density="compact"
+        />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
