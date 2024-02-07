@@ -49,7 +49,7 @@ watch(
     <ReportCard
       :title="item.title"
       :url="item.url"
-      :abstract="item.abstract ? item.abstract.substring(0, 400) : null"
+      :abstract="item.abstract ? item.abstract.substring(0, 500) : null"
     />
     <v-divider />
   </div>

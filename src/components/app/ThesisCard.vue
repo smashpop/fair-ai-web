@@ -20,16 +20,16 @@ const props = defineProps({
     <v-row>
       <v-col cols="12" md="8">
         <v-container>
-          <h1 class="text-20 font-weight-bold mb-4">
+          <div class="text-20 mb-4" style="font-weight: 600">
             {{ props.title }}
-          </h1>
+          </div>
 
           <div class="text-medium-emphasis text-body-2">
             {{ props.abstract }}
           </div>
-          <h1 class="text-body-1 mb-4">
+          <div class="text-body-1 mb-4">
             {{ props.url }}
-          </h1>
+          </div>
         </v-container>
       </v-col>
       <v-spacer></v-spacer>
