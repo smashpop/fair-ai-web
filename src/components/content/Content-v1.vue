@@ -3,7 +3,7 @@
     <v-container>
       <v-row align="center" justify="space-between">
         <v-col cols="12" md="6">
-          <v-img height="300" gradient="#262626, #262626" class="elevation-5 rounded" />
+          <v-img height="300" src="https://picsum.photos/1920/1080?random" cover />
         </v-col>
 
         <v-col cols="12" md="5">
