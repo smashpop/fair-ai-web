@@ -18,9 +18,9 @@ const props = defineProps({
 <template>
   <v-card class="pa-2" flat>
     <v-row>
-      <v-col cols="12" md="7">
+      <v-col cols="12" md="8">
         <v-container>
-          <h1 class="text-h5 mb-4">
+          <h1 class="text-20 font-weight-bold mb-4">
             {{ props.title }}
           </h1>
 
@@ -34,7 +34,7 @@ const props = defineProps({
       </v-col>
       <v-spacer></v-spacer>
       <v-col cols="12" md="3">
-        <v-img height="150" gradient="#262626, #262626" class="rounded elevation-5" />
+        <v-img class="mt-2" height="150" src="@/assets/images/GettyImages.png" />
       </v-col>
     </v-row>
   </v-card>

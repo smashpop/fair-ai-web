@@ -47,8 +47,15 @@ watch(
 <template>
   <div v-for="(item, index) in items" :key="index">
     <ArticleCard :article="item" />
-    <div class="py-1" />
+    <v-divider />
+  </div>
+  <div class="text-center">
+    <v-pagination
+      v-model="page"
+      class="my-4"
+      rounded="circle"
+      :length="15"
+      :total-visible="6"
+    ></v-pagination>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

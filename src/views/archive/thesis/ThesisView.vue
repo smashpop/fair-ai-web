@@ -50,9 +50,9 @@ watch(
     <ThesisCard
       :title="item.title"
       :url="item.url"
-      :abstract="item.abstract ? item.abstract.substring(0, 250) : null"
+      :abstract="item.abstract ? item.abstract.substring(0, 400) : null"
     />
-    <div class="py-1" />
+    <v-divider />
   </div>
   <div class="text-center">
     <v-pagination
