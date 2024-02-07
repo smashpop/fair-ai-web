@@ -17,22 +17,20 @@ function setPrivacyPolicy(item) {
 
 <template>
   <BaseCard>
-    <v-row >
+    <v-row>
       <v-col cols="10">
         <strong class="pa-0 mb-4 text-h6 font-weight-bold"> 개인정보처리방침 </strong>
       </v-col>
 
       <v-col cols="2">
         <div class="d-flex flex-wrap mt-4 justify-end">
-
-        <SelectEnforceDate
-          v-model="selectItem"
-          :items="privacyPolicys.list"
-          class="ms-2 select"
-          @update:model-value="setPrivacyPolicy"
-        />
-      </div>
-
+          <SelectEnforceDate
+            v-model="selectItem"
+            :items="privacyPolicys.list"
+            class="ms-2 select"
+            @update:model-value="setPrivacyPolicy"
+          />
+        </div>
       </v-col>
     </v-row>
 

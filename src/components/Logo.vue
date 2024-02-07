@@ -20,4 +20,3 @@ function onClickImage() {
     />
   </div>
 </template>
-
