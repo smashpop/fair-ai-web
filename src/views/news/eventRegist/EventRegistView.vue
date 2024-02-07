@@ -9,6 +9,10 @@ const eventRequest = ref({
   contents: '',
   startDate: null,
   endDate: null,
+  place: '',
+  fee: null,
+  reqStartDate: null,
+  reqEndDate: null,
   url: '',
   imageFileUrl: '',
   reqName: '',
@@ -91,152 +95,192 @@ async function addEvent() {
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="6">
+      <v-col cols="8" class="ma-6">
+        <v-card class="mx-6 pa-4">
+          <v-card-text>
+            <p>
+              담당자 검토를 거쳐 최종적으로 등록되며, 등록 후 입력하신 이메일이나, 연락처로 안내
+              드립니다.
+            </p>
 
-          <v-card class="ma-12">
-            <v-card-text>
-              <p>
-                담당자 검토를 거쳐 최종적으로 등록되며, 등록 후 입력하신 이메일이나, 연락처로 안내
-                드립니다.
-              </p>
+            <v-row dense>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="eventRequest.eventName"
+                  label="행사명"
+                  variant="outlined"
+                  density="compact"
+                />
+              </v-col>
+            </v-row>
 
-              <v-row dense>
-            <v-col cols="12">
-              <v-text-field
-                v-model="eventRequest.eventName"
-                label="행사명"
-                variant="outlined"
-                density="compact"
-              />
-            </v-col>
-          </v-row>
+            <v-row dense>
+              <v-col cols="6" md="6">
+                <v-text-field
+                  v-model="eventRequest.startDate"
+                  type="date"
+                  label="행사시작일"
+                  variant="outlined"
+                  density="compact"
+                />
+              </v-col>
 
-          <v-row dense>
-            <v-col cols="6" md="6">
-              <v-text-field
-                v-model="eventRequest.startDate"
-                type="date"
-                label="행사시작일"
-                variant="outlined"
-                density="compact"
-              />
-            </v-col>
+              <v-col cols="6" md="6">
+                <v-text-field
+                  v-model="eventRequest.endDate"
+                  type="date"
+                  label="행사종료일"
+                  variant="outlined"
+                  density="compact"
+                />
+              </v-col>
+            </v-row>
 
-            <v-col cols="6" md="6">
-              <v-text-field
-                v-model="eventRequest.endDate"
-                type="date"
-                label="행사종료일"
-                variant="outlined"
-                density="compact"
-              />
-            </v-col>
-          </v-row>
+            <v-row dense>
+              <v-col cols="12">
+                <v-textarea
+                  v-model="eventRequest.contents"
+                  label="내용"
+                  placeholder="Write something …"
+                  variant="outlined"
+                  clearable
+                  clear-icon="mdi-close-circle"
+                  auto-grow
+                  rows="10"
+                  row-height="25"
+                />
+              </v-col>
+            </v-row>
 
-          <v-row dense>
-            <v-col cols="12">
-              <v-textarea
-                v-model="eventRequest.contents"
-                label="내용"
-                placeholder="Write something …"
-                variant="outlined"
-                clearable
-                clear-icon="mdi-close-circle"
-                auto-grow
-                rows="15"
-                row-height="25"
-              />
-            </v-col>
-          </v-row>
+            <v-row dense>
+              <v-col cols="3">
+                <v-text-field
+                  v-model="eventRequest.place"
+                  label="장소"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
 
-          <v-row dense>
-            <v-col cols="12">
-              <v-text-field
-                v-model="eventRequest.url"
-                label="url"
-                variant="outlined"
-                density="compact"
-              />
-            </v-col>
-          </v-row>
+              <v-col cols="6">
+                <v-text-field
+                  v-model="eventRequest.fee"
+                  label="비용"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
+            </v-row>
 
-          <v-row dense>
-            <v-col cols="12">
-              <v-text-field
-                v-model="eventRequest.imageFileUrl"
-                label="이미지Url"
-                variant="outlined"
-                density="compact"
-              />
-            </v-col>
-          </v-row>
+            <v-row dense>
+              <v-col cols="6" md="6">
+                <v-text-field
+                  v-model="eventRequest.reqStartDate"
+                  type="date"
+                  label="참가신청기간"
+                  variant="outlined"
+                  density="compact"
+                />
+              </v-col>
 
-          <v-row dense>
-            <v-col cols="3">
-              <v-text-field
-                v-model="eventRequest.reqName"
-                label="요청자"
-                variant="outlined"
-                density="compact"
-                hide-details
-              />
-            </v-col>
+              <v-col cols="6" md="6">
+                <v-text-field
+                  v-model="eventRequest.reqEndDate"
+                  type="date"
+                  label=""
+                  variant="outlined"
+                  density="compact"
+                />
+              </v-col>
+            </v-row>
 
-            <v-col cols="6">
-              <v-text-field
-                v-model="eventRequest.reqEmail"
-                label="Email"
-                variant="outlined"
-                density="compact"
-                hide-details
-              />
-            </v-col>
+            <v-row dense>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="eventRequest.url"
+                  label="url"
+                  variant="outlined"
+                  density="compact"
+                />
+              </v-col>
+            </v-row>
 
-            <v-col cols="3">
-              <v-text-field
-                v-model="eventRequest.reqTel"
-                label="연락처"
-                variant="outlined"
-                density="compact"
-                hide-details
-              />
-            </v-col>
-          </v-row>
+            <v-row dense>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="eventRequest.imageFileUrl"
+                  label="이미지Url"
+                  variant="outlined"
+                  density="compact"
+                />
+              </v-col>
+            </v-row>
 
-              <v-row dense>
-                <v-col cols="12">
-                  <v-file-input
-                    v-model="fileList"
-                    label="첨부파일"
-                    accept="image/*"
-                    chips
-                    show-size
-                    variant="outlined"
-                    density="compact"
-                  >
-                    <template #selection="{ fileNames }">
-                      <template v-for="fileName in fileNames" :key="fileName">
-                        <v-chip size="small" label color="primary" class="me-2">
-                          {{ fileName }}
-                        </v-chip>
-                      </template>
+            <v-row dense>
+              <v-col cols="3">
+                <v-text-field
+                  v-model="eventRequest.reqName"
+                  label="요청자"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
+
+              <v-col cols="6">
+                <v-text-field
+                  v-model="eventRequest.reqEmail"
+                  label="Email"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
+
+              <v-col cols="3">
+                <v-text-field
+                  v-model="eventRequest.reqTel"
+                  label="연락처"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
+            </v-row>
+
+            <v-row dense>
+              <v-col cols="12">
+                <v-file-input
+                  v-model="fileList"
+                  label="첨부파일"
+                  accept="image/*"
+                  chips
+                  show-size
+                  variant="outlined"
+                  density="compact"
+                >
+                  <template #selection="{ fileNames }">
+                    <template v-for="fileName in fileNames" :key="fileName">
+                      <v-chip size="small" label color="primary" class="me-2">
+                        {{ fileName }}
+                      </v-chip>
                     </template>
-                  </v-file-input>
-                </v-col>
-              </v-row>
-            </v-card-text>
+                  </template>
+                </v-file-input>
+              </v-col>
+            </v-row>
+          </v-card-text>
 
-            <v-card-actions>
-              <v-spacer />
-              <v-btn class="ma-2" color="blue-darken-1" variant="outlined">
-                닫기
-              </v-btn>
-              <v-btn class="ma-2" color="blue-darken-1" variant="flat" @click.stop="addEvent">
-                저장
-              </v-btn>
-            </v-card-actions>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn class="ma-2" color="blue-darken-1" variant="outlined"> 닫기 </v-btn>
+            <v-btn class="ma-2" color="blue-darken-1" variant="flat" @click.stop="addEvent">
+              저장
+            </v-btn>
+          </v-card-actions>
         </v-card>
-
       </v-col>
     </v-row>
   </v-container>

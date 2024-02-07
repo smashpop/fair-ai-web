@@ -87,116 +87,112 @@ async function addSuggest() {
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="6">
+      <v-col cols="8" class="ma-6">
+        <v-card class="mx-6 pa-4">
+          <v-card-text>
+            <p>
+              담당자 검토를 거쳐 최종적으로 등록되며, 등록 후 입력하신 이메일이나, 연락처로 안내
+              드립니다.
+            </p>
+            <v-radio-group v-model="suggest.categoryId" inline density="compact" color="primary">
+              <v-radio label="시스템장애" value="시스템장애"></v-radio>
+              <v-radio label="자료등록 신청" value="자료등록 신청"></v-radio>
+              <v-radio label="기타" value="기타"></v-radio>
+            </v-radio-group>
 
-          <v-card class="ma-12">
-            <v-card-text>
-              <p>
-                담당자 검토를 거쳐 최종적으로 등록되며, 등록 후 입력하신 이메일이나, 연락처로 안내
-                드립니다.
-              </p>
-              <v-radio-group v-model="suggest.categoryId" inline density="compact" color="primary">
-                <v-radio label="시스템장애" value="시스템장애"></v-radio>
-                <v-radio label="자료등록 신청" value="자료등록 신청"></v-radio>
-                <v-radio label="기타" value="기타"></v-radio>
-              </v-radio-group>
+            <v-row dense>
+              <v-col cols="6">
+                <v-text-field
+                  v-model="suggest.suggestName"
+                  label="신청자"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
+            </v-row>
 
-              <v-row dense>
-                <v-col cols="6">
-                  <v-text-field
-                    v-model="suggest.suggestName"
-                    label="신청자"
-                    variant="outlined"
-                    density="compact"
-                    hide-details
-                  />
-                </v-col>
-              </v-row>
+            <v-row dense>
+              <v-col cols="6">
+                <v-text-field
+                  v-model="suggest.suggestEmail"
+                  label="e-mail"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
 
-              <v-row dense>
-                <v-col cols="6">
-                  <v-text-field
-                    v-model="suggest.suggestEmail"
-                    label="e-mail"
-                    variant="outlined"
-                    density="compact"
-                    hide-details
-                  />
-                </v-col>
+              <v-col cols="6">
+                <v-text-field
+                  v-model="suggest.suggestTel"
+                  label="연락처"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
+            </v-row>
 
-                <v-col cols="6">
-                  <v-text-field
-                    v-model="suggest.suggestTel"
-                    label="연락처"
-                    variant="outlined"
-                    density="compact"
-                    hide-details
-                  />
-                </v-col>
-              </v-row>
+            <v-row>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="suggest.title"
+                  label="제목"
+                  variant="outlined"
+                  density="compact"
+                  hide-details
+                />
+              </v-col>
+            </v-row>
 
-              <v-row>
-                <v-col cols="12">
-                  <v-text-field
-                    v-model="suggest.title"
-                    label="제목"
-                    variant="outlined"
-                    density="compact"
-                    hide-details
-                  />
-                </v-col>
-              </v-row>
+            <v-row dense>
+              <v-col cols="12">
+                <v-textarea
+                  v-model="suggest.contents"
+                  label="내용"
+                  placeholder="Write something …"
+                  variant="outlined"
+                  clearable
+                  clear-icon="mdi-close-circle"
+                  auto-grow
+                  rows="18"
+                  row-height="25"
+                />
+              </v-col>
+            </v-row>
 
-              <v-row dense>
-                <v-col cols="12">
-                  <v-textarea
-                    v-model="suggest.contents"
-                    label="내용"
-                    placeholder="Write something …"
-                    variant="outlined"
-                    clearable
-                    clear-icon="mdi-close-circle"
-                    auto-grow
-                    rows="18"
-                    row-height="25"
-                  />
-                </v-col>
-              </v-row>
-
-              <v-row dense>
-                <v-col cols="12">
-                  <v-file-input
-                    v-model="fileList"
-                    label="첨부파일"
-                    accept="image/*"
-                    chips
-                    show-size
-                    variant="outlined"
-                    density="compact"
-                  >
-                    <template #selection="{ fileNames }">
-                      <template v-for="fileName in fileNames" :key="fileName">
-                        <v-chip size="small" label color="primary" class="me-2">
-                          {{ fileName }}
-                        </v-chip>
-                      </template>
+            <v-row dense>
+              <v-col cols="12">
+                <v-file-input
+                  v-model="fileList"
+                  label="첨부파일"
+                  accept="image/*"
+                  chips
+                  show-size
+                  variant="outlined"
+                  density="compact"
+                >
+                  <template #selection="{ fileNames }">
+                    <template v-for="fileName in fileNames" :key="fileName">
+                      <v-chip size="small" label color="primary" class="me-2">
+                        {{ fileName }}
+                      </v-chip>
                     </template>
-                  </v-file-input>
-                </v-col>
-              </v-row>
-            </v-card-text>
+                  </template>
+                </v-file-input>
+              </v-col>
+            </v-row>
+          </v-card-text>
 
-            <v-card-actions>
-              <v-spacer />
-              <v-btn class="ma-2" color="blue-darken-1" variant="outlined">
-                닫기
-              </v-btn>
-              <v-btn class="ma-2" color="blue-darken-1" variant="flat" @click.stop="addSuggest">
-                저장
-              </v-btn>
-            </v-card-actions>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn class="ma-2" color="blue-darken-1" variant="outlined"> 닫기 </v-btn>
+            <v-btn class="ma-2" color="blue-darken-1" variant="flat" @click.stop="addSuggest">
+              저장
+            </v-btn>
+          </v-card-actions>
         </v-card>
-
       </v-col>
     </v-row>
   </v-container>
