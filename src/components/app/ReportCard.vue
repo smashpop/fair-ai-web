@@ -18,9 +18,9 @@ const props = defineProps({
 <template>
   <v-card class="pa-2" flat>
     <v-row>
-      <v-col cols="12" md="7">
+      <v-col cols="12" md="8">
         <v-container>
-          <h1 class="text-h5 mb-4">
+          <h1 class="text-20 font-weight-bold mb-4">
             {{ props.title }}
           </h1>
 
