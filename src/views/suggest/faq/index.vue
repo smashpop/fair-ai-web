@@ -5,11 +5,9 @@ import FaqView from './FaqView'
 
 <template>
   <v-container fluid class="bg-white h-screen">
-    <div class="mx-16">
-      <strong class="text-h5 font-weight-bold"> FAQ</strong>
-      <div class="py-1" />
+    <div class="text-center text-h2 font-weight-black text-black mx-16 my-5">FAQ</div>
+    <v-divider class="my-4 border-opacity-100" :thickness="3" />
 
-      <FaqView />
-    </div>
+    <FaqView />
   </v-container>
 </template>

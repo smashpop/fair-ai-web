@@ -61,7 +61,7 @@ watch(
 
 <style lang="scss" scoped>
 .bg_image {
-  background: url('../../../../assets/images/EventImage.png');
+  background: url('../../../assets/images/EventImage.png');
   height: 540px;
 }
 </style>
