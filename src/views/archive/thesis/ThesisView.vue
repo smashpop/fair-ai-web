@@ -47,11 +47,7 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <ThesisCard
-      :title="item.title"
-      :url="item.url"
-      :abstract="item.abstract ? item.abstract.substring(0, 400) : null"
-    />
+    <ThesisCard :thesis="item" />
     <v-divider />
   </div>
   <div class="text-center">

@@ -12,18 +12,18 @@ const props = defineProps({
 })
 
 const previewText = computed(() => {
-  return props.article.previewText ? props.article.previewText.substring(0, 250) : null
+  return props.article.previewText ? props.article.previewText.substring(0, 500) : null
 })
 </script>
 
 <template>
   <v-card class="pa-2" flat>
     <v-row>
-      <v-col cols="12" md="7">
+      <v-col cols="12" md="8">
         <v-container>
-          <h1 class="text-h5 mb-4">
+          <div class="text-20 mb-4" style="font-weight: 600">
             {{ props.article.title }}
-          </h1>
+          </div>
 
           <div class="text-medium-emphasis text-body-2">{{ previewText }}...</div>
 
