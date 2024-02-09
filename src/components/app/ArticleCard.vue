@@ -2,6 +2,7 @@
 // Utilities
 import { computed } from 'vue'
 import { parseDateTime } from '@/utils/util'
+import tempImageSrc from '@/assets/images/TempImage.png'
 
 const props = defineProps({
   article: {
@@ -38,7 +39,11 @@ const previewText = computed(() => {
 
       <v-spacer></v-spacer>
       <v-col cols="12" md="3">
-        <v-img :src="props.article.thumbnailUrl" height="150" class="rounded" cover />
+        <v-img 
+          :src="props.article.thumbnailUrl ? props.article.thumbnailUrl : tempImageSrc"
+          height="150"
+          class="rounded"
+          cover />
       </v-col>
     </v-row>
   </v-card>

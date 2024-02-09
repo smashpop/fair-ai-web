@@ -6,7 +6,7 @@
  */
 // Components
 import Default from '@/layouts/default'
-import Home from '@/views/Home'
+import Home from '@/views/home'
 import Search from '@/views/search'
 import Result from '@/views/result'
 import PrivacyPolocy from '@/views/privacyPolicy'
