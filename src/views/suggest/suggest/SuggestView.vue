@@ -1,6 +1,12 @@
 <script setup>
+// Components
+import { DialogWrapper } from 'vue3-promise-dialog'
+
 // Utilities
 import { ref } from 'vue'
+import { warning, confirm } from '@/utils/util'
+
+// Apis
 import { createSuggestApi, fileUploadApi } from '@/apis/suggest'
 import { createAttachFileApi } from '@/apis/attachFile'
 
@@ -11,6 +17,21 @@ const suggest = ref({
   suggestEmail: '',
   suggestTel: '',
   categoryId: null
+})
+
+function resetSuggest() {
+  suggest.value.title = ''
+  suggest.value.contents = ''
+  suggest.value.suggestName = ''
+  suggest.value.suggestEmail = ''
+  suggest.value.suggestTel = ''
+  suggest.value.categoryId = null
+}
+
+const snackbar = ref({
+  flag: false,
+  message: '등록이 완료되었습니다.',
+  timeout: 1500
 })
 
 const fileList = ref([])
@@ -38,9 +59,9 @@ async function fileUpload(suggestId) {
               //
             })
             .catch((error) => {
-              // if (warning(' 파일등록 실패.')) {
-              //   console.log('Err addNotice() - createAttachFileApi')
-              // }
+              if (warning(' 파일등록 실패.')) {
+                console.log('Err addNotice() - createAttachFileApi')
+              }
               console.log('>createAttachFileApi() fail. error=', error)
             })
         } catch (e) {
@@ -48,9 +69,9 @@ async function fileUpload(suggestId) {
         }
       })
       .catch((error) => {
-        // if (warning(' 파일등록 실패.')) {
-        //   console.log('Err addNotice() - fileUploadApi')
-        // }
+        if (warning(' 파일등록 실패.')) {
+          console.log('Err addNotice() - fileUploadApi')
+        }
         console.log('>fileUploadApi() fail. error=', error)
       })
   } catch (e) {
@@ -59,6 +80,16 @@ async function fileUpload(suggestId) {
 }
 
 async function addSuggest() {
+  if (await confirm('등룍 하시겠습니까?')) {
+    console.log('YES')
+    await addSuggestProc()
+    resetSuggest()
+  } else {
+    console.log('NO')
+  }
+}
+
+async function addSuggestProc() {
   await createSuggestApi(suggest.value)
     .then(async (response) => {
       // 문의/제안 등록
@@ -68,19 +99,18 @@ async function addSuggest() {
 
         fileUpload(suggestId) // 파일저장처리
 
-        // snackbar.value.flag = true
+        snackbar.value.flag = true
         // emit('add')
       } else {
         console.log('::fail data.code=', response.data.code)
       }
     })
     .catch((error) => {
-      // if (warning(' 등록 실패.')) {
-      //   console.log('Err addSuggest() - createSuggestApi')
-      // }
+      if (warning(' 등록 실패.')) {
+        console.log('Err addSuggest() - createSuggestApi')
+      }
       console.log('>createSuggestApi() fail. error=', error)
     })
-  // resetSuggest()
 }
 </script>
 
@@ -95,9 +125,9 @@ async function addSuggest() {
               드립니다.
             </p>
             <v-radio-group v-model="suggest.categoryId" inline density="compact" color="primary">
-              <v-radio label="시스템장애" value="시스템장애"></v-radio>
-              <v-radio label="자료등록 신청" value="자료등록 신청"></v-radio>
-              <v-radio label="기타" value="기타"></v-radio>
+              <v-radio label="시스템장애" value="1"></v-radio>
+              <v-radio label="자료등록 신청" value="2"></v-radio>
+              <v-radio label="기타" value="3"></v-radio>
             </v-radio-group>
 
             <v-row dense>
@@ -196,4 +226,8 @@ async function addSuggest() {
       </v-col>
     </v-row>
   </v-container>
+  <v-snackbar v-model="snackbar.flag" :timeout="snackbar.timeout">
+    {{ snackbar.message }}
+  </v-snackbar>
+  <DialogWrapper />
 </template>

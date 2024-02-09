@@ -25,6 +25,7 @@
     "vue-detect-browser": "^1.0.4",
     "vue-json-excel3": "^1.0.19",
     "vue-router": "^4.2.5",
+    "vue3-promise-dialog": "^0.3.4",
     "vuetify": "^3.5.3"
   },
   "devDependencies": {

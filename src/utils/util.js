@@ -1,3 +1,15 @@
+import { openDialog } from 'vue3-promise-dialog'
+import WarningDialog from '@/components/functional/WarningDialog.vue'
+import ConfirmDialog from '@/components/functional/ConfirmDialog.vue'
+
+export async function warning(text) {
+  return await openDialog(WarningDialog, { text })
+}
+
+export async function confirm(text) {
+  return await openDialog(ConfirmDialog, { text })
+}
+
 /**
  * Parse the time to string
  * @param {(Object|string|number)} time
