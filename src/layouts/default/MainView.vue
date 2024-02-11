@@ -14,3 +14,6 @@ function onScroll() {
     <router-view />
   </v-main>
 </template>
+
+<style lang="scss" scoped>
+</style>

@@ -13,13 +13,12 @@ const props = defineProps({
 <template>
   <v-container>
     <v-sheet v-if="props.card" class="pa-4" elevation="0">
-      <div>
-        <h6 class="text-subtitle-1 mb-4">논문 해외</h6>
-      </div>
-
+      <span class="text-subtitle-1 font-weight-bold text-blue mb-4">논문</span>
+      <span class="text-subtitle-1 font-weight-bold text-medium-emphasis mb-4 mx-2">|</span>
+      <span class="text-subtitle-1 text-medium-emphasis mb-4"> {{ props.card.thesis.orgType }} </span>
       <div>
         <v-sheet height="150" elevation="0">
-          <strong class="text-30 letter" font-weight-bold>
+          <strong class="text-30 letter font-weight-bold" >
             {{ props.card.thesis ? props.card.thesis.title : '' }}
           </strong>
         </v-sheet>
@@ -31,15 +30,32 @@ const props = defineProps({
             <v-img width="163" height="210" :src="cardImageSrc(props.card.id)" />
           </v-col>
 
-          <v-col cols="12" md="7">
+          <v-col cols="12" md="7" align-self="end" class="mb-2">
             <div>
-              <strong class="text-subtitle-1 mb-4">저자</strong>
+              <span class="text-subtitle-1 font-weight-bold mb-4">저자</span>
+              <span class="text-subtitle-1 ml-2 mb-4">{{ props.card.thesis.author }}</span>
             </div>
             <div>
-              <strong class="text-subtitle-1 mb-4">발행</strong>
+              <span class="text-subtitle-1 font-weight-bold mb-4">발행</span>
+              <span class="text-subtitle-1 ml-2 mb-4">{{ props.card.thesis.publisher }}</span>
             </div>
             <div>
-              <strong class="text-subtitle-1 mb-4">연도</strong>
+              <span class="text-subtitle-1 font-weight-bold mb-4">연도</span>
+              <span class="text-subtitle-1 ml-2 mb-4">{{ props.card.thesis.publishedYear }}</span>
+            </div>
+            <div>
+              <span class="text-subtitle-1 mb-4">원문보기</span>
+              <span class="ml-2">
+                <v-btn
+                  :href="props.card.thesis.url"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  variant="text"
+                  @click.stop
+                >
+                  <v-icon icon="mdi-arrow-top-right" size="large" start />
+                </v-btn>
+              </span>
             </div>
           </v-col>
         </v-row>

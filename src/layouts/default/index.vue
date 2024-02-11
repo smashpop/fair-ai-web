@@ -8,14 +8,10 @@ import Footer from './Footer'
 </script>
 
 <template>
-  <v-app>
-    <div class="bg_image">
-      <Header />
-
-      <MainView />
-
-      <Footer />
-    </div>
+  <v-app class="bg_image">
+    <Header />
+    <MainView />
+    <Footer />
   </v-app>
 </template>
 
@@ -23,6 +19,7 @@ import Footer from './Footer'
 .bg_image {
   background: url('../../assets/images/GettyImages.png');
   background-size: cover;
+  background-color: #1efefe;
   height: 100vh;
 }
 </style>

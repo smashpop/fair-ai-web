@@ -17,6 +17,8 @@ import NoticeSection from './noticeSection'
     <div class="py-1" />
     <ArticleSection />
 
+    <v-divider class="border-opacity-100 my-9 mx-5" />
+
     <div class="py-2" />
     <ThesisSection />
   </v-container>
