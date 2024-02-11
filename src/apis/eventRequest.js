@@ -34,13 +34,6 @@ export function createEventRequestApi(data) {
   })
 }
 
-export function updateEventRequestApi(data) {
-  return request({
-    url: '/ai-event-request',
-    method: 'put',
-    data
-  })
-}
 
 export function deleteEventRequestApi(id) {
   return request({

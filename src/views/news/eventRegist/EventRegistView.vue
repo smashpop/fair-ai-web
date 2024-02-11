@@ -1,14 +1,24 @@
 <script setup>
+// Components
+import { DialogWrapper } from 'vue3-promise-dialog'
+import DatePicker from '@/components/ui/DatePicker.vue'
+
 // Utilities
 import { ref } from 'vue'
+import { warning, confirm } from '@/utils/util'
+import { useDate } from 'vuetify'
+
+// Apis
 import { createEventRequestApi, fileUploadApi } from '@/apis/eventRequest'
 import { createAttachFileApi } from '@/apis/attachFile'
+
+const date = useDate()
 
 const eventRequest = ref({
   eventName: '',
   contents: '',
-  startDate: null,
-  endDate: null,
+  startDate: date.toISO(new Date()),
+  endDate: date.toISO(new Date()),
   place: '',
   fee: null,
   reqStartDate: null,
@@ -19,6 +29,28 @@ const eventRequest = ref({
   reqEmail: '',
   reqTel: '',
   createdId: null
+})
+
+function resetEventRequest() {
+  eventRequest.value.eventName = ''
+  eventRequest.value.contents = ''
+  eventRequest.value.startDate = date.toISO(new Date())
+  eventRequest.value.endDate = date.toISO(new Date())
+  eventRequest.value.place = ''
+  eventRequest.value.fee = ''
+  eventRequest.value.reqStartDate = ''
+  eventRequest.value.reqEndDate = ''
+  eventRequest.value.url = ''
+  eventRequest.value.imageFileUrl = null
+  eventRequest.value.reqName = ''
+  eventRequest.value.reqEmail = ''
+  eventRequest.value.reqTel = ''
+}
+
+const snackbar = ref({
+  flag: false,
+  message: '등록이 완료되었습니다.',
+  timeout: 1500
 })
 
 const fileList = ref([])
@@ -46,9 +78,9 @@ async function fileUpload(suggestId) {
               //
             })
             .catch((error) => {
-              // if (warning(' 파일등록 실패.')) {
-              //   console.log('Err addNotice() - createAttachFileApi')
-              // }
+              if (warning(' 파일등록 실패.')) {
+                console.log('Err addNotice() - createAttachFileApi')
+              }
               console.log('>createAttachFileApi() fail. error=', error)
             })
         } catch (e) {
@@ -56,9 +88,9 @@ async function fileUpload(suggestId) {
         }
       })
       .catch((error) => {
-        // if (warning(' 파일등록 실패.')) {
-        //   console.log('Err addNotice() - fileUploadApi')
-        // }
+        if (warning(' 파일등록 실패.')) {
+          console.log('Err addNotice() - fileUploadApi')
+        }
         console.log('>fileUploadApi() fail. error=', error)
       })
   } catch (e) {
@@ -67,6 +99,16 @@ async function fileUpload(suggestId) {
 }
 
 async function addEvent() {
+  if (await confirm('등룍 하시겠습니까?')) {
+    console.log('YES')
+    await addEventProc()
+    resetEventRequest()
+  } else {
+    console.log('NO')
+  }
+}
+
+async function addEventProc() {
   await createEventRequestApi(eventRequest.value)
     .then(async (response) => {
       // 관련행사 등록
@@ -76,19 +118,18 @@ async function addEvent() {
 
         fileUpload(eventRequestId) // 파일저장처리
 
-        // snackbar.value.flag = true
+        snackbar.value.flag = true
         // emit('add')
       } else {
         console.log('::fail data.code=', response.data.code)
       }
     })
     .catch((error) => {
-      // if (warning(' 등록 실패.')) {
-      //   console.log('Err addEvent() - createEventApi')
-      // }
+      if (warning(' 등록 실패.')) {
+        console.log('Err addEvent() - createEventApi')
+      }
       console.log('>createEventApi() fail. error=', error)
     })
-  // resetEvent()
 }
 </script>
 
@@ -103,7 +144,7 @@ async function addEvent() {
               드립니다.
             </p>
 
-            <v-row dense>
+            <v-row class="mt-2" dense>
               <v-col cols="12">
                 <v-text-field
                   v-model="eventRequest.eventName"
@@ -115,26 +156,20 @@ async function addEvent() {
             </v-row>
 
             <v-row dense>
-              <v-col cols="6" md="6">
-                <v-text-field
-                  v-model="eventRequest.startDate"
-                  type="date"
-                  label="행사시작일"
-                  variant="outlined"
-                  density="compact"
-                />
-              </v-col>
-
-              <v-col cols="6" md="6">
-                <v-text-field
-                  v-model="eventRequest.endDate"
-                  type="date"
-                  label="행사종료일"
-                  variant="outlined"
-                  density="compact"
-                />
-              </v-col>
-            </v-row>
+            <v-col cols="6" md="3">
+              <DatePicker
+                v-model="eventRequest.startDate"
+                label="행사시작일"
+              />
+            </v-col>
+            ~
+            <v-col cols="6" md="3">
+              <DatePicker
+                v-model="eventRequest.endDate"
+                label="행사종료일"
+              />
+            </v-col>
+          </v-row>
 
             <v-row dense>
               <v-col cols="12">
@@ -153,7 +188,7 @@ async function addEvent() {
             </v-row>
 
             <v-row dense>
-              <v-col cols="3">
+              <v-col cols="9">
                 <v-text-field
                   v-model="eventRequest.place"
                   label="장소"
@@ -163,7 +198,7 @@ async function addEvent() {
                 />
               </v-col>
 
-              <v-col cols="6">
+              <v-col cols="3">
                 <v-text-field
                   v-model="eventRequest.fee"
                   label="비용"
@@ -175,23 +210,17 @@ async function addEvent() {
             </v-row>
 
             <v-row dense>
-              <v-col cols="6" md="6">
-                <v-text-field
+              <v-col cols="6" md="3">
+                <DatePicker
                   v-model="eventRequest.reqStartDate"
-                  type="date"
                   label="참가신청기간"
-                  variant="outlined"
-                  density="compact"
                 />
               </v-col>
-
-              <v-col cols="6" md="6">
-                <v-text-field
+              ~
+              <v-col cols="6" md="3">
+                <DatePicker
                   v-model="eventRequest.reqEndDate"
-                  type="date"
                   label=""
-                  variant="outlined"
-                  density="compact"
                 />
               </v-col>
             </v-row>
@@ -284,4 +313,9 @@ async function addEvent() {
       </v-col>
     </v-row>
   </v-container>
+
+  <v-snackbar v-model="snackbar.flag" :timeout="snackbar.timeout">
+    {{ snackbar.message }}
+  </v-snackbar>
+  <DialogWrapper />
 </template>

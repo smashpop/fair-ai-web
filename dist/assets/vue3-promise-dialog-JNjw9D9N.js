@@ -1,1 +1,0 @@
-import{x as n}from"./@vue-5qbJIjPN.js";const e=n();function a(o){o===void 0&&(o=e.value.comp.returnValue()),e.value.resolve(o),e.value=null}function u(o,i,s="default"){return new Promise(l=>{e.value={dialog:o,props:i,wrapper:s,resolve:l}})}const c={install:(o,i)=>{o.config.globalProperties.$close=(s,l)=>{a(l)}}};export{c as P,a as c,u as o};
