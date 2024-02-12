@@ -32,7 +32,7 @@ const previewText = computed(() => {
         </v-row>
 
         <v-row>
-          <span class="text-medium-emphasis text-body-1 ml-1">
+          <span class="font-weight-bold text-medium-emphasis text-body-1 ml-1">
             {{ props.article.mediaName }}
           </span>
           <span class="text-medium-emphasis text-body-1 ml-6">
