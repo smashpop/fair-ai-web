@@ -156,20 +156,14 @@ async function addEventProc() {
             </v-row>
 
             <v-row dense>
-            <v-col cols="6" md="3">
-              <DatePicker
-                v-model="eventRequest.startDate"
-                label="행사시작일"
-              />
-            </v-col>
-            ~
-            <v-col cols="6" md="3">
-              <DatePicker
-                v-model="eventRequest.endDate"
-                label="행사종료일"
-              />
-            </v-col>
-          </v-row>
+              <v-col cols="6" md="3">
+                <DatePicker v-model="eventRequest.startDate" label="행사시작일" />
+              </v-col>
+              ~
+              <v-col cols="6" md="3">
+                <DatePicker v-model="eventRequest.endDate" label="행사종료일" />
+              </v-col>
+            </v-row>
 
             <v-row dense>
               <v-col cols="12">
@@ -211,17 +205,11 @@ async function addEventProc() {
 
             <v-row dense>
               <v-col cols="6" md="3">
-                <DatePicker
-                  v-model="eventRequest.reqStartDate"
-                  label="참가신청기간"
-                />
+                <DatePicker v-model="eventRequest.reqStartDate" label="참가신청기간" />
               </v-col>
               ~
               <v-col cols="6" md="3">
-                <DatePicker
-                  v-model="eventRequest.reqEndDate"
-                  label=""
-                />
+                <DatePicker v-model="eventRequest.reqEndDate" label="" />
               </v-col>
             </v-row>
 

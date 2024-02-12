@@ -39,11 +39,12 @@ const previewText = computed(() => {
 
       <v-spacer></v-spacer>
       <v-col cols="12" md="3">
-        <v-img 
+        <v-img
           :src="props.article.thumbnailUrl ? props.article.thumbnailUrl : tempImageSrc"
           height="150"
           class="rounded"
-          cover />
+          cover
+        />
       </v-col>
     </v-row>
   </v-card>

@@ -17,8 +17,7 @@ import NoticeView from './NoticeView'
       <v-divider class="my-4 border-opacity-100" :thickness="3" />
 
       <v-row>
-        <v-col cols="12" md="2">
-      </v-col>
+        <v-col cols="12" md="2"> </v-col>
         <v-col cols="12" md="10">
           <NoticeView />
         </v-col>

@@ -2,6 +2,7 @@
 // Components
 import SearchField from '@/components/app/SearchField'
 import ThesisView from './ThesisView.vue'
+import FilterView from './FilterView'
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import ThesisView from './ThesisView.vue'
 
       <v-row>
         <v-col cols="12" md="2">
-          <v-sheet color="white" height="700px" class="pa-2" border> Filter section1 </v-sheet>
+          <FilterView />
         </v-col>
 
         <v-col cols="12" md="10">

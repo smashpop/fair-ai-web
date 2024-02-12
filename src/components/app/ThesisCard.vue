@@ -22,9 +22,7 @@ const abstract = computed(() => {
             {{ props.thesis.title }}
           </div>
 
-          <div class="text-medium-emphasis text-body-2">
-            {{ abstract }}...
-          </div>
+          <div class="text-medium-emphasis text-body-2">{{ abstract }}...</div>
           <div class="text-body-1 mb-4">
             {{ props.thesis.url }}
           </div>

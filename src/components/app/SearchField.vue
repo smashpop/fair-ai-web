@@ -16,7 +16,10 @@ function clickProc() {
     @click.stop="clickProc()"
   >
     <div class="bg-white rounded-pill" style="width: 654px; height: 62px; padding: 6px">
-      <div class="bg-black rounded-pill pa-3" style="width: 110px; height: 50px; padding: 4px; margin-left: 530px">
+      <div
+        class="bg-black rounded-pill pa-3"
+        style="width: 110px; height: 50px; padding: 4px; margin-left: 530px"
+      >
         <strong class="text-18 text-white font-weight-regular ml-6">검색</strong>
       </div>
     </div>

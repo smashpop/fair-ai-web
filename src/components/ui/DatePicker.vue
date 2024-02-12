@@ -11,7 +11,7 @@ const prop = defineProps({
   label: {
     type: String,
     default: null
-  },
+  }
 })
 const menu = ref(false)
 const date = useDate()
@@ -35,17 +35,11 @@ function updateDate(val) {
   model.value = date.toISO(val)
   console.log(val)
 }
-
 </script>
-
 
 <template>
   <div>
-    <v-menu
-      v-model="menu"
-      :close-on-content-click="false"
-      min-width="290px"
-    >
+    <v-menu v-model="menu" :close-on-content-click="false" min-width="290px">
       <template #activator="{ props }">
         <v-text-field
           v-bind="props"
@@ -68,4 +62,3 @@ function updateDate(val) {
     </v-menu>
   </div>
 </template>
-

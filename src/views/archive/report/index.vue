@@ -2,6 +2,7 @@
 // Components
 import SearchField from '@/components/app/SearchField'
 import ReportView from './ReportView.vue'
+import FilterView from './FilterView'
 </script>
 
 <template>
@@ -16,10 +17,9 @@ import ReportView from './ReportView.vue'
       </v-row>
       <v-divider class="my-4 border-opacity-100" :thickness="3" />
 
-
       <v-row>
         <v-col cols="12" md="2">
-          <v-sheet color="white" height="700px" class="pa-2" border> Filter section1 </v-sheet>
+          <FilterView />
         </v-col>
 
         <v-col cols="12" md="10">

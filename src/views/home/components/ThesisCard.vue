@@ -15,10 +15,12 @@ const props = defineProps({
     <v-sheet v-if="props.card" class="pa-4" elevation="0">
       <span class="text-subtitle-1 font-weight-bold text-blue mb-4">논문</span>
       <span class="text-subtitle-1 font-weight-bold text-medium-emphasis mb-4 mx-2">|</span>
-      <span class="text-subtitle-1 text-medium-emphasis mb-4"> {{ props.card.thesis.orgType }} </span>
+      <span class="text-subtitle-1 text-medium-emphasis mb-4">
+        {{ props.card.thesis.orgType }}
+      </span>
       <div>
         <v-sheet height="150" elevation="0">
-          <strong class="text-30 letter font-weight-bold" >
+          <strong class="text-30 letter font-weight-bold">
             {{ props.card.thesis ? props.card.thesis.title : '' }}
           </strong>
         </v-sheet>

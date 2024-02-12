@@ -34,7 +34,6 @@ export function createEventRequestApi(data) {
   })
 }
 
-
 export function deleteEventRequestApi(id) {
   return request({
     url: `/ai-event-request/${id}`,

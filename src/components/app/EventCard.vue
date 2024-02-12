@@ -23,18 +23,17 @@ const contents = computed(() => {
             {{ props.event.eventName }}
           </div>
 
-          <div class="text-medium-emphasis text-body-2">
-            {{ contents }}...
-          </div>
+          <div class="text-medium-emphasis text-body-2">{{ contents }}...</div>
         </v-container>
       </v-col>
       <v-spacer></v-spacer>
       <v-col cols="12" md="3">
-        <v-img 
+        <v-img
           :src="props.event.imageFileUrl ? props.event.imageFileUrl : tempImageSrc"
           height="150"
           class="rounded"
-          cover />
+          cover
+        />
       </v-col>
     </v-row>
   </v-card>
