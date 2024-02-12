@@ -1,14 +1,7 @@
 <script setup>
 // Utilities
-import { ref } from 'vue'
 
-const keyword = ref('')
-const emit = defineEmits(['search', 'click'])
-
-function searchClick(keyword) {
-  console.log('searchClick()=', keyword)
-  emit('search', keyword)
-}
+const emit = defineEmits(['click'])
 
 function clickProc() {
   console.log('Click()=')
@@ -17,23 +10,17 @@ function clickProc() {
 </script>
 
 <template>
-  <v-text-field
-    v-model="keyword"
-    placeholder="검색"
-    class="mr-16"
-    color="primary"
-    bg-color="white"
-    style="max-width: 600px"
-    variant="outlined"
-    rounded
-    density="comfortable"
-    append-inner-icon="mdi-magnify"
-    single-line
-    hide-details
-    autofocus
+  <div
+    class="bg-black rounded-pill cursor-pointer"
+    style="width: 660px; height: 68px; padding: 3px"
     @click.stop="clickProc()"
-    @keyup.enter.prevent="searchClick(keyword)"
-  />
+  >
+    <div class="bg-white rounded-pill" style="width: 654px; height: 62px; padding: 6px">
+      <div class="bg-black rounded-pill pa-3" style="width: 110px; height: 50px; padding: 4px; margin-left: 530px">
+        <strong class="text-18 text-white font-weight-regular ml-6">검색</strong>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
