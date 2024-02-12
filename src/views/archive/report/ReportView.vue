@@ -47,7 +47,7 @@ watch(
 <template>
   <div v-for="(item, index) in items" :key="index">
     <ReportCard :report="item" />
-    <v-divider />
+    <v-divider class="mb-2 mx-2"/>
   </div>
   <div class="text-center">
     <v-pagination

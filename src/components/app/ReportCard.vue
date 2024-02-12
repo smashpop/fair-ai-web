@@ -15,7 +15,7 @@ const abstract = computed(() => {
 
 <template>
   <v-card class="mx-2" flat>
-    <v-row>
+    <v-row dense>
       <v-col cols="12" md="9">
         <v-container>
           <v-row>
@@ -50,7 +50,7 @@ const abstract = computed(() => {
             <div class="text-medium-emphasis text-body-2">{{ abstract }}...</div>
           </v-row>
 
-          <v-row justify="end">
+          <v-row justify="end" dense>
             <span class="text-subtitle-1 font-weight-bold">원문보기</span>
             <span class="ml-1">
               <v-btn
@@ -68,7 +68,7 @@ const abstract = computed(() => {
       </v-col>
 
       <v-col cols="12" md="3">
-        <v-img class="mt-2" height="180" src="@/assets/images/GettyImages.png" />
+        <v-img class="mt-2" height="180" cover src="@/assets/images/GettyImages.png" />
       </v-col>
     </v-row>
   </v-card>
