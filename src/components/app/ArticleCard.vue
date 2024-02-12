@@ -1,7 +1,7 @@
 <script setup>
 // Utilities
 import { computed } from 'vue'
-import { parseDateTime } from '@/utils/util'
+import { parseDate } from '@/utils/util'
 import tempImageSrc from '@/assets/images/TempImage.png'
 
 const props = defineProps({
@@ -17,32 +17,49 @@ const previewText = computed(() => {
 </script>
 
 <template>
-  <v-card class="pa-2" flat>
-    <v-row>
-      <v-col cols="12" md="8">
+  <v-card class="mx-2" flat>
+    <v-row dense>
+      <v-col cols="12" md="9">
         <v-container>
-          <div class="text-20 mb-4" style="font-weight: 600">
+          <v-row>
+            <div class="text-20 my-2 mr-12" style="font-weight: 600">
             {{ props.article.title }}
           </div>
+        </v-row>
 
-          <div class="text-medium-emphasis text-body-2">{{ previewText }}...</div>
+        <v-row style="height: 100px">
+          <div class="text-medium-emphasis text-body-2 mr-12">{{ previewText }}...</div>
+        </v-row>
 
-          <div class="text-medium-emphasis text-body-1 mt-1">
-            {{ parseDateTime(props.article.publishedDate) }}&nbsp;
-
-            {{ props.article.creator }}기자&nbsp;
-
+        <v-row>
+          <span class="text-medium-emphasis text-body-1 ml-1">
             {{ props.article.mediaName }}
-          </div>
+          </span>
+          <span class="text-medium-emphasis text-body-1 ml-6">
+            {{ parseDate(props.article.publishedDate) }}
+          </span>
+          <span class="text-subtitle-1 text-medium-emphasis font-weight-bold ml-6">자세히보기</span>
+            <span class="ml-1">
+              <v-btn
+                :href="props.article.url"
+                rel="noopener noreferrer"
+                target="_blank"
+                variant="text"
+                @click.stop
+              >
+                <v-icon icon="mdi-arrow-top-right" size="large" start />
+              </v-btn>
+            </span>
+        </v-row>
+        
         </v-container>
       </v-col>
 
-      <v-spacer></v-spacer>
       <v-col cols="12" md="3">
         <v-img
           :src="props.article.thumbnailUrl ? props.article.thumbnailUrl : tempImageSrc"
-          height="150"
-          class="rounded"
+          height="160"
+          class="mt-2 rounded" 
           cover
         />
       </v-col>
