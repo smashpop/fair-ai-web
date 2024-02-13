@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import SearchField from '@/components/app/SearchField'
+import SmallSearchField from '@/components/app/SmallSearchField'
 import EventView from './EventView'
 </script>
 
@@ -12,7 +12,7 @@ import EventView from './EventView'
       </v-sheet>
 
       <v-row class="my-4" justify="center">
-        <SearchField />
+        <SmallSearchField />
       </v-row>
       <v-divider class="my-4 border-opacity-100" :thickness="3" />
 

@@ -4,7 +4,9 @@ import EventCard from '@/components/app/EventCard'
 
 // Utilities
 import { ref, watch } from 'vue'
-import { fetchList } from '@/apis/event'
+
+// Apis
+import { fetchEventList } from '@/apis/event'
 
 const items = ref([])
 const loading = ref(false)
@@ -20,7 +22,7 @@ const serverOptions = ref({
 async function loadFromServer() {
   loading.value = true
 
-  await fetchList(serverOptions.value)
+  await fetchEventList(serverOptions.value)
     .then((response) => {
       items.value = response.data.items
       serverItemsLength.value = response.data.total
@@ -47,7 +49,16 @@ watch(
 <template>
   <div v-for="(item, index) in items" :key="index">
     <EventCard :event="item" />
-    <div class="py-1" />
+    <v-divider class="mb-2 mx-2"/>
+  </div>
+  <div class="text-center">
+    <v-pagination
+      v-model="page"
+      class="my-4"
+      rounded="circle"
+      :length="15"
+      :total-visible="6"
+    ></v-pagination>
   </div>
 </template>
 

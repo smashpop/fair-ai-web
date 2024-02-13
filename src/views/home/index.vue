@@ -14,7 +14,7 @@ import NoticeSection from './noticeSection'
 
     <PopularitySection />
 
-    <div class="py-1" />
+    <div class="py-8" />
     <ArticleSection />
 
     <v-divider class="border-opacity-100 my-9 mx-5" />
