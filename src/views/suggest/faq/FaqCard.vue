@@ -11,9 +11,9 @@ const props = defineProps({
 
 <template>
   <v-expansion-panels>
-    <v-expansion-panel>
+    <v-expansion-panel elevation="0">
       <v-expansion-panel-title>
-        <div class="my-4 font-weight-bold">
+        <div class="text-18 font-weight-medium">
           {{ props.faq.title }}
         </div>
       </v-expansion-panel-title>
