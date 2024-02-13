@@ -16,6 +16,7 @@ const serverOptions = ref({
   sortType: 'desc',
   keyword: null
 })
+const page = ref(1)
 
 async function loadFromServer() {
   loading.value = true
@@ -49,6 +50,7 @@ watch(
     <CurriculumCard :item="item" />
     <v-divider class="mb-2 mx-2"/>
   </div>
+  
   <div class="text-center">
     <v-pagination
       v-model="page"

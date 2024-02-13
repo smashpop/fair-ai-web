@@ -13,6 +13,7 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { PromiseDialog } from 'vue3-promise-dialog'
 import browserDetect from 'vue-detect-browser'
 import JsonExcel from 'vue-json-excel3'
+import CountryFlag from 'vue-country-flag-next'
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
@@ -26,4 +27,5 @@ export function registerPlugins(app) {
     .use(browserDetect)
     .use(installGlobalComponents)
     .component('DownloadExcel', JsonExcel)
+    .component('CountryFlag', CountryFlag)
 }

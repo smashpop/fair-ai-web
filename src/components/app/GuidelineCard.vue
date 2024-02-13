@@ -21,12 +21,15 @@ const summary = computed(() => {
   <v-card class="pa-2" flat>
     <v-row dense>
       <v-col cols="12" md="2"> </v-col>
-      <v-col cols="12" md="7">
+      <v-col cols="12" md="8">
         <v-container>
           <v-row>
-            <div class="text-20 my-2 mr-12" style="font-weight: 600">
+            <span v-if="item.orgType === '국가'">
+              <country-flag :country="item.nation.iso" size='big' shadow />
+            </span>
+            <span class="text-20 my-2 ml-4 mr-12" style="font-weight: 600">
               {{ name }}
-            </div>
+            </span>
           </v-row>
 
           <v-row style="height: 60px">
@@ -41,7 +44,7 @@ const summary = computed(() => {
         </v-container>
       </v-col>
 
-      <v-col cols="12" md="3">
+      <v-col cols="12" md="2">
         <v-img
           :src="tempImageSrc"
           height="130"
