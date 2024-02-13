@@ -10,7 +10,7 @@ const props = defineProps({
 })
 
 const description = computed(() => {
-  return props.item.description ? props.item.description.substring(0, 500) : null
+  return props.item.description ? props.item.description.substring(0, 400) : null
 })
 </script>
 
@@ -25,7 +25,7 @@ const description = computed(() => {
           </div>
         </v-row>
 
-        <v-row style="height: 60px">
+        <v-row style="height: 70px">
           <div class="text-medium-emphasis text-body-2 mr-12">{{ description }}...</div>
         </v-row>
 
@@ -49,8 +49,8 @@ const description = computed(() => {
 
       <v-col cols="12" md="3">
         <v-img
-          :src="props.item.thumbnailUrl ? props.item.thumbnailUrl : tempImageSrc"
-          height="130"
+          :src="props.item.imageUrl ? props.item.imageUrl : tempImageSrc"
+          height="140"
           class="mt-1 rounded" 
           cover
         />

@@ -22,7 +22,7 @@ import FilterView from './FilterView'
           <FilterView />
         </v-col>
         
-        <v-col cols="12" md="10">
+        <v-col cols="12" md="8">
           <RefSiteView />
         </v-col>
       </v-row>

@@ -18,9 +18,19 @@ const description = computed(() => {
 <template>
   <v-card class="mx-2" flat>
     <v-row dense>
-      <v-col cols="12" md="2"> </v-col>
+      <v-col cols="12" md="2"> 
+      </v-col>
 
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="2" class="pa-2">
+        <v-img
+          :src="props.item.thumbnailUrl ? props.item.thumbnailUrl : tempImageSrc"
+          height="130"
+          class="mt-1 rounded" 
+          cover
+        />
+      </v-col>
+
+      <v-col cols="12" md="8" class="pl-2">
         <v-container>
           <v-row>
             <div class="text-20 my-2 mr-12" style="font-weight: 600">
@@ -49,14 +59,6 @@ const description = computed(() => {
         </v-container>
       </v-col>
 
-      <v-col cols="12" md="2">
-        <v-img
-          :src="props.item.thumbnailUrl ? props.item.thumbnailUrl : tempImageSrc"
-          height="130"
-          class="mt-1 rounded" 
-          cover
-        />
-      </v-col>
     </v-row>
   </v-card>
 </template>

@@ -12,17 +12,16 @@ export function getMetaDataApi(data) {
 
 export function fetchList(data) {
   return request({
-    url: '/ai-refsite-page',
+    url: '/ai-refsite-list',
     method: 'post',
     data
   })
 }
 
-export function fetchListAll(data) {
+export function fetchListAll() {
   return request({
     url: '/ai-refsite',
     method: 'get',
-    data
   })
 }
 
