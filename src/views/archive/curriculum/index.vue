@@ -2,7 +2,6 @@
 // Components
 import SmallSearchField from '@/components/app/SmallSearchField'
 import CurriculumView from './CurriculumView.vue'
-import FilterView from './FilterView'
 </script>
 
 <template>
@@ -17,11 +16,7 @@ import FilterView from './FilterView'
       </v-row>
       <v-divider class="my-4 border-opacity-100" :thickness="3" />
 
-      <v-row>
-        <v-col cols="12" md="2">
-          <FilterView />
-        </v-col>
-        
+      <v-row>  
         <v-col cols="12" md="10">
           <CurriculumView />
         </v-col>

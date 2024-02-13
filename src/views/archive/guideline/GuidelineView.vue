@@ -46,12 +46,8 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <GuidelineCard
-      :name="item.nation ? item.nation.name : item.organization.name"
-      :url="item.url"
-      :summary="item.summary ? item.summary.substring(0, 250) : null"
-    />
-    <div class="py-1" />
+    <GuidelineCard :item="item" />
+    <v-divider class="mb-2 mx-2"/>
   </div>
 </template>
 

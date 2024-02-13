@@ -2,6 +2,7 @@
 // Utilities
 import { computed } from 'vue'
 import tempImageSrc from '@/assets/images/TempImage.png'
+
 const props = defineProps({
   item: {
     type: Object,
@@ -13,10 +14,13 @@ const description = computed(() => {
   return props.item.description ? props.item.description.substring(0, 500) : null
 })
 </script>
+
 <template>
   <v-card class="mx-2" flat>
     <v-row dense>
-      <v-col cols="12" md="9">
+      <v-col cols="12" md="2"> </v-col>
+
+      <v-col cols="12" md="7">
         <v-container>
           <v-row>
             <div class="text-20 my-2 mr-12" style="font-weight: 600">
