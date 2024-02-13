@@ -1,7 +1,8 @@
 <script setup>
 // Components
-import SearchField from '@/components/app/SearchField'
+import SmallSearchField from '@/components/app/SmallSearchField'
 import CurriculumView from './CurriculumView.vue'
+import FilterView from './FilterView'
 </script>
 
 <template>
@@ -12,11 +13,15 @@ import CurriculumView from './CurriculumView.vue'
       </v-sheet>
 
       <v-row class="my-4" justify="center">
-        <SearchField />
+        <SmallSearchField />
       </v-row>
       <v-divider class="my-4 border-opacity-100" :thickness="3" />
 
       <v-row>
+        <v-col cols="12" md="2">
+          <FilterView />
+        </v-col>
+        
         <v-col cols="12" md="10">
           <CurriculumView />
         </v-col>

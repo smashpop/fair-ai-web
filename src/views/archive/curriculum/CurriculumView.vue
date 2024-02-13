@@ -46,12 +46,17 @@ watch(
 
 <template>
   <div v-for="(item, index) in items" :key="index">
-    <CurriculumCard
-      :organization="item.organization"
-      :url="item.url"
-      :description="item.description ? item.description.substring(0, 250) : null"
-    />
-    <div class="py-1" />
+    <CurriculumCard :item="item" />
+    <v-divider class="mb-2 mx-2"/>
+  </div>
+  <div class="text-center">
+    <v-pagination
+      v-model="page"
+      class="my-4"
+      rounded="circle"
+      :length="15"
+      :total-visible="6"
+    ></v-pagination>
   </div>
 </template>
 
