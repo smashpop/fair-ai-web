@@ -23,7 +23,7 @@ const description = computed(() => {
 
       <v-col cols="12" md="2" class="pa-2">
         <v-img
-          :src="props.item.thumbnailUrl ? props.item.thumbnailUrl : tempImageSrc"
+          :src="props.item.imageUrl ? props.item.imageUrl : tempImageSrc"
           height="130"
           class="mt-1 rounded" 
           cover
