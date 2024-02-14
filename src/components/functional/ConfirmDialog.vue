@@ -1,25 +1,14 @@
-<script>
+<script setup>
 // Utilities
-import { defineComponent } from 'vue'
 import { closeDialog } from 'vue3-promise-dialog'
 
-export default defineComponent({
-  props: {
-    text: {
-      type: String,
-      default: null
-    }
-  },
-  setup() {
-    function returnValue() {
-      return true
-    }
-    return {
-      returnValue,
-      closeDialog
-    }
+const props = defineProps({
+  text: {
+    type: String,
+    default: null
   }
 })
+
 </script>
 
 <template>
@@ -36,7 +25,7 @@ export default defineComponent({
             <v-icon class="mb-6" color="blue" icon="mdi-check-circle-outline" size="96" />
 
             <div class="mx-12 text-h6 font-weight-bold">
-              {{ text }}
+              {{ props.text }}
             </div>
           </div>
 
@@ -60,7 +49,7 @@ export default defineComponent({
               min-width="80"
               rounded
               variant="flat"
-              @click.stop="closeDialog()"
+              @click.stop="closeDialog(true)"
             >
               <div class="text-subtitle-1 font-weight-bold">확인</div>
             </v-btn>

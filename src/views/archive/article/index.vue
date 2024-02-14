@@ -15,6 +15,13 @@ import FilterView from './FilterView'
       <v-row class="my-4" justify="center">
         <SmallSearchField />
       </v-row>
+
+      <v-row justify="end">
+        <v-col cols="12" md="2">
+          <div class=" font-weight-bold text-body-2">최신순</div>
+        </v-col>
+      </v-row>
+
       <v-divider class="my-4 border-opacity-100" :thickness="3" />
 
       <v-row>

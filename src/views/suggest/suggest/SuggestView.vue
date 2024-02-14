@@ -4,7 +4,7 @@ import { DialogWrapper } from 'vue3-promise-dialog'
 
 // Utilities
 import { ref } from 'vue'
-import { warning, confirm } from '@/utils/util'
+import { warning, confirm, verification } from '@/utils/util'
 
 // Apis
 import { createSuggestApi, fileUploadApi } from '@/apis/suggest'
@@ -80,7 +80,7 @@ async function fileUpload(suggestId) {
 }
 
 async function addSuggest() {
-  if (await confirm('등룍 하시겠습니까?')) {
+  if (await verification('등룍 하시겠습니까?')) {
     console.log('YES')
     await addSuggestProc()
     resetSuggest()
@@ -186,7 +186,7 @@ async function addSuggestProc() {
                   clearable
                   clear-icon="mdi-close-circle"
                   auto-grow
-                  rows="18"
+                  rows="12"
                   row-height="25"
                 />
               </v-col>

@@ -1,32 +1,33 @@
 <script setup>
 // Utilities
+import { ref } from 'vue'
 
 import { closeDialog } from 'vue3-promise-dialog'
+const otp = ref('')
 
-const props = defineProps({
-  text: {
-    type: String,
-    default: null
-  }
-})
 </script>
 
 <template>
   <div class="dialog">
     <div class="center">
       <v-card class="mx-auto" elevation="16" min-width="400">
-        <v-toolbar color="red-lighten-1" density="compact">
-          <div class="mx-4 text-h6 font-weight-bold">Warning</div>
+        <v-toolbar color="blue-lighten-1" density="compact">
+          <div class="mx-4 text-h6 font-weight-bold">Email 인증</div>
         </v-toolbar>
 
         <v-divider></v-divider>
-
         <v-card-text>
           <div class="py-5 text-center">
-            <v-icon class="mb-6" color="red" icon="mdi-check-circle-outline" size="96" />
+            <v-icon class="mb-6" color="blue" icon="mdi-check-circle-outline" size="96" />
 
             <div class="mx-12 text-h6 font-weight-bold">
-              {{ props.text }}
+              <v-otp-input
+                v-model="otp"
+                class="mb-8"
+                divider="•"
+                length="4"
+                variant="outlined"
+              ></v-otp-input>
             </div>
           </div>
 
@@ -35,13 +36,24 @@ const props = defineProps({
           <div class="pa-4 text-end">
             <v-btn
               class="text-none mx-2"
-              color="medium-emphasis"
+              color="blue-darken-1"
               min-width="80"
               rounded
               variant="outlined"
               @click.stop="closeDialog(false)"
             >
-              <div class="text-h6 font-weight-bold">닫기</div>
+              <div class="text-subtitle-1 font-weight-bold">닫기</div>
+            </v-btn>
+
+            <v-btn
+              class="text-none mx-2"
+              color="blue-darken-1"
+              min-width="80"
+              rounded
+              variant="flat"
+              @click.stop="closeDialog()"
+            >
+              <div class="text-subtitle-1 font-weight-bold">확인</div>
             </v-btn>
           </div>
         </v-card-text>

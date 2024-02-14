@@ -20,6 +20,7 @@ const previewText = computed(() => {
   <v-card class="mx-2" flat>
     <v-row dense>
       <v-col cols="12" md="9">
+      
         <v-container>
           <v-row>
             <div class="text-20 my-2 mr-12" style="font-weight: 600">

@@ -46,7 +46,7 @@ watch(
   <BaseCard>
     <div class="d-flex justify-space-between">
       <v-card-title class="pa-0 mb-4 text-h6 font-weight-bold"> 기사 </v-card-title>
-      <v-btn size="small" flat class="text-primary text-capitalize"> View All </v-btn>
+      <v-btn size="small" variant="flat" class="text-primary text-capitalize"> View All </v-btn>
     </div>
 
     <v-divider class="mb-2"></v-divider>
