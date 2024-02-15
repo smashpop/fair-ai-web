@@ -9,6 +9,7 @@ import { warning, confirm, verification } from '@/utils/util'
 // Apis
 import { createSuggestApi, fileUploadApi } from '@/apis/suggest'
 import { createAttachFileApi } from '@/apis/attachFile'
+import { sendMailApi } from '@/apis/email'
 
 const suggest = ref({
   title: '',
@@ -27,6 +28,12 @@ function resetSuggest() {
   suggest.value.suggestTel = ''
   suggest.value.categoryId = null
 }
+
+const mail = ref({
+  email: 'lobster3@naver.com',
+  subject: 'email test',
+  contents: 'test email',
+})
 
 const snackbar = ref({
   flag: false,
@@ -80,6 +87,10 @@ async function fileUpload(suggestId) {
 }
 
 async function addSuggest() {
+  console.log('>>addSuggest()')
+
+  await sendMailApi(mail.value)      // 메일 전송
+
   if (await verification('등룍 하시겠습니까?')) {
     console.log('YES')
     await addSuggestProc()
