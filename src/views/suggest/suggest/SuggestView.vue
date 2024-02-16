@@ -31,8 +31,8 @@ function resetSuggest() {
 
 const mail = ref({
   email: 'lobster3@naver.com',
-  subject: 'email test',
-  contents: 'test email',
+  subject: 'email test4',
+  contents: 'test email4',
 })
 
 const snackbar = ref({
