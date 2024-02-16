@@ -1,10 +1,7 @@
 <script setup>
 // Components
-import Headers from '@/views/archive/components/Headers'
 </script>
 
 <template>
-  <Headers />
-
   <router-view />
 </template>

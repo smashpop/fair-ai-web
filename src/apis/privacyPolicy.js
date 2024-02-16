@@ -8,6 +8,20 @@ export function fetchList(data) {
   })
 }
 
+export function fetchListAll() {
+  return request({
+    url: '/ai-privacy-policy',
+    method: 'get'
+  })
+}
+
+export function fetchLast() {
+  return request({
+    url: '/ai-privacy-policy-last',
+    method: 'get'
+  })
+}
+
 export function createPrivacyPolicyApi(data) {
   return request({
     url: '/ai-privacy-policy',
@@ -28,13 +42,5 @@ export function deletePrivacyPolicyApi(id) {
   return request({
     url: `/ai-privacy-policy/${id}`,
     method: 'delete'
-  })
-}
-
-export function searchList(data) {
-  return request({
-    url: '/ai-privacy-policy-search',
-    method: 'post',
-    data
   })
 }

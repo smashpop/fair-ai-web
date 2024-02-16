@@ -8,6 +8,13 @@ export function fetchList(data) {
   })
 }
 
+export function fetchLastList() {
+  return request({
+    url: '/ai-article-last',
+    method: 'get'
+  })
+}
+
 export function fetchListAll(data) {
   return request({
     url: '/ai-article',

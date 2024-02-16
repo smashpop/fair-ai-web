@@ -21,10 +21,10 @@ export default defineConfig({
       }
     }),
     ViteFonts({
-      google: {
+      custom: {
         families: [
           {
-            name: 'Noto Sans KR',
+            name: 'Pretendard',
             styles: 'wght@100;300;400;500;700;900',
           },
           {

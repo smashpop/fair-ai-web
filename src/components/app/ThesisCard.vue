@@ -1,40 +1,79 @@
 <script setup>
+// Utilities
+import { computed } from 'vue'
+
 const props = defineProps({
-  title: {
-    type: String,
-    default: null
-  },
-  url: {
-    type: String,
-    default: null
-  },
-  abstract: {
-    type: String,
+  thesis: {
+    type: Object,
     default: null
   }
+})
+const abstract = computed(() => {
+  return props.thesis.abstract ? props.thesis.abstract.substring(0, 400) : null
 })
 </script>
 
 <template>
-  <v-card class="pa-2" flat>
-    <v-row>
-      <v-col cols="12" md="7">
+  <v-card class="mx-2" flat>
+    <v-row dense>
+      <v-col cols="12" md="9">
         <v-container>
-          <h1 class="text-h5 mb-4">
-            {{ props.title }}
-          </h1>
+          <v-row>
+            <div class="text-20 my-2 mr-12" style="font-weight: 600">
+              {{ props.thesis.title }}
+            </div>
+          </v-row>
 
-          <div class="text-medium-emphasis text-body-2">
-            {{ props.abstract }}
-          </div>
-          <h1 class="text-body-1 mb-4">
-            {{ props.url }}
-          </h1>         
+          <v-row class="mb-2">
+            <v-chip color="primary" size="small" label>
+              <v-icon start icon="mdi-web"></v-icon>
+              <span class="text-body-1">
+                {{ props.thesis.orgType }}
+              </span>
+            </v-chip>
+
+            <span class="text-body-1 font-weight-bold ml-6"> 저자 </span>
+            <span class="text-body-1 ml-2">
+              {{ props.thesis.author }}
+            </span>
+            <span class="text-body-1 font-weight-bold ml-6"> 발행지명 </span>
+            <span class="text-body-1 ml-2">
+              {{ props.thesis.publisher }}
+            </span>
+            <span class="text-body-1 font-weight-bold ml-6"> 발행연도 </span>
+            <span class="text-body-1 ml-2">
+              {{ props.thesis.publishedYear }}
+            </span>
+          </v-row>
+
+          <v-row style="height: 80px">
+            <div class="text-medium-emphasis text-body-2 mr-12">{{ abstract }}...</div>
+          </v-row>
+
+          <v-row justify="end" dense>
+            <span class="text-subtitle-1 font-weight-bold text-medium-emphasis">원문보기</span>
+            <span class="mr-4">
+              <v-btn
+                :href="props.thesis.url"
+                rel="noopener noreferrer"
+                target="_blank"
+                variant="text"
+                @click.stop
+              >
+                <v-icon icon="mdi-arrow-top-right" size="large" start />
+              </v-btn>
+            </span>
+          </v-row>
         </v-container>
       </v-col>
-      <v-spacer></v-spacer>
+
       <v-col cols="12" md="3">
-        <v-img height="150" gradient="#262626, #262626" class="rounded elevation-5" />
+        <v-img 
+          src="@/assets/images/GettyImages.png" 
+          height="180" 
+          class="mt-2 rounded" 
+          cover 
+        />
       </v-col>
     </v-row>
   </v-card>

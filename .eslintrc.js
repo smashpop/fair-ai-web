@@ -9,6 +9,7 @@ module.exports = {
   extends: [
     'standard',
     'plugin:vue/vue3-recommended',
+    'plugin:vuetify/base',
     'eslint:recommended',
     '@vue/eslint-config-prettier/skip-formatting'
   ],

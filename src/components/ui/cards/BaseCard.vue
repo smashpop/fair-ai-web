@@ -16,7 +16,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <v-card class="card">
+  <v-card class="card" elevation="8">
     <div v-show="props.cardTitle" class="card-header">
       <i class="tio- text-18">{{ props.icon }}</i>
       <div class="card-title">{{ props.cardTitle }}</div>
