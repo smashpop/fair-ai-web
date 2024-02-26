@@ -91,7 +91,7 @@ async function addSuggest() {
 
   await sendMailApi(mail.value)      // 메일 전송
 
-  if (await verification('등룍 하시겠습니까?')) {
+  if (await verification('등록 하시겠습니까?')) {
     console.log('YES')
     await addSuggestProc()
     resetSuggest()
