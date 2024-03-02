@@ -6,7 +6,7 @@ import EventCard from '@/components/app/EventCard'
 import { ref, watch } from 'vue'
 
 // Apis
-import { fetchEventList } from '@/apis/event'
+import { fetchList } from '@/apis/event'
 
 const items = ref([])
 const loading = ref(false)
@@ -22,7 +22,7 @@ const serverOptions = ref({
 async function loadFromServer() {
   loading.value = true
 
-  await fetchEventList(serverOptions.value)
+  await fetchList(serverOptions.value)
     .then((response) => {
       items.value = response.data.items
       serverItemsLength.value = response.data.total
