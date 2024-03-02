@@ -16,29 +16,6 @@ export function fetchListAll(data) {
   })
 }
 
-export function createGuidelineApi(data) {
-  return request({
-    url: '/ai-guideline',
-    method: 'post',
-    data
-  })
-}
-
-export function updateGuidelineApi(data) {
-  return request({
-    url: '/ai-guideline',
-    method: 'put',
-    data
-  })
-}
-
-export function deleteGuidelineApi(id) {
-  return request({
-    url: `/ai-guideline/${id}`,
-    method: 'delete'
-  })
-}
-
 export function searchList(data) {
   return request({
     url: '/ai-guideline-search',
