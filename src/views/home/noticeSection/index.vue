@@ -66,7 +66,6 @@ watch(
             </div>
           </div>
           <v-divider class="my-2"></v-divider>
-          
         </v-list-item>
       </v-list>
     </div>

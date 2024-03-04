@@ -49,7 +49,7 @@ watch(
 <template>
   <div v-for="(item, index) in items" :key="index">
     <EventCard :event="item" />
-    <v-divider class="mb-2 mx-2"/>
+    <v-divider class="mb-2 mx-2" />
   </div>
   <div class="text-center">
     <v-pagination

@@ -16,7 +16,7 @@ import CurriculumView from './CurriculumView.vue'
       </v-row>
       <v-divider class="my-4 border-opacity-100" :thickness="3" />
 
-      <v-row>  
+      <v-row>
         <v-col cols="12" md="10">
           <CurriculumView />
         </v-col>

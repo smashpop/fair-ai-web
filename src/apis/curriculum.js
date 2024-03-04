@@ -16,7 +16,6 @@ export function fetchListAll(data) {
   })
 }
 
-
 export function searchList(data) {
   return request({
     url: '/ai-curriculum-search',

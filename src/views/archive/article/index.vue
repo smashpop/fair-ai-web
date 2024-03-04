@@ -18,7 +18,7 @@ import FilterView from './FilterView'
 
       <v-row justify="end">
         <v-col cols="12" md="2">
-          <div class=" font-weight-bold text-body-2">최신순</div>
+          <div class="font-weight-bold text-body-2">최신순</div>
         </v-col>
       </v-row>
 

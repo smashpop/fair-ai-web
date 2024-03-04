@@ -31,7 +31,7 @@ const abstract = computed(() => {
                 {{ props.report.orgType }}
               </span>
             </v-chip>
-            
+
             <span class="text-body-1 font-weight-bold ml-6"> 저자 </span>
             <span class="text-body-1 ml-2">
               {{ props.report.author }}
@@ -68,12 +68,7 @@ const abstract = computed(() => {
       </v-col>
 
       <v-col cols="12" md="3">
-        <v-img 
-          src="@/assets/images/GettyImages.png" 
-          height="180" 
-          class="mt-2 rounded" 
-          cover 
-        />
+        <v-img src="@/assets/images/GettyImages.png" height="180" class="mt-2 rounded" cover />
       </v-col>
     </v-row>
   </v-card>

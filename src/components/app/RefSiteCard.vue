@@ -21,16 +21,18 @@ const description = computed(() => {
         <v-container>
           <v-row>
             <div class="text-20 my-2 mr-12" style="font-weight: 600">
-            {{ props.item.siteName }}
-          </div>
-        </v-row>
+              {{ props.item.siteName }}
+            </div>
+          </v-row>
 
-        <v-row style="height: 70px">
-          <div class="text-medium-emphasis text-body-2 mr-12">{{ description }}...</div>
-        </v-row>
+          <v-row style="height: 70px">
+            <div class="text-medium-emphasis text-body-2 mr-12">{{ description }}...</div>
+          </v-row>
 
-        <v-row>
-          <span class="text-subtitle-1 text-medium-emphasis font-weight-bold ml-6">자세히보기</span>
+          <v-row>
+            <span class="text-subtitle-1 text-medium-emphasis font-weight-bold ml-6"
+              >자세히보기</span
+            >
             <span class="ml-1">
               <v-btn
                 :href="props.item.url"
@@ -42,8 +44,7 @@ const description = computed(() => {
                 <v-icon icon="mdi-arrow-top-right" size="large" start />
               </v-btn>
             </span>
-        </v-row>
-        
+          </v-row>
         </v-container>
       </v-col>
 
@@ -51,11 +52,10 @@ const description = computed(() => {
         <v-img
           :src="props.item.imageUrl ? props.item.imageUrl : tempImageSrc"
           height="140"
-          class="mt-1 rounded" 
+          class="mt-1 rounded"
           cover
         />
       </v-col>
     </v-row>
   </v-card>
 </template>
-

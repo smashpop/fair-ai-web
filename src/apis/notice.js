@@ -26,7 +26,6 @@ export function fetchCardList(data) {
   })
 }
 
-
 export function searchList(data) {
   return request({
     url: '/ai-notice-search',

@@ -21,10 +21,9 @@ export function fetchList(data) {
 export function fetchListAll() {
   return request({
     url: '/ai-refsite',
-    method: 'get',
+    method: 'get'
   })
 }
-
 
 export function searchList(data) {
   return request({

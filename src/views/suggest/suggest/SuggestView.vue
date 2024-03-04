@@ -32,7 +32,7 @@ function resetSuggest() {
 const mail = ref({
   email: 'hl2kxm@gmail.com',
   subject: 'email test5',
-  contents: 'test email5',
+  contents: 'test email5'
 })
 
 const snackbar = ref({
@@ -89,7 +89,7 @@ async function fileUpload(suggestId) {
 async function addSuggest() {
   console.log('>>addSuggest()')
 
-  await sendMailApi(mail.value)      // 메일 전송
+  await sendMailApi(mail.value) // 메일 전송
 
   if (await verification('등룍 하시겠습니까?')) {
     console.log('YES')
