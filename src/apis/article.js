@@ -23,29 +23,6 @@ export function fetchListAll(data) {
   })
 }
 
-export function createArticleApi(data) {
-  return request({
-    url: '/ai-article',
-    method: 'post',
-    data
-  })
-}
-
-export function updateArticleApi(data) {
-  return request({
-    url: '/ai-article',
-    method: 'put',
-    data
-  })
-}
-
-export function deleteArticleApi(id) {
-  return request({
-    url: `/ai-article/${id}`,
-    method: 'delete'
-  })
-}
-
 export function searchList(data) {
   return request({
     url: '/ai-article-search',

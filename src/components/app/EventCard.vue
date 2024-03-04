@@ -35,7 +35,6 @@ const contents = computed(() => {
           <div class="text-medium-emphasis text-body-2">{{ contents }}...</div>
         </v-container>
       </v-col>
-
     </v-row>
   </v-card>
 </template>

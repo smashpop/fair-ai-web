@@ -8,13 +8,6 @@ export function fetchEventList() {
   })
 }
 
-export function fetchEventList2() {
-  return request({
-    url: '/ai-event-list2',
-    method: 'get'
-  })
-}
-
 export function fetchList(data) {
   return request({
     url: '/ai-event-page',
@@ -36,29 +29,6 @@ export function fetchCardList(data) {
     url: '/ai-event-card',
     method: 'post',
     data
-  })
-}
-
-export function createEventApi(data) {
-  return request({
-    url: '/ai-event',
-    method: 'post',
-    data
-  })
-}
-
-export function updateEventApi(data) {
-  return request({
-    url: '/ai-event',
-    method: 'put',
-    data
-  })
-}
-
-export function deleteEventApi(id) {
-  return request({
-    url: `/ai-event/${id}`,
-    method: 'delete'
   })
 }
 

@@ -4,7 +4,6 @@ import { ref } from 'vue'
 
 import { closeDialog } from 'vue3-promise-dialog'
 const otp = ref('')
-
 </script>
 
 <template>

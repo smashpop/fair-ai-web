@@ -19,6 +19,6 @@ import Footer from './Footer'
 .bg_image {
   background: url('../../assets/images/GettyImages.png');
   background-repeat: no-repeat;
-  background-color: linear-gradient(180deg, #F0F3F7 0%, rgba(255, 255, 255, 0.00) 100%);
+  background-color: linear-gradient(180deg, #f0f3f7 0%, rgba(255, 255, 255, 0) 100%);
 }
 </style>

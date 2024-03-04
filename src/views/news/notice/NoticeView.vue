@@ -42,29 +42,28 @@ watch(
 </script>
 
 <template>
-    <div class="d-flex justify-space-between">
-      <strong class="pa-0 mb-4 text-h6 font-weight-bold"> 공지사항 </strong>
-    </div>
+  <div class="d-flex justify-space-between">
+    <strong class="pa-0 mb-4 text-h6 font-weight-bold"> 공지사항 </strong>
+  </div>
 
-    <v-divider class="mb-2"></v-divider>
+  <v-divider class="mb-2"></v-divider>
 
-    <v-list>
-      <v-list-item v-for="(item, index) in items" :key="index">
-        <div class="d-flex justify-space-between align-center" style="height: 40px">
-          <div class="d-flex align-baseline flex-1">
-            <div class="text-18 font-weight-medium">
-              {{ item.title }}
-            </div>
-          </div>
-
-          <div class="text-16">
-            {{ item.updatedAt ? parseDate(item.updatedAt) : parseDate(item.createdAt) }}
+  <v-list>
+    <v-list-item v-for="(item, index) in items" :key="index">
+      <div class="d-flex justify-space-between align-center" style="height: 40px">
+        <div class="d-flex align-baseline flex-1">
+          <div class="text-18 font-weight-medium">
+            {{ item.title }}
           </div>
         </div>
-        <v-divider class="my-2"></v-divider>
 
-      </v-list-item>
-    </v-list>
+        <div class="text-16">
+          {{ item.updatedAt ? parseDate(item.updatedAt) : parseDate(item.createdAt) }}
+        </div>
+      </div>
+      <v-divider class="my-2"></v-divider>
+    </v-list-item>
+  </v-list>
 </template>
 
 <style lang="scss" scoped></style>

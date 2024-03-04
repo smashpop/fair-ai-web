@@ -26,29 +26,6 @@ export function fetchCardList(data) {
   })
 }
 
-export function createFaqApi(data) {
-  return request({
-    url: '/ai-faq',
-    method: 'post',
-    data
-  })
-}
-
-export function updateFaqApi(data) {
-  return request({
-    url: '/ai-faq',
-    method: 'put',
-    data
-  })
-}
-
-export function deleteFaqApi(id) {
-  return request({
-    url: `/ai-faq/${id}`,
-    method: 'delete'
-  })
-}
-
 export function searchList(data) {
   return request({
     url: '/ai-faq-search',

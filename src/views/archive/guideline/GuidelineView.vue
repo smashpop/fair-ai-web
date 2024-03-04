@@ -47,7 +47,7 @@ watch(
 <template>
   <div v-for="(item, index) in items" :key="index">
     <GuidelineCard :item="item" />
-    <v-divider class="mb-2 mx-2"/>
+    <v-divider class="mb-2 mx-2" />
   </div>
 </template>
 

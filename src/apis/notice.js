@@ -26,29 +26,6 @@ export function fetchCardList(data) {
   })
 }
 
-export function createNoticeApi(data) {
-  return request({
-    url: '/ai-notice',
-    method: 'post',
-    data
-  })
-}
-
-export function updateNoticeApi(data) {
-  return request({
-    url: '/ai-notice',
-    method: 'put',
-    data
-  })
-}
-
-export function deleteNoticeApi(id) {
-  return request({
-    url: `/ai-notice/${id}`,
-    method: 'delete'
-  })
-}
-
 export function searchList(data) {
   return request({
     url: '/ai-notice-search',

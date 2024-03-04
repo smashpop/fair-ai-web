@@ -25,7 +25,7 @@ const summary = computed(() => {
         <v-container>
           <v-row>
             <span v-if="item.orgType === '국가'">
-              <country-flag :country="item.nation.iso" size='big' shadow />
+              <country-flag :country="item.nation.iso" size="big" shadow />
             </span>
             <span class="text-20 my-2 ml-4 mr-12" style="font-weight: 600">
               {{ name }}
@@ -33,7 +33,7 @@ const summary = computed(() => {
           </v-row>
 
           <v-row style="height: 60px">
-          <div class="text-medium-emphasis text-body-2 mr-12">{{ summary }}...</div>
+            <div class="text-medium-emphasis text-body-2 mr-12">{{ summary }}...</div>
           </v-row>
 
           <v-row>
@@ -45,12 +45,8 @@ const summary = computed(() => {
       </v-col>
 
       <v-col cols="12" md="2">
-        <v-img
-          :src="tempImageSrc"
-          height="130"
-          class="mt-1 rounded" 
-          cover
-        />      </v-col>
+        <v-img :src="tempImageSrc" height="130" class="mt-1 rounded" cover />
+      </v-col>
     </v-row>
   </v-card>
 </template>

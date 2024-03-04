@@ -21,7 +21,7 @@ import FilterView from './FilterView'
         <v-col cols="12" md="2">
           <FilterView />
         </v-col>
-        
+
         <v-col cols="12" md="10">
           <EventView />
         </v-col>

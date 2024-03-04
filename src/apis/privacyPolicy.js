@@ -21,26 +21,3 @@ export function fetchLast() {
     method: 'get'
   })
 }
-
-export function createPrivacyPolicyApi(data) {
-  return request({
-    url: '/ai-privacy-policy',
-    method: 'post',
-    data
-  })
-}
-
-export function updatePrivacyPolicyApi(data) {
-  return request({
-    url: '/ai-privacy-policy',
-    method: 'put',
-    data
-  })
-}
-
-export function deletePrivacyPolicyApi(id) {
-  return request({
-    url: `/ai-privacy-policy/${id}`,
-    method: 'delete'
-  })
-}

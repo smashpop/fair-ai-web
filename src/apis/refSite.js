@@ -12,7 +12,7 @@ export function getMetaDataApi(data) {
 
 export function fetchList(data) {
   return request({
-    url: '/ai-refsite-list',
+    url: '/ai-refsite-page',
     method: 'post',
     data
   })
@@ -21,30 +21,7 @@ export function fetchList(data) {
 export function fetchListAll() {
   return request({
     url: '/ai-refsite',
-    method: 'get',
-  })
-}
-
-export function createRefSiteApi(data) {
-  return request({
-    url: '/ai-refsite',
-    method: 'post',
-    data
-  })
-}
-
-export function updateRefSiteApi(data) {
-  return request({
-    url: '/ai-refsite',
-    method: 'put',
-    data
-  })
-}
-
-export function deleteRefSiteApi(id) {
-  return request({
-    url: `/ai-refsite/${id}`,
-    method: 'delete'
+    method: 'get'
   })
 }
 
