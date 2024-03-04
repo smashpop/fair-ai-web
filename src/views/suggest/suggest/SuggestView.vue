@@ -4,7 +4,7 @@ import { DialogWrapper } from 'vue3-promise-dialog'
 
 // Utilities
 import { ref } from 'vue'
-import { warning, confirm, verification } from '@/utils/util'
+import { warning, verification } from '@/utils/util'
 
 // Apis
 import { createSuggestApi, fileUploadApi } from '@/apis/suggest'
