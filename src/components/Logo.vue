@@ -9,7 +9,7 @@ function onClickImage() {
 </script>
 
 <template>
-  <div class="pt-1" style="width: 260px; height: 48px">
+  <div class="ml-5" style="width: 137px; height: 40px;">
     <!-- 로고 -->
     <v-img
       src="@/assets/images/BI_new.svg"

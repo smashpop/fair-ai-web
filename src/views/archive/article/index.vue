@@ -7,12 +7,12 @@ import FilterView from './FilterView'
 
 <template>
   <v-container fluid class="bg-white">
-    <div class="mx-16">
-      <v-sheet class="text-center mx-auto px-4" height="80" max-width="800" width="100%">
-        <div class="text-h2 font-weight-black text-black my-5">기사</div>
+    <div>
+      <v-sheet class="text-center mx-auto" width="100%">
+        <div class="text-68 font-weight-bold black text-black">기사</div>
       </v-sheet>
 
-      <v-row class="my-4" justify="center">
+      <v-row class="sch mt-5" justify="center">
         <SmallSearchField />
       </v-row>
 
@@ -22,7 +22,7 @@ import FilterView from './FilterView'
         </v-col>
       </v-row>
 
-      <v-divider class="my-4 border-opacity-100" :thickness="3" />
+      <v-divider class="mx-auto border-opacity-100" :thickness="3" />
 
       <v-row>
         <v-col cols="12" md="2">
@@ -36,3 +36,15 @@ import FilterView from './FilterView'
     </div>
   </v-container>
 </template>
+
+<style lang="scss" scoped>
+.v-container > div { margin-top: 82px; }
+.v-container .v-row { width: 1360px; margin: 0 auto; }
+
+.v-container .v-divider { width: 1360px; }
+
+.sch .v-input {}
+.sch .v-input::v-deep .v-input__control .v-field { background-color: #F0F3F7 !important; }
+.sch .v-input::v-deep .v-input__control input { height: 52px; }
+.sch .v-input::v-deep .v-input__control .v-field__outline { display: none; }
+</style>
