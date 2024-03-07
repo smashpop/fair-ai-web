@@ -133,7 +133,7 @@ function onScroll() {
 </template>
 
 <style lang="scss" scoped>
-.v-app-bar::v-deep .v-toolbar__content { border-bottom: 1px solid rgba(0,0,0,0.15); }
+.v-app-bar::v-deep .v-toolbar__content { min-width: 1360px; border-bottom: 1px solid rgba(0,0,0,0.15); }
 .v-app-bar::v-deep .v-toolbar__prepend > div:nth-of-type(2) { margin-left: 58px; }
 
 .v-btn::v-deep .v-btn__content > p { color: #222; }

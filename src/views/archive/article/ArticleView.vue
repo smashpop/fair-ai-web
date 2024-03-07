@@ -47,7 +47,7 @@ watch(
 <template>
   <div v-for="(item, index) in items" :key="index">
     <ArticleCard :article="item" />
-    <v-divider class="mb-2 mx-2" />
+    <v-divider class="my-8" />
   </div>
   <div class="text-center">
     <v-pagination

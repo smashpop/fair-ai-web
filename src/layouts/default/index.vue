@@ -17,8 +17,9 @@ import Footer from './Footer'
 
 <style lang="scss" scoped>
 .bg_image {
-  background: url('../../assets/images/GettyImages.png');
-  background-repeat: no-repeat;
-  background-color: linear-gradient(180deg, #f0f3f7 0%, rgba(255, 255, 255, 0) 100%);
+  //background: url('../../assets/images/GettyImages.png');
+  //background-repeat: no-repeat;
+  //background-color: linear-gradient(180deg, #f0f3f7 0%, rgba(255, 255, 255, 0) 100%);
+  background: #fff;
 }
 </style>

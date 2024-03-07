@@ -6,45 +6,52 @@ import FilterView from './FilterView'
 </script>
 
 <template>
-  <v-container fluid class="bg-white">
-    <div>
-      <v-sheet class="text-center mx-auto" width="100%">
-        <div class="text-68 font-weight-bold black text-black">기사</div>
-      </v-sheet>
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+    <p class="text-68 font-weight-bold text-black">기사</p>
+  </v-sheet>
 
-      <v-row class="sch mt-5" justify="center">
-        <SmallSearchField />
-      </v-row>
+  <v-sheet class="sch mt-3 d-flex justify-center mx-auto" width="1360">
+    <SmallSearchField />
+  </v-sheet>
 
-      <v-row justify="end">
-        <v-col cols="12" md="2">
+  <v-sheet class="mx-auto board mt-15" width="1360">
+    <v-container class="pa-0" fluid>
+      <v-row justify="space-between" align="center" no-gutters>
+        <v-col class="d-flex align-center">
+          <p>1,016</p>
+          <p>건의 자료가<br>있습니다.</p>
+        </v-col>
+
+        <v-col class="d-flex justify-end">
+          <p>엑셀다운로드</p>
           <div class="font-weight-bold text-body-2">최신순</div>
         </v-col>
       </v-row>
 
-      <v-divider class="mx-auto border-opacity-100" :thickness="3" />
+      <v-divider class="border-opacity-100 mt-5" :thickness="3" />
 
-      <v-row>
-        <v-col cols="12" md="2">
+      <v-row no-gutters class="justify-space-between">
+        <v-col class="side-menu">
           <FilterView />
         </v-col>
 
-        <v-col cols="12" md="10">
+        <v-col class="contents pt-10">
           <ArticleView />
         </v-col>
       </v-row>
-    </div>
-  </v-container>
+    </v-container>
+  </v-sheet>
 </template>
 
 <style lang="scss" scoped>
-.v-container > div { margin-top: 82px; }
-.v-container .v-row { width: 1360px; margin: 0 auto; }
-
-.v-container .v-divider { width: 1360px; }
-
+body { overflow-x: scroll; }
 .sch .v-input {}
 .sch .v-input::v-deep .v-input__control .v-field { background-color: #F0F3F7 !important; }
 .sch .v-input::v-deep .v-input__control input { height: 52px; }
+.sch .v-input::v-deep .v-input__control input::placeholder { opacity: 0; }
 .sch .v-input::v-deep .v-input__control .v-field__outline { display: none; }
+
+.board {}
+.board .side-menu { width: 245px; flex: 0 0 auto; }
+.board .contents { width: 1015px; flex: 0 0 auto; }
 </style>
