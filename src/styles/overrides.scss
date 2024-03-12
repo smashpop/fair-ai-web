@@ -13,6 +13,7 @@ $sizes: (
   'text-20': 20px,
   'text-24': 24px,
   'text-30': 30px,
+  'text-34': 34px,
   'text-48': 48px,
   'text-68': 68px
 );
@@ -30,8 +31,42 @@ $sizes: (
   --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
   --fc-neutral-text-color: #808080;
   --fc-border-color: #939393;
+
+  --main-color: #136BFC;
 }
 
 .font-weight-semi-bold {
   font-weight: 600;
 }
+
+.text-main-color { color: var(--main-color) !important; }
+.bg-main-color { background-color: var(--main-color) !important; }
+.text-color-555 { color: #555 !important; }
+.text-color-222 { color: #222 !important; }
+.line-height-normal { line-height: normal !important; }
+
+
+
+
+//게시판 공통
+.bo-sch .v-input .v-input__control .v-field { background-color: #F0F3F7 !important; }
+.bo-sch .v-input .v-input__control input { height: 52px; }
+.bo-sch .v-input .v-input__control input::placeholder { opacity: 0; }
+.bo-sch .v-input .v-input__control .v-field__outline { display: none; }
+
+.btn-plain-custom { min-width: auto; height: auto !important; opacity: 1; padding: 0; line-height: 1.5; }
+
+.board { padding-bottom: 100px; }
+.board .text-body-1 {}
+.board .side-menu { width: 245px; flex: 0 0 auto; }
+.board .contents { width: 1015px; flex: 0 0 auto; }
+
+.fair-pg {}
+.fair-pg > ul {}
+.fair-pg > ul > li {}
+.fair-pg > ul > li > button { width: 40px !important; height: 40px !important; }
+.fair-pg > ul > li > button > span { color: #222; font-weight: 700; font-size: 14px; }
+.fair-pg > ul > li.v-pagination__item--is-active > button { background: #000;}
+.fair-pg > ul > li.v-pagination__item--is-active > button > span { color: #fff;}
+.fair-pg > ul > li > button:hover { background: #000 !important; }
+.fair-pg > ul > li > button:hover > span { color: #fff; }

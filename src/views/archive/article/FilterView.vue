@@ -8,12 +8,15 @@ const items = ref([])
 
 <template>
   <v-container class="pa-0">
-    <v-row class="my-4" justify="center" no-gutters>
-      <div class="text-14 text-black my-5">
-        저자, 설명 등의 조합 키워드 검색은 상세검색을 이용해 주세요.
+    <v-row justify="start" no-gutters class="mt-10">
+      <div class="text-16 text-color-555 font-weight-semi-bold">
+        발행일 
       </div>
-      <v-btn block rounded="xl" size="large" variant="outlined">
-        <div class="text-16 font-weight-black text-black">상세검색</div>
+
+
+
+      <v-btn block size="large" variant="flat" class="bg-main-color mt-3">
+        <div class="text-body-1 font-weight-medium text-white">적용</div>
       </v-btn>
     </v-row>
 

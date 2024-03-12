@@ -49,13 +49,14 @@ watch(
     <ArticleCard :article="item" />
     <v-divider class="my-8" />
   </div>
+
   <div class="text-center">
     <v-pagination
       v-model="page"
-      class="my-4"
+      class="fair-pg"
       rounded="circle"
-      :length="15"
-      :total-visible="6"
+      :length="10"
+      :total-visible="10"
     ></v-pagination>
   </div>
 </template>

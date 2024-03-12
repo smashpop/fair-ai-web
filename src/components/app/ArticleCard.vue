@@ -28,31 +28,29 @@ const previewText = computed(() => {
           </v-row>
 
           <v-row no-gutters class="mt-5">
-            <div class="text-medium-emphasis text-body-1">{{ previewText }}</div>
+            <div class="text-body-1">{{ previewText }}</div>
           </v-row>
 
-          <v-row no-gutters class="mt-3 align-center">
-            <span class="font-weight-bold text-medium-emphasis text-body-1">
+          <v-row no-gutters class="mt-3 align-center info">
+            <span class="font-weight-bold text-body-1">
               {{ props.article.mediaName }}
             </span>
 
-            <span class="text-medium-emphasis text-body-1">
-              {{ parseDate(props.article.publishedDate) }}
+            <span class="text-body-1 mx-2" style="color: #727171;">
+              | {{ parseDate(props.article.publishedDate) }} |
             </span>
-
-            <span class="text-subtitle-1 text-medium-emphasis font-weight-bold">자세히보기</span>
 
             <span class="">
               <v-btn
                 :href="props.article.url"
                 rel="noopener noreferrer"
                 target="_blank"
-                variant="text"
-                density="compact"
-                icon="mdi-arrow-top-right"
-                size="large"
+                variant="plain"
                 @click.stop
+
+                class="d-flex text-subtitle-1 font-weight-medium btn-plain-custom btn-more"
               >
+              자세히보기
               </v-btn>
             </span>
           </v-row>
@@ -71,3 +69,6 @@ const previewText = computed(() => {
     </v-row>
   </v-card>
 </template>
+
+<style lang="scss" scoped>
+</style>
