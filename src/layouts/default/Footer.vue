@@ -22,22 +22,22 @@
               <strong class="text-20 font-weight-bold text-color-222">소식</strong>
             </v-btn>
             <v-btn to="/suggest" variant="plain" class="btn-plain-custom">
-              <strong class="text-20 font-weight-bold text-color-222">문의/제안</strong>
+              <strong class="text-20 font-weight-bold text-color-222">문의·제안</strong>
             </v-btn>
           </v-col>
 
           <v-col class="d-flex flex-column justify-space-between">
             <v-row no-gutters class="d-flex flex-column align-start flex-0-0">
               <v-btn to="/news/event-regist" variant="plain" class="btn-plain-custom">
-                <strong class="text-16 font-weight-bold text-grey-darken-1">행사등록 제안</strong>
+                <strong class="text-16 font-weight-semi-bold text-color-727171">행사등록 제안</strong>
               </v-btn>
 
-              <v-btn to="/privacy-polocy" variant="plain" class="btn-plain-custom">
-                <strong class="text-16 font-weight-bold text-grey-darken-1">개인정보처리방침</strong>
+              <v-btn to="/privacy-polocy" variant="plain" class="btn-plain-custom mt-4">
+                <strong class="text-16 font-weight-semi-bold text-color-727171">개인정보처리방침</strong>
               </v-btn>
             </v-row>
 
-            <v-row no-gutters class="d-flex flex-column flex-0-0">
+            <v-row no-gutters class="d-flex flex-column flex-0-0 text-color-999">
               <p>재단법인 엔씨문화재단</p>
               <p>© NC Cultural Foundation. All Rights Reserved.</p>
             </v-row>

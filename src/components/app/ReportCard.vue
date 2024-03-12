@@ -14,17 +14,17 @@ const abstract = computed(() => {
 </script>
 
 <template>
-  <v-card class="mx-2" flat>
-    <v-row dense>
-      <v-col cols="12" md="9">
-        <v-container>
-          <v-row>
-            <div class="text-20 my-2 mr-12" style="font-weight: 600">
+  <v-card flat>
+    <v-row no-gutters justify="space-between" align="center">
+      <v-col>
+        <v-container fluid class="pa-0">
+          <v-row no-gutters>
+            <div class="text-20">
               {{ props.report.title }}
             </div>
           </v-row>
 
-          <v-row class="mb-2">
+          <v-row no-gutters>
             <v-chip color="primary" size="small" label>
               <v-icon start icon="mdi-web"></v-icon>
               <span class="text-body-1">
@@ -46,11 +46,11 @@ const abstract = computed(() => {
             </span>
           </v-row>
 
-          <v-row style="height: 80px">
+          <v-row no-gutters>
             <div class="text-medium-emphasis text-body-2 mr-12">{{ abstract }}...</div>
           </v-row>
 
-          <v-row justify="end" dense>
+          <v-row no-gutters>
             <span class="text-subtitle-1 font-weight-bold text-medium-emphasis">원문보기</span>
             <span class="mr-4">
               <v-btn
@@ -67,9 +67,11 @@ const abstract = computed(() => {
         </v-container>
       </v-col>
 
-      <v-col cols="12" md="3">
+      <!--
+      <v-col>
         <v-img src="@/assets/images/GettyImages.png" height="180" class="mt-2 rounded" cover />
       </v-col>
+      -->
     </v-row>
   </v-card>
 </template>

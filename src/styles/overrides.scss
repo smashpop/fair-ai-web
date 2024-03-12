@@ -42,7 +42,9 @@ $sizes: (
 .text-main-color { color: var(--main-color) !important; }
 .bg-main-color { background-color: var(--main-color) !important; }
 .text-color-555 { color: #555 !important; }
+.text-color-999 { color: #999 !important; }
 .text-color-222 { color: #222 !important; }
+.text-color-727171 { color: #727171 !important; }
 .line-height-normal { line-height: normal !important; }
 
 
@@ -70,3 +72,6 @@ $sizes: (
 .fair-pg > ul > li.v-pagination__item--is-active > button > span { color: #fff;}
 .fair-pg > ul > li > button:hover { background: #000 !important; }
 .fair-pg > ul > li > button:hover > span { color: #fff; }
+
+.snb {}
+.snb > button { width: 120px; height: 42px !important; border-radius: 100px; font-size: 16px; color: #000; font-weight: 700; }
