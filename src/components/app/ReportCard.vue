@@ -19,12 +19,12 @@ const abstract = computed(() => {
       <v-col>
         <v-container fluid class="pa-0">
           <v-row no-gutters>
-            <div class="text-20">
+            <div class="text-20 font-weight-semi-bold text-black">
               {{ props.report.title }}
             </div>
           </v-row>
 
-          <v-row no-gutters>
+          <v-row no-gutters class="mt-3 text-color-727171 align-center">
             <v-chip color="primary" size="small" label>
               <v-icon start icon="mdi-web"></v-icon>
               <span class="text-body-1">
@@ -32,37 +32,35 @@ const abstract = computed(() => {
               </span>
             </v-chip>
 
-            <span class="text-body-1 font-weight-bold ml-6"> 저자 </span>
+            <span class="text-body-1 font-weight-semi-bold ml-6"> 저자 </span>
             <span class="text-body-1 ml-2">
               {{ props.report.author }}
             </span>
-            <span class="text-body-1 font-weight-bold ml-6"> 발행지명 </span>
+            <span class="text-body-1 font-weight-semi-bold ml-6"> 발행지명 </span>
             <span class="text-body-1 ml-2">
               {{ props.report.publisher }}
             </span>
-            <span class="text-body-1 font-weight-bold ml-6"> 발행연도 </span>
+            <span class="text-body-1 font-weight-semi-bold ml-6"> 발행연도 </span>
             <span class="text-body-1 ml-2">
               {{ props.report.publishedYear }}
             </span>
           </v-row>
 
-          <v-row no-gutters>
-            <div class="text-medium-emphasis text-body-2 mr-12">{{ abstract }}...</div>
+          <v-row no-gutters class="mt-6">
+            <div class="text-body-1 text-color-555">{{ abstract }}...</div>
           </v-row>
 
-          <v-row no-gutters>
-            <span class="text-subtitle-1 font-weight-bold text-medium-emphasis">원문보기</span>
-            <span class="mr-4">
-              <v-btn
-                :href="props.report.url"
-                rel="noopener noreferrer"
-                target="_blank"
-                variant="text"
-                @click.stop
-              >
-                <v-icon icon="mdi-arrow-top-right" size="large" start />
-              </v-btn>
-            </span>
+          <v-row no-gutters class="justify-end mt-3">
+            <v-btn
+              class="btn-plain-custom"
+              :href="props.report.url"
+              rel="noopener noreferrer"
+              target="_blank"
+              variant="plain"
+              @click.stop
+            >
+              원문보기
+            </v-btn>
           </v-row>
         </v-container>
       </v-col>

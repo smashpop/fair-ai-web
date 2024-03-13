@@ -16,44 +16,41 @@ const description = computed(() => {
 </script>
 
 <template>
-  <v-card class="mx-2" flat>
-    <v-row dense>
-      <v-col cols="12" md="2"> </v-col>
-
-      <v-col cols="12" md="2" class="pa-2">
+  <v-card flat>
+    <v-row no-gutters>
+      <v-col style="max-width: 210px;">
         <v-img
           :src="props.item.imageUrl ? props.item.imageUrl : tempImageSrc"
-          height="130"
-          class="mt-1 rounded"
+          width="210"
+          height="116"
+          class="rounded"
           cover
         />
       </v-col>
 
-      <v-col cols="12" md="8" class="pl-2">
-        <v-container>
-          <v-row>
-            <div class="text-20 my-2 mr-12" style="font-weight: 600">
+      <v-col class="pl-7">
+        <v-container fluid class="pa-0">
+          <v-row no-gutters>
+            <div class="text-20 text-black font-weight-semi-bold">
               {{ props.item.organization }}
             </div>
           </v-row>
 
-          <v-row style="height: 60px">
-            <div class="text-medium-emphasis text-body-2 mr-12">{{ description }}...</div>
+          <v-row no-gutters class="mt-3">
+            <div class="text-16 text-color-555">{{ description }}...</div>
           </v-row>
 
-          <v-row>
-            <span class="text-subtitle-1 text-medium-emphasis font-weight-bold ml-6"
-              >자세히보기</span
-            >
-            <span class="ml-1">
+          <v-row no-gutters class="mt-3">
+            <span>
               <v-btn
+                class="btn-plain-custom text-color-555 text-body-1"
                 :href="props.item.url"
                 rel="noopener noreferrer"
                 target="_blank"
-                variant="text"
+                variant="plain"
                 @click.stop
               >
-                <v-icon icon="mdi-arrow-top-right" size="large" start />
+                https://ethnics.moe.edu.tw/files/resource/fileebookf
               </v-btn>
             </span>
           </v-row>
