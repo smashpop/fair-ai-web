@@ -47,7 +47,20 @@ $sizes: (
 .text-color-727171 { color: #727171 !important; }
 .line-height-normal { line-height: normal !important; }
 
+.scroll { overflow: overlay; }
+.scroll::-webkit-scrollbar { width: 15px; }
+.scroll::-webkit-scrollbar-track { background-color: #f7f8fb; border-left: 1px solid #dbe0ed; border-right: 1px solid #dbe0ed; border-bottom: 1px solid #dbe0ed; }
+.scroll::-webkit-scrollbar-thumb { border: 4px solid transparent; background-color: #aab7ce; border-radius: 10px; background-clip: content-box; }
 
+.scroll2 { overflow: overlay; }
+.scroll2::-webkit-scrollbar { width: 2px; }
+.scroll2::-webkit-scrollbar-track { background-color: #e2e2e2; border-left: 0px solid #dbe0ed; border-right: 0px solid #dbe0ed; border-bottom: 0px solid #dbe0ed; }
+.scroll2::-webkit-scrollbar-thumb { border: 0px solid transparent; background-color: #686868; border-radius: 0px; background-clip: content-box; }
+
+.scroll3 { overflow: overlay; }
+.scroll3::-webkit-scrollbar { width: 4px; }
+.scroll3::-webkit-scrollbar-track { background-color: #fff; border-left: 0px solid #dbe0ed; border-right: 0px solid #dbe0ed; border-bottom: 0px solid #dbe0ed; }
+.scroll3::-webkit-scrollbar-thumb { border: 0px solid transparent; background-color: #A0A0A0; border-radius: 0px; background-clip: content-box; border-radius: 4px; }
 
 
 //게시판 공통
@@ -75,3 +88,12 @@ $sizes: (
 
 .snb {}
 .snb > button { width: 120px; height: 42px !important; border-radius: 100px; font-size: 16px; color: #000; font-weight: 700; }
+
+.side-keyword { max-height: 423px; overflow-y: auto; }
+.side-keyword > p {}
+.side-keyword > p~p { margin-top: 10px; }
+.side-keyword > p > .v-btn { height: 42px; border: 1px solid #cfcfcf; }
+.side-keyword > p > .v-btn .v-btn__content { font-size: 14px; color: #727171; font-weight: 500; letter-spacing: 0; }
+.side-keyword > p > .v-btn .v-btn__overlay { background-color: #fff;}
+.side-keyword > p > .v-btn:hover { border: 1px solid var(--main-color); background-color: #fff; }
+.side-keyword > p > .v-btn:hover .v-btn__content { color: var(--main-color); background-color: #fff; }

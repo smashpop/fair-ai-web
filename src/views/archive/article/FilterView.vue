@@ -8,97 +8,37 @@ const items = ref([])
 
 <template>
   <v-container class="pa-0">
-    <v-row justify="start" no-gutters class="mt-10">
+    <v-row no-gutters class="mt-10 flex-column">
       <div class="text-16 text-color-555 font-weight-semi-bold">
         발행일 
       </div>
 
-
+      <div class="d-flex jutify-space-between align-center mt-5">
+        <v-text-field variant="outlined" density="compact" hide-details></v-text-field> - 
+        <v-text-field variant="outlined" density="compact" hide-details></v-text-field>
+      </div>
 
       <v-btn block size="large" variant="flat" class="bg-main-color mt-3">
         <div class="text-body-1 font-weight-medium text-white">적용</div>
       </v-btn>
     </v-row>
 
-    <v-divider class="my-6" />
+    <v-divider class="my-7" style="border-color: #a0a0a0; opacity: 1;" />
 
-    <v-row class="my-4" justify="start" dense no-gutters>
-      <div class="text-16 font-weight-bold text-black text-medium-emphasis">발행연도</div>
-    </v-row>
-    <v-row dense no-gutters>
-      <v-col cols="8">
-        <div>
-          <v-checkbox
-            v-model="items"
-            label="2024 (98)"
-            color="info"
-            value="info"
-            density="compact"
-            hide-details
-          ></v-checkbox>
-        </div>
+    <v-row justify="start" no-gutters class="flex-column">
+      <div class="text-16 text-color-555 font-weight-semi-bold">
+        최근 인기 키워드 
+      </div>
 
-        <div>
-          <v-checkbox
-            v-model="items"
-            label="2023 (1128)"
-            color="info"
-            value="info"
-            density="compact"
-            hide-details
-          ></v-checkbox>
-        </div>
-
-        <div>
-          <v-checkbox
-            v-model="items"
-            label="2022 (156)"
-            color="info"
-            value="info"
-            density="compact"
-            hide-details
-          ></v-checkbox>
-        </div>
-
-        <div>
-          <v-checkbox
-            v-model="items"
-            label="2021 (214)"
-            color="info"
-            value="info"
-            density="compact"
-            hide-details
-          ></v-checkbox>
-        </div>
-      </v-col>
+      <div class="side-keyword mt-5 scroll3">
+        <p><v-btn rounded="xl" variant="outlined">#인공지능 윤리</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#자율주행</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#Mid journey</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#Urban Transportation System</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#차세대 전력반도체</v-btn></p>
+      </div>
     </v-row>
 
-    <v-divider class="my-6" />
-
-    <v-row class="my-4" justify="start" dense no-gutters>
-      <div class="text-16 font-weight-bold text-black text-medium-emphasis">국내/해외</div>
-    </v-row>
-
-    <v-row dense no-gutters>
-      <v-col cols="8">
-        <v-checkbox
-          v-model="items"
-          label="국내"
-          color="info"
-          value="info"
-          density="compact"
-          hide-details
-        ></v-checkbox>
-        <v-checkbox
-          v-model="items"
-          label="해외"
-          color="info"
-          value="info"
-          density="compact"
-          hide-details
-        ></v-checkbox>
-      </v-col>
-    </v-row>
-    <v-divider class="my-6" />
+    <v-divider class="mt-7" style="border-color: #a0a0a0; opacity: 1;" />
   </v-container>
 </template>
