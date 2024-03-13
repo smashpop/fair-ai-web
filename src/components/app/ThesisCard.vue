@@ -14,17 +14,17 @@ const abstract = computed(() => {
 </script>
 
 <template>
-  <v-card class="mx-2" flat>
-    <v-row dense>
-      <v-col cols="12" md="9">
-        <v-container>
-          <v-row>
-            <div class="text-20 my-2 mr-12" style="font-weight: 600">
+  <v-card flat>
+    <v-row no-gutters justify="space-between" align="center">
+      <v-col>
+        <v-container fluid class="pa-0">
+          <v-row no-gutters>
+            <div class="text-20">
               {{ props.thesis.title }}
             </div>
           </v-row>
 
-          <v-row class="mb-2">
+          <v-row no-gutters class="align-center">
             <v-chip color="primary" size="small" label>
               <v-icon start icon="mdi-web"></v-icon>
               <span class="text-body-1">
@@ -46,30 +46,39 @@ const abstract = computed(() => {
             </span>
           </v-row>
 
-          <v-row style="height: 80px">
-            <div class="text-medium-emphasis text-body-2 mr-12">{{ abstract }}...</div>
-          </v-row>
-
-          <v-row justify="end" dense>
-            <span class="text-subtitle-1 font-weight-bold text-medium-emphasis">원문보기</span>
-            <span class="mr-4">
-              <v-btn
-                :href="props.thesis.url"
-                rel="noopener noreferrer"
-                target="_blank"
-                variant="text"
-                @click.stop
-              >
-                <v-icon icon="mdi-arrow-top-right" size="large" start />
-              </v-btn>
-            </span>
+          <v-row no-gutters>
+            <div class="text-body-1">{{ abstract }}...</div>
           </v-row>
         </v-container>
       </v-col>
 
-      <v-col cols="12" md="3">
-        <v-img src="@/assets/images/GettyImages.png" height="180" class="mt-2 rounded" cover />
+      <v-col style="max-width: 83px; margin-left: 140px;">
+        <v-img src="@/assets/images/GettyImages.png" width="83" height="107" class="rounded" cover />
       </v-col>
+    </v-row>
+
+    <v-row no-gutters justify="end">
+      <v-btn
+        class="text-subtitle-1 btn-plain-custom"
+        :href="props.thesis.url"
+        rel="noopener noreferrer"
+        target="_blank"
+        variant="plain"
+        @click.stop
+      >
+        원문보기
+      </v-btn>
+
+      <v-btn
+        class="text-subtitle-1 btn-plain-custom ml-8"
+        :href="props.thesis.url"
+        rel="noopener noreferrer"
+        target="_blank"
+        variant="plain"
+        @click.stop
+      >
+        더보기
+      </v-btn>
     </v-row>
   </v-card>
 </template>
