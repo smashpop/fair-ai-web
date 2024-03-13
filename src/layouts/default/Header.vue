@@ -10,7 +10,7 @@ function onScroll() {
 </script>
 
 <template>
-  <v-app-bar v-scroll.self="onScroll" color="transparent" flat height="72">
+  <v-app-bar v-scroll.self="onScroll" color="transparent" flat height="72" :class="{ active: isScrollDown }">
     <template #prepend>
       <logo />
 
@@ -132,7 +132,46 @@ function onScroll() {
   </v-app-bar>
 </template>
 
+<script>
+/*
+window.addEventListener('scroll', function(){
+  console.log( window.scrollY );
+});
+*/
+
+export default {
+   data() {
+      return {
+         isScrollDown: false,    // class active 변수
+         scrollTop: 0,           // 스크롤 값 저장용
+      };
+   },
+
+   // 1번 가상 돔 마운트 시, 이벤트 등록
+   mounted() {
+      document.addEventListener('scroll', this.handleScroll);
+   },
+   // 3번 마운트 해제 전, 이벤트 삭제하기
+   beforeUnmount() {
+      document.removeEventListener('scroll', this.handleScroll);
+   },
+   methods: {
+     // 2번 이벤트 액션
+      handleScroll: function (e) {
+        this.scrollTop = window.scrollY;
+        if (this.scrollTop > 0) {
+          this.isScrollDown = true;
+        } else {
+          this.isScrollDown = false;
+        }
+        //console.log(this.scrollTop);
+      }
+   },
+};
+</script>
+
 <style lang="scss" scoped>
+.v-app-bar.active::v-deep .v-toolbar__content { background: #fff;}
 .v-app-bar::v-deep .v-toolbar__content { min-width: 1360px; border-bottom: 1px solid rgba(0,0,0,0.15); }
 .v-app-bar::v-deep .v-toolbar__prepend > div:nth-of-type(2) { margin-left: 58px; }
 
