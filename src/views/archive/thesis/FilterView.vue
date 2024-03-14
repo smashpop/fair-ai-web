@@ -11,7 +11,7 @@ const items = ref([])
     <div>
       <v-row no-gutters>
         <div class="text-14 text-color-222 font-weight-medium">
-          저자, 설명 등의 조합 키워드 검색은 상세검색을 이용해 주세요.
+          저자, 설명 등의 조합 키워드 검색은 <br>상세검색을 이용해 주세요.
         </div>
 
         <v-btn block rounded="xl" variant="plain" style="width: 100%; height: 44px; border: 1px solid #000; opacity: 1;" class="mt-4" :ripple="false">

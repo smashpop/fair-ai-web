@@ -20,12 +20,12 @@ const abstract = computed(() => {
       <v-col>
         <v-container fluid class="pa-0">
           <v-row no-gutters>
-            <div class="text-20">
+            <div class="text-20 font-weight-semi-bold text-black line-height-normal">
               {{ props.thesis.title }}
             </div>
           </v-row>
 
-          <v-row no-gutters class="align-center">
+          <v-row no-gutters class="align-center mt-3">
             <v-chip color="primary" size="small" label>
               <v-icon start icon="mdi-web"></v-icon>
               <span class="text-body-1">
@@ -33,27 +33,27 @@ const abstract = computed(() => {
               </span>
             </v-chip>
 
-            <span class="text-body-1 font-weight-bold ml-6"> 저자 </span>
-            <span class="text-body-1 ml-2">
+            <span class="text-body-1 font-weight-semi-bold text-color-727171 ml-5"> 저자 </span>
+            <span class="text-body-1 ml-2 author text-color-727171">
               {{ props.thesis.author }}
             </span>
-            <span class="text-body-1 font-weight-bold ml-6"> 발행지명 </span>
-            <span class="text-body-1 ml-2">
+            <span class="text-body-1 font-weight-semi-bold text-color-727171 ml-5"> 발행지명 </span>
+            <span class="text-body-1 ml-2 text-color-727171">
               {{ props.thesis.publisher }}
             </span>
-            <span class="text-body-1 font-weight-bold ml-6"> 발행연도 </span>
-            <span class="text-body-1 ml-2">
+            <span class="text-body-1 font-weight-semi-bold text-color-727171 ml-5"> 발행연도 </span>
+            <span class="text-body-1 ml-2 text-color-727171">
               {{ props.thesis.publishedYear }}
             </span>
           </v-row>
 
-          <v-row no-gutters>
-            <div class="text-body-1 more-text" v-bind:id="'more-text-'+props.thesis.id">{{ abstract }}...</div>
+          <v-row no-gutters class="mt-6">
+            <div class="text-body-1 text-color-555 more-text close" v-bind:id="'more-text-'+props.thesis.id">{{ abstract }}...</div>
           </v-row>
         </v-container>
       </v-col>
 
-      <v-col style="max-width: 83px; margin-left: 140px;">
+      <v-col style="max-width: 83px; margin-left: 140px; flex: 0 0 auto;">
         <v-img src="@/assets/images/GettyImages.png" width="83" height="107" class="rounded" cover />
       </v-col>
     </v-row>
@@ -93,10 +93,10 @@ export default {
       const moreElement = document.getElementById("more-text-"+e);
 
       if(moreElement.classList.contains('active')){
-        moreElement.classList.remove('active');
+        moreElement.classList.replace('active', 'close');
       }
       else{
-        moreElement.classList.add('active');
+        moreElement.classList.replace('close', 'active');
       }
      }
    },
@@ -104,5 +104,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.more-text.active { background: red; }
+.author { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
+.more-text.close { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
+.more-text.active {}
 </style>
