@@ -44,16 +44,33 @@
           </v-col>
 
           <v-col class="d-flex flex-column justify-space-between">
-            <v-select
-              :items="['나의AAC', 'NC문화재단', 'NC SOFT']"
-              class="ml-4"
-              variant="underlined"
-              density="compact"
-            >
-              <template #label>
-                <strong class="text-16 font-weight-bold"> 관련사이트 </strong>
-              </template>
-            </v-select>
+            <v-sheet width="325" class="site">
+              <v-menu location="top">
+                <template v-slot:activator="{ props }">
+                  <v-btn v-bind="props" variant="plain" class="btn-plain-custom" rounded="0" :ripple="false">
+                    관련 사이트
+                  </v-btn>
+                </template>
+
+                <v-list>
+                  <v-list-item href="https://naver.com" target="_blank">
+                    <v-list-item-title>NC문화재단</v-list-item-title>
+                  </v-list-item>
+
+                  <v-list-item href="https://naver.com" target="_blank">
+                    <v-list-item-title>NC소프트</v-list-item-title>
+                  </v-list-item>
+
+                  <v-list-item href="https://naver.com" target="_blank">
+                    <v-list-item-title>NC Japan</v-list-item-title>
+                  </v-list-item>
+
+                  <v-list-item href="https://naver.com" target="_blank">
+                    <v-list-item-title>NC Taiwan</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </v-sheet>
 
             <div class="d-flex justify-end">
               <v-btn color="grey" icon="mdi-facebook" variant="outlined" />
@@ -67,4 +84,17 @@
 </template>
 
 <style lang="scss" scoped>
+.site { background: transparent; }
+.site .v-btn { width: 100%; justify-content: start; border-bottom: 1px solid #727171; background: url('/src/assets/images/footer-site-arrow.svg') 100% center no-repeat; }
+.site .v-btn[aria-expanded=true] {}
+.site .v-btn::v-deep .v-btn__content { height: 59px; width: 100%; font-size: 16px; font-weight: 600; color: #727171; }
+
+.v-overlay-container {}
+.v-overlay-container #v-menu-25 {}
+.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list { box-shadow: none; border: 1px solid #222; padding: 0; }
+.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item { height: 40px; min-height: 40px; padding: 0 20px; box-sizing: border-box; }
+.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item:hover { background: #F0F3F7; }
+.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
+.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item .v-list-item-title { font-size: 16px; color: #222; }
+.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; }
 </style>
