@@ -23,7 +23,40 @@ import FilterView from './FilterView'
         </v-col>
 
         <v-col class="d-flex justify-end">
-          <v-btn class="btn-plain-custom btn-excel text-black font-weight-medium text-body-1" variant="plain">엑셀 다운로드</v-btn>
+          <v-btn 
+            class="btn-plain-custom btn-excel text-black font-weight-medium text-body-1" 
+            variant="plain" 
+            :ripple="false">
+            엑셀 다운로드
+          </v-btn>
+
+          <v-sheet class="list-sort ml-8">
+            <v-menu location="bottom" content-class="list-sort-content">
+              <template v-slot:activator="{ props }">
+                <v-btn 
+                  v-bind="props" 
+                  variant="plain" 
+                  class="btn-plain-custom text-black font-weight-medium text-body-1" 
+                  rounded="0" 
+                  :ripple="false"
+                >
+                  최신순
+                </v-btn>
+              </template>
+
+              <v-list>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </v-sheet>
         </v-col>
       </v-row>
 
@@ -43,4 +76,16 @@ import FilterView from './FilterView'
 </template>
 
 <style lang="scss" scoped>
+.list-sort { background: transparent; }
+.list-sort .v-btn { background: url('/src/assets/images/sort-arrow-close.svg') 100% center no-repeat; padding-right: 24px; }
+.list-sort .v-btn[aria-expanded=true] { background: url('/src/assets/images/sort-arrow-open.svg') 100% center no-repeat; }
+.list-sort .v-btn[aria-expanded=true]::v-deep .v-btn__content { color: #136BFC; }
+.list-sort .v-btn::v-deep .v-btn__content {}
+
+.v-overlay-container .list-sort-content .v-list { width: 120px; box-shadow: none; border: 1px solid #222; padding: 0; }
+.v-overlay-container .list-sort-content .v-list .v-list-item { height: 40px; min-height: 40px; padding: 0 20px; box-sizing: border-box; }
+.v-overlay-container .list-sort-content .v-list .v-list-item:hover { background: #F0F3F7; }
+.v-overlay-container .list-sort-content .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
+.v-overlay-container .list-sort-content .v-list .v-list-item .v-list-item-title { font-size: 14px; color: #222; }
+.v-overlay-container .list-sort-content .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; }
 </style>

@@ -8,6 +8,7 @@ const props = defineProps({
     default: null
   }
 })
+
 const abstract = computed(() => {
   return props.thesis.abstract ? props.thesis.abstract.substring(0, 400) : null
 })
@@ -47,7 +48,7 @@ const abstract = computed(() => {
           </v-row>
 
           <v-row no-gutters>
-            <div class="text-body-1">{{ abstract }}...</div>
+            <div class="text-body-1 more-text" v-bind:id="'more-text-'+props.thesis.id">{{ abstract }}...</div>
           </v-row>
         </v-container>
       </v-col>
@@ -71,14 +72,37 @@ const abstract = computed(() => {
 
       <v-btn
         class="text-subtitle-1 btn-plain-custom ml-8"
-        :href="props.thesis.url"
-        rel="noopener noreferrer"
-        target="_blank"
         variant="plain"
-        @click.stop
+        @click="moreChk(props.thesis.id)"
       >
         더보기
       </v-btn>
     </v-row>
   </v-card>
 </template>
+
+<script>
+export default {
+   data() {
+      return {
+      };
+   },
+
+   methods: {
+     moreChk(e) {
+      const moreElement = document.getElementById("more-text-"+e);
+
+      if(moreElement.classList.contains('active')){
+        moreElement.classList.remove('active');
+      }
+      else{
+        moreElement.classList.add('active');
+      }
+     }
+   },
+};
+</script>
+
+<style lang="scss" scoped>
+.more-text.active { background: red; }
+</style>

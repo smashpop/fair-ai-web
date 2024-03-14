@@ -45,7 +45,7 @@
 
           <v-col class="d-flex flex-column justify-space-between">
             <v-sheet width="325" class="site">
-              <v-menu location="top">
+              <v-menu location="top" content-class="footer-site">
                 <template v-slot:activator="{ props }">
                   <v-btn v-bind="props" variant="plain" class="btn-plain-custom" rounded="0" :ripple="false">
                     관련 사이트
@@ -90,11 +90,10 @@
 .site .v-btn::v-deep .v-btn__content { height: 59px; width: 100%; font-size: 16px; font-weight: 600; color: #727171; }
 
 .v-overlay-container {}
-.v-overlay-container #v-menu-25 {}
-.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list { box-shadow: none; border: 1px solid #222; padding: 0; }
-.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item { height: 40px; min-height: 40px; padding: 0 20px; box-sizing: border-box; }
-.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item:hover { background: #F0F3F7; }
-.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
-.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item .v-list-item-title { font-size: 16px; color: #222; }
-.v-overlay-container #v-menu-25::v-deep .v-overlay__content .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; }
+.v-overlay-container .footer-site .v-list { box-shadow: none; border: 1px solid #222; padding: 0; }
+.v-overlay-container .footer-site .v-list .v-list-item { height: 40px; min-height: 40px; padding: 0 20px; box-sizing: border-box; }
+.v-overlay-container .footer-site .v-list .v-list-item:hover { background: #F0F3F7; }
+.v-overlay-container .footer-site .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
+.v-overlay-container .footer-site .v-list .v-list-item .v-list-item-title { font-size: 16px; color: #222; }
+.v-overlay-container .footer-site .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; }
 </style>
