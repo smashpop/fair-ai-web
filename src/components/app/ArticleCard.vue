@@ -22,7 +22,7 @@ const previewText = computed(() => {
       <v-col class=""> 
         <v-container fluid class="pa-0">
           <v-row no-gutters>
-            <div class="text-20 font-weight-semi-bold text-black">
+            <div class="text-20 font-weight-semi-bold text-black line-height-normal">
               {{ props.article.title }}
             </div>
           </v-row>

@@ -13,6 +13,8 @@ const props = defineProps({
 const description = computed(() => {
   return props.item.description ? props.item.description.substring(0, 500) : null
 })
+
+//console.log(props.item);
 </script>
 
 <template>
@@ -37,7 +39,7 @@ const description = computed(() => {
           </v-row>
 
           <v-row no-gutters class="mt-3">
-            <div class="text-16 text-color-555">{{ description }}...</div>
+            <div class="text-16 text-color-555">{{ description }}</div>
           </v-row>
 
           <v-row no-gutters class="mt-3">
@@ -50,7 +52,7 @@ const description = computed(() => {
                 variant="plain"
                 @click.stop
               >
-                https://ethnics.moe.edu.tw/files/resource/fileebookf
+                {{props.item.url}}
               </v-btn>
             </span>
           </v-row>

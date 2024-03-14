@@ -88,6 +88,7 @@ $sizes: (
 
 .snb {}
 .snb > button { width: 120px; height: 42px !important; border-radius: 100px; font-size: 16px; color: #000; font-weight: 700; }
+.snb > button.on { background: var(--main-color); color: #fff; }
 
 .side-keyword { max-height: 423px; overflow-y: auto; }
 .side-keyword > p {}

@@ -15,8 +15,8 @@ import GuidelineView from './GuidelineView.vue'
 
   <v-divider class="mt-15 mb-4" :thickness="1" />
     <v-sheet class="mx-auto snb" width="1360">
-      <v-btn variant="plain" class="btn-plain-custom">국가</v-btn>
-      <v-btn variant="plain" class="btn-plain-custom">국제기구</v-btn>
+      <v-btn variant="plain" :ripple="false" class="btn-plain-custom on">국가</v-btn>
+      <v-btn variant="plain" :ripple="false" class="btn-plain-custom">국제기구</v-btn>
     </v-sheet>
   <v-divider class="mt-4" :thickness="1" />
 

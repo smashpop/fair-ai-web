@@ -19,7 +19,7 @@ const abstract = computed(() => {
       <v-col>
         <v-container fluid class="pa-0">
           <v-row no-gutters>
-            <div class="text-20 font-weight-semi-bold text-black">
+            <div class="text-20 font-weight-semi-bold text-black line-height-normal">
               {{ props.report.title }}
             </div>
           </v-row>
@@ -32,15 +32,15 @@ const abstract = computed(() => {
               </span>
             </v-chip>
 
-            <span class="text-body-1 font-weight-semi-bold ml-6"> 저자 </span>
+            <span class="text-body-1 font-weight-semi-bold ml-5"> 저자 </span>
             <span class="text-body-1 ml-2">
               {{ props.report.author }}
             </span>
-            <span class="text-body-1 font-weight-semi-bold ml-6"> 발행지명 </span>
+            <span class="text-body-1 font-weight-semi-bold ml-5"> 발행지명 </span>
             <span class="text-body-1 ml-2">
               {{ props.report.publisher }}
             </span>
-            <span class="text-body-1 font-weight-semi-bold ml-6"> 발행연도 </span>
+            <span class="text-body-1 font-weight-semi-bold ml-5"> 발행연도 </span>
             <span class="text-body-1 ml-2">
               {{ props.report.publishedYear }}
             </span>
