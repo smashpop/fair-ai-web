@@ -15,7 +15,7 @@
             </v-btn>
 
             <v-btn to="/archive" variant="plain" class="btn-plain-custom">
-              <strong class="text-20 font-weight-bold text-color-222">자료실</strong>
+              <strong class="text-20 font-weight-bold text-color-222">최신자료</strong>
             </v-btn>
 
             <v-btn to="/news" variant="plain" class="btn-plain-custom">
@@ -73,8 +73,25 @@
             </v-sheet>
 
             <div class="d-flex justify-end">
-              <v-btn color="grey" icon="mdi-facebook" variant="outlined" />
-              <v-btn color="grey" icon="mdi-youtube" variant="outlined" />
+              <v-btn href="https://facebook.com" target="_blank" variant="plain" class="btn-plain-custom" :ripple="false">
+                <v-img
+                  src="@/assets/images/button-facebook.svg"
+                  class="cursor-pointer"
+                  width="40"
+                  height="40"
+                  alt="facebook"
+                />
+              </v-btn>
+
+              <v-btn href="https://youtube.com" target="_blank" variant="plain" class="btn-plain-custom ml-3" :ripple="false">
+                <v-img
+                  src="@/assets/images/button-youtube.svg"
+                  class="cursor-pointer"
+                  width="40"
+                  height="40"
+                  alt="youtube"
+                />
+              </v-btn>
             </div>
           </v-col>
         </v-row>

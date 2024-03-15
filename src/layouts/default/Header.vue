@@ -125,8 +125,8 @@ function onScroll() {
     </template>
 
     <template #append>
-      <v-btn append-icon="$vuetify" variant="text" class="pr-5">
-        <p class="text-16 font-weight-medium">행사 캘린더</p>
+      <v-btn variant="plain" class="btn-plain-custom pr-5" :ripple="false">
+        <p class="text-16 font-weight-medium calendar">행사 캘린더</p>
       </v-btn>
     </template>
   </v-app-bar>
@@ -176,4 +176,5 @@ export default {
 .v-app-bar::v-deep .v-toolbar__prepend > div:nth-of-type(2) { margin-left: 58px; }
 
 .v-btn::v-deep .v-btn__content > p { color: #222; }
+.calendar { padding-right: 25px; background: url('/src/assets/images/calendar.svg') 100% 1px no-repeat; }
 </style>
