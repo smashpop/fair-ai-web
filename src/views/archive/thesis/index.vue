@@ -24,10 +24,17 @@ import FilterView from './FilterView'
 
         <v-col class="d-flex justify-end">
           <v-btn 
-            class="btn-plain-custom btn-excel text-black font-weight-medium text-body-1" 
+            class="btn-plain-custom btn-excel text-black font-weight-medium text-body-1"
             variant="plain" 
             :ripple="false">
-            엑셀 다운로드
+            <span>엑셀 다운로드</span>
+            <v-img
+              src="@/assets/images/icon-download.svg"
+              class="cursor-pointer ml-2"
+              width="12"
+              height="15"
+              alt="excel download"
+            />
           </v-btn>
 
           <v-sheet class="list-sort ml-8">

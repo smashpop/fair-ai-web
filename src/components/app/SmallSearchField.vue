@@ -19,7 +19,6 @@ function clickProc() {
 <template>
   <v-text-field
     v-model="keyword"
-    placeholder="검색"
     color="primary"
     bg-color="white"
     style="max-width: 440px"

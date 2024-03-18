@@ -64,12 +64,13 @@ $sizes: (
 
 
 //게시판 공통
-.bo-sch .v-input .v-input__control .v-field { background-color: #F0F3F7 !important; }
+.bo-sch .v-input .v-input__control .v-field { background-color: #F0F3F7 !important; padding-right: 30px; }
 .bo-sch .v-input .v-input__control input { height: 52px; }
-.bo-sch .v-input .v-input__control input::placeholder { opacity: 0; }
 .bo-sch .v-input .v-input__control .v-field__outline { display: none; }
+.bo-sch .v-input .v-input__control .v-field__append-inner { background: url('@/assets/images/icon-search.svg') center no-repeat; width: 20px; }
+.bo-sch .v-input .v-input__control .v-field__append-inner > i { display: none; }
 
-.btn-plain-custom { min-width: auto; height: auto !important; opacity: 1; padding: 0; line-height: 1.5; }
+.btn-plain-custom { min-width: auto; height: auto !important; opacity: 1 !important; padding: 0; line-height: 1.5; }
 
 .board { padding-bottom: 100px; }
 .board .text-body-1 {}
