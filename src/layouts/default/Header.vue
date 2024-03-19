@@ -94,7 +94,7 @@ function onScroll() {
                   <div>행사캘린더</div>
                 </v-btn>
                 <v-btn to="/news/event-regist" variant="plain" :ripple="false">
-                  <div>행사신청</div>
+                  <div>행사등록 제안</div>
                 </v-btn>
               </v-row>
             </v-list-item>
@@ -115,7 +115,7 @@ function onScroll() {
                   <div>FAQ</div>
                 </v-btn>
                 <v-btn to="/suggest/suggest" variant="plain" :ripple="false">
-                  <div>문의/제안</div>
+                  <div>문의·제안</div>
                 </v-btn>
               </v-row>
             </v-list-item>

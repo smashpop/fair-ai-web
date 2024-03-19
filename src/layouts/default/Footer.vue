@@ -15,7 +15,7 @@
             </v-btn>
 
             <v-btn to="/archive" variant="plain" class="btn-plain-custom">
-              <strong class="text-20 font-weight-bold text-color-222">최신자료</strong>
+              <strong class="text-20 font-weight-bold text-color-222">자료실</strong>
             </v-btn>
 
             <v-btn to="/news" variant="plain" class="btn-plain-custom">
