@@ -55,19 +55,19 @@ function onScroll() {
                 </v-btn>
 
                 <v-btn to="/archive/article" variant="plain" :ripple="false">
-                  <div>기사</div>
+                  <div>뉴스</div>
                 </v-btn>
 
                 <v-btn to="/archive/guideline" variant="plain" :ripple="false">
                   <div>가이드라인</div>
                 </v-btn>
 
-                <v-btn to="/archive/curriculum" variant="plain" :ripple="false">
-                  <div>교육커리큘럼</div>
-                </v-btn>
-
                 <v-btn to="/archive/refSite" variant="plain" :ripple="false">
                   <div>참고사이트</div>
+                </v-btn>
+
+                <v-btn to="/archive/curriculum" variant="plain" :ripple="false">
+                  <div>전공/커리큘럼</div>
                 </v-btn>
               </v-row>
             </v-list-item>
@@ -87,14 +87,11 @@ function onScroll() {
                 <v-btn to="/news/notice" variant="plain" :ripple="false">
                   <div>공지사항</div>
                 </v-btn>
-                <v-btn to="/news/event" variant="plain" :ripple="false">
-                  <div>관련행사</div>
-                </v-btn>
                 <v-btn to="/news/event-calendar" variant="plain" :ripple="false">
-                  <div>행사캘린더</div>
+                  <div>관련행사 </div>
                 </v-btn>
                 <v-btn to="/news/event-regist" variant="plain" :ripple="false">
-                  <div>행사등록 제안</div>
+                  <div>행사등록 신청</div>
                 </v-btn>
               </v-row>
             </v-list-item>

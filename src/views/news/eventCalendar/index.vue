@@ -3,6 +3,7 @@
 import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import koLocale from '@fullcalendar/core/locales/ko'
+import SmallSearchField from '@/components/app/SmallSearchField'
 
 // Utilities
 import { ref } from 'vue'
@@ -40,6 +41,34 @@ async function loadFromServer() {
 loadFromServer()
 </script>
 
+
+<template>
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+    <p class="text-68 font-weight-bold text-black">관련행사</p>
+  </v-sheet>
+
+  <v-sheet class="bo-sch mt-3 d-flex justify-center mx-auto" width="1360">
+    <SmallSearchField />
+  </v-sheet>
+
+  <v-divider class="mt-15 mb-4" :thickness="1" />
+    <v-sheet class="mx-auto snb" width="1360">
+      <v-btn variant="plain" :ripple="false" href="/news/event-calendar" class="btn-plain-custom on">월간</v-btn>
+      <v-btn variant="plain" :ripple="false" href="/news/event" class="btn-plain-custom">목록</v-btn>
+    </v-sheet>
+  <v-divider class="mt-4" :thickness="1" />
+
+
+  <v-sheet class="mx-auto board mt-15" width="1360">
+    <v-container fluid class="pa-0">
+      <div>
+        <FullCalendar :options="calendarOptions" />
+      </div>
+    </v-container>
+  </v-sheet>
+</template>
+
+<!--
 <template>
   <v-container fluid class="bg-white">
     <v-responsive class="align-center text-center fill-height">
@@ -56,5 +85,6 @@ loadFromServer()
     </v-responsive>
   </v-container>
 </template>
+-->
 
 <style lang="scss" scoped></style>

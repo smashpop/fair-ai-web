@@ -88,7 +88,9 @@ $sizes: (
 .fair-pg > ul > li > button:hover > span { color: #fff; }
 
 .snb {}
+.snb > a,
 .snb > button { width: 120px; height: 42px !important; border-radius: 100px; font-size: 16px; color: #000; font-weight: 700; }
+.snb > a.on,
 .snb > button.on { background: var(--main-color); color: #fff; }
 
 .side-keyword { max-height: 423px; overflow-y: auto; }

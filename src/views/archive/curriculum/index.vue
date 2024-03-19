@@ -6,7 +6,7 @@ import CurriculumView from './CurriculumView.vue'
 
 <template>
   <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
-    <p class="text-68 font-weight-bold text-black">교육커리큘럼</p>
+    <p class="text-68 font-weight-bold text-black">전공/커리큘럼</p>
   </v-sheet>
 
   <v-sheet class="bo-sch mt-3 d-flex justify-center mx-auto" width="1360">
