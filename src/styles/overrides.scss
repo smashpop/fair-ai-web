@@ -156,3 +156,9 @@ textarea.privacy { width: 100%; border: 1px solid #CFCFCF; padding: 20px 20px 0 
 .list-original-contents.v-overlay__content .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
 .list-original-contents.v-overlay__content .v-list .v-list-item .v-list-item-title { font-size: 14px; color: #222; }
 .list-original-contents.v-overlay__content .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; background: url('@/assets/images/sort-more.svg') 100% center no-repeat;}
+
+
+.btn-more .v-btn__content { font-weight: 500; padding-right: 24px; background: url('@/assets/images/sort-arrow-close.svg') 100% center no-repeat; }
+.btn-more.active .v-btn__content { color: var(--main-color); background: url('@/assets/images/sort-arrow-open.svg') 100% center no-repeat; }
+
+.chip-country { border-radius: 6px; height: 30px !important; padding: 0 10px 0 28px !important; background: url('@/assets/images/icon-earth.svg') 10px center no-repeat; }

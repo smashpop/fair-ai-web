@@ -137,9 +137,4 @@ export default {
 .author { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
 .more-text.close { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
 .more-text.active {}
-
-.btn-more::v-deep .v-btn__content { font-weight: 500; padding-right: 24px; background: url('@/assets/images/sort-arrow-close.svg') 100% center no-repeat; }
-.btn-more.active::v-deep .v-btn__content { color: var(--main-color); background: url('@/assets/images/sort-arrow-open.svg') 100% center no-repeat; }
-
-.chip-country { border-radius: 6px; height: 30px; padding: 0 10px 0 28px; background: url('@/assets/images/icon-earth.svg') 10px center no-repeat; }
 </style>

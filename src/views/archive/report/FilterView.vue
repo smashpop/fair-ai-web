@@ -26,15 +26,15 @@ const items = ref([])
       </v-row>
 
       <v-row no-gutters class="mt-5">
-        <v-col>
+        <v-col class="scroll2" style="max-height: 195px;">
           <div>
             <v-checkbox
               v-model="items"
               label="2024 (98)"
-              color="info"
-              value="info"
-              density="compact"
+              value="1"
               hide-details
+              class="input-chk-custom"
+              :ripple="false"
             ></v-checkbox>
           </div>
 
@@ -42,10 +42,10 @@ const items = ref([])
             <v-checkbox
               v-model="items"
               label="2023 (1128)"
-              color="info"
-              value="info"
-              density="compact"
+              value="2"
               hide-details
+              class="input-chk-custom mt-2"
+              :ripple="false"
             ></v-checkbox>
           </div>
 
@@ -53,10 +53,10 @@ const items = ref([])
             <v-checkbox
               v-model="items"
               label="2022 (156)"
-              color="info"
               value="info"
-              density="compact"
               hide-details
+              class="input-chk-custom mt-2"
+              :ripple="false"
             ></v-checkbox>
           </div>
 
@@ -64,10 +64,43 @@ const items = ref([])
             <v-checkbox
               v-model="items"
               label="2021 (214)"
-              color="info"
               value="info"
-              density="compact"
               hide-details
+              class="input-chk-custom mt-2"
+              :ripple="false"
+            ></v-checkbox>
+          </div>
+
+          <div>
+            <v-checkbox
+              v-model="items"
+              label="2020 (214)"
+              value="info"
+              hide-details
+              class="input-chk-custom mt-2"
+              :ripple="false"
+            ></v-checkbox>
+          </div>
+
+          <div>
+            <v-checkbox
+              v-model="items"
+              label="2019 (214)"
+              value="info"
+              hide-details
+              class="input-chk-custom mt-2"
+              :ripple="false"
+            ></v-checkbox>
+          </div>
+
+          <div>
+            <v-checkbox
+              v-model="items"
+              label="2018 (214)"
+              value="info"
+              hide-details
+              class="input-chk-custom mt-2"
+              :ripple="false"
             ></v-checkbox>
           </div>
         </v-col>
@@ -76,7 +109,7 @@ const items = ref([])
       <v-divider class="my-7" />
 
       <v-row no-gutters>
-        <div class="text-16 font-weight-semi-bold text-color-555">국내/해외</div>
+        <div class="text-16 font-weight-semi-bold text-color-555">국내/국외</div>
       </v-row>
 
       <v-row no-gutters class="mt-5">
@@ -84,18 +117,19 @@ const items = ref([])
           <v-checkbox
             v-model="items"
             label="국내"
-            color="info"
-            value="info"
-            density="compact"
+            value="1"
             hide-details
+            class="input-chk-custom"
+            :ripple="false"
           ></v-checkbox>
+
           <v-checkbox
             v-model="items"
-            label="해외"
-            color="info"
-            value="info"
-            density="compact"
+            label="국외"
+            value="2"
             hide-details
+            class="input-chk-custom mt-2"
+            :ripple="false"
           ></v-checkbox>
         </v-col>
       </v-row>

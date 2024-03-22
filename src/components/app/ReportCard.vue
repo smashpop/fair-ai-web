@@ -9,7 +9,7 @@ const props = defineProps({
   }
 })
 const abstract = computed(() => {
-  return props.report.abstract ? props.report.abstract.substring(0, 400) : null
+  return props.report.abstract ? props.report.abstract.substring(0, 800) : null
 })
 </script>
 
@@ -24,32 +24,44 @@ const abstract = computed(() => {
             </div>
           </v-row>
 
-          <v-row no-gutters class="mt-3 text-color-727171 align-center">
-            <v-chip color="primary" size="small" label>
-              <v-icon start icon="mdi-web"></v-icon>
-              <span class="text-body-1">
+          <v-row no-gutters class="align-center mt-3">
+            <v-chip color="primary" class="chip-country" label>
+              <span class="text-body-2 text-color-222 font-weight-semi-bold">
                 {{ props.report.orgType }}
               </span>
             </v-chip>
 
-            <span class="text-body-1 font-weight-semi-bold ml-5"> 저자 </span>
-            <span class="text-body-1 ml-2">
+            <span class="text-body-1 font-weight-semi-bold text-color-727171 ml-5"> 저자 </span>
+            <span class="text-body-1 ml-2 author text-color-727171">
               {{ props.report.author }}
             </span>
-            <span class="text-body-1 font-weight-semi-bold ml-5"> 발행지명 </span>
-            <span class="text-body-1 ml-2">
+            <span class="text-body-1 font-weight-semi-bold text-color-727171 ml-5"> 발행지명 </span>
+            <span class="text-body-1 ml-2 text-color-727171">
               {{ props.report.publisher }}
             </span>
-            <span class="text-body-1 font-weight-semi-bold ml-5"> 발행연도 </span>
-            <span class="text-body-1 ml-2">
+            <span class="text-body-1 font-weight-semi-bold text-color-727171 ml-5"> 발행연도 </span>
+            <span class="text-body-1 ml-2 text-color-727171">
               {{ props.report.publishedYear }}
             </span>
           </v-row>
 
           <v-row no-gutters class="mt-6">
-            <div class="text-body-1 text-color-555">{{ abstract }}...</div>
+            <div class="text-body-1 text-color-555 more-text close" v-bind:id="'more-text-'+props.report.id">{{ abstract }}...</div>
           </v-row>
 
+          <v-row no-gutters justify="end" class="mt-3">
+            <v-btn
+              class="text-subtitle-1 btn-plain-custom ml-8 line-height-normal btn-more"
+              :class="{ active: isActive }"
+              variant="plain"
+              :ripple="false"
+              @click="moreChk(props.report.id)"
+            >
+              {{btnText}}
+            </v-btn>
+          </v-row>
+
+          <!--
           <v-row no-gutters class="justify-end mt-3">
             <v-btn
               class="btn-plain-custom"
@@ -61,7 +73,7 @@ const abstract = computed(() => {
             >
               원문보기
             </v-btn>
-          </v-row>
+          </v-row>-->
         </v-container>
       </v-col>
 
@@ -73,3 +85,37 @@ const abstract = computed(() => {
     </v-row>
   </v-card>
 </template>
+
+<script>
+export default {
+   data() {
+      return {
+        btnText: '더보기',
+        isActive: false,
+      };
+   },
+
+   methods: {
+     moreChk(e) {
+      const moreElement = document.getElementById("more-text-"+e);
+
+      if(moreElement.classList.contains('active')){
+        moreElement.classList.replace('active', 'close');
+        this.btnText = '더보기';
+        this.isActive = false;
+      }
+      else{
+        moreElement.classList.replace('close', 'active');
+        this.btnText = '닫기';
+        this.isActive = true;
+      }
+     }
+   },
+};
+</script>
+
+<style lang="scss" scoped>
+.author { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
+.more-text.close { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
+.more-text.active {}
+</style>

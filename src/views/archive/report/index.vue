@@ -22,8 +22,48 @@ import FilterView from './FilterView'
           <p class="text-color-555" style="margin-left: 6px;">건의 자료가<br>있습니다.</p>
         </v-col>
 
-        <v-col class="d-flex justify-end">
-          <v-btn class="btn-plain-custom btn-excel text-black font-weight-medium text-body-1" variant="plain">엑셀 다운로드</v-btn>
+<v-col class="d-flex justify-end">
+          <v-btn 
+            class="btn-plain-custom btn-excel text-black font-weight-medium text-body-1"
+            variant="plain" 
+            :ripple="false">
+            <span>엑셀 다운로드</span>
+            <v-img
+              src="@/assets/images/icon-download.svg"
+              class="cursor-pointer ml-2"
+              width="12"
+              height="15"
+              alt="excel download"
+            />
+          </v-btn>
+
+          <v-sheet class="list-sort ml-8">
+            <v-menu location="bottom" attach>
+              <template v-slot:activator="{ props }">
+                <v-btn 
+                  v-bind="props" 
+                  variant="plain" 
+                  class="btn-plain-custom text-black font-weight-medium text-body-1" 
+                  rounded="0" 
+                  :ripple="false"
+                >
+                  최신순
+                </v-btn>
+              </template>
+
+              <v-list>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </v-sheet>
         </v-col>
       </v-row>
 
