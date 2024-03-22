@@ -38,7 +38,7 @@ import FilterView from './FilterView'
           </v-btn>
 
           <v-sheet class="list-sort ml-8">
-            <v-menu location="bottom" content-class="list-sort-content">
+            <v-menu location="bottom" attach>
               <template v-slot:activator="{ props }">
                 <v-btn 
                   v-bind="props" 
@@ -83,16 +83,4 @@ import FilterView from './FilterView'
 </template>
 
 <style lang="scss" scoped>
-.list-sort { background: transparent; }
-.list-sort .v-btn { background: url('/src/assets/images/sort-arrow-close.svg') 100% center no-repeat; padding-right: 24px; }
-.list-sort .v-btn[aria-expanded=true] { background: url('/src/assets/images/sort-arrow-open.svg') 100% center no-repeat; }
-.list-sort .v-btn[aria-expanded=true]::v-deep .v-btn__content { color: #136BFC; }
-.list-sort .v-btn::v-deep .v-btn__content {}
-
-.v-overlay-container .list-sort-content .v-list { width: 120px; box-shadow: none; border: 1px solid #222; padding: 0; }
-.v-overlay-container .list-sort-content .v-list .v-list-item { height: 40px; min-height: 40px; padding: 0 20px; box-sizing: border-box; }
-.v-overlay-container .list-sort-content .v-list .v-list-item:hover { background: #F0F3F7; }
-.v-overlay-container .list-sort-content .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
-.v-overlay-container .list-sort-content .v-list .v-list-item .v-list-item-title { font-size: 14px; color: #222; }
-.v-overlay-container .list-sort-content .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; }
 </style>

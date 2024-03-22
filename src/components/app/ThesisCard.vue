@@ -26,9 +26,8 @@ const abstract = computed(() => {
           </v-row>
 
           <v-row no-gutters class="align-center mt-3">
-            <v-chip color="primary" size="small" label>
-              <v-icon start icon="mdi-web"></v-icon>
-              <span class="text-body-1">
+            <v-chip color="primary" class="chip-country" label>              
+              <span class="text-body-2 text-color-222 font-weight-semi-bold">
                 {{ props.thesis.orgType }}
               </span>
             </v-chip>
@@ -59,23 +58,48 @@ const abstract = computed(() => {
     </v-row>
 
     <v-row no-gutters justify="end">
-      <v-btn
-        class="text-subtitle-1 btn-plain-custom"
-        :href="props.thesis.url"
-        rel="noopener noreferrer"
-        target="_blank"
-        variant="plain"
-        @click.stop
-      >
-        원문보기
-      </v-btn>
+      <v-sheet class="list-original ml-8">
+        <v-menu location="bottom" content-class="list-original-contents">
+          <template v-slot:activator="{ props }">
+            <v-btn 
+              v-bind="props" 
+              variant="plain" 
+              class="btn-plain-custom text-color-555 font-weight-medium text-body-1" 
+              rounded="0" 
+              :ripple="false"
+            >
+              원문보기
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item>
+              <v-list-item-title>eArticle</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-title>KISS</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-title>KCI</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-title>AccessON</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </v-sheet>
 
       <v-btn
-        class="text-subtitle-1 btn-plain-custom ml-8"
+        class="text-subtitle-1 btn-plain-custom ml-8 line-height-normal btn-more"
+        :class="{ active: isActive }"
         variant="plain"
+        :ripple="false"
         @click="moreChk(props.thesis.id)"
       >
-        더보기
+        {{btnText}}
       </v-btn>
     </v-row>
   </v-card>
@@ -85,6 +109,8 @@ const abstract = computed(() => {
 export default {
    data() {
       return {
+        btnText: '더보기',
+        isActive: false,
       };
    },
 
@@ -94,9 +120,13 @@ export default {
 
       if(moreElement.classList.contains('active')){
         moreElement.classList.replace('active', 'close');
+        this.btnText = '더보기';
+        this.isActive = false;
       }
       else{
         moreElement.classList.replace('close', 'active');
+        this.btnText = '닫기';
+        this.isActive = true;
       }
      }
    },
@@ -107,4 +137,9 @@ export default {
 .author { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
 .more-text.close { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
 .more-text.active {}
+
+.btn-more::v-deep .v-btn__content { font-weight: 500; padding-right: 24px; background: url('@/assets/images/sort-arrow-close.svg') 100% center no-repeat; }
+.btn-more.active::v-deep .v-btn__content { color: var(--main-color); background: url('@/assets/images/sort-arrow-open.svg') 100% center no-repeat; }
+
+.chip-country { border-radius: 6px; height: 30px; padding: 0 10px 0 28px; background: url('@/assets/images/icon-earth.svg') 10px center no-repeat; }
 </style>

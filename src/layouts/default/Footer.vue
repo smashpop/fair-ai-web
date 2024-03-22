@@ -106,11 +106,10 @@
 .site .v-btn[aria-expanded=true] {}
 .site .v-btn::v-deep .v-btn__content { height: 59px; width: 100%; font-size: 16px; font-weight: 600; color: #727171; }
 
-.v-overlay-container {}
-.v-overlay-container .footer-site .v-list { box-shadow: none; border: 1px solid #222; padding: 0; }
-.v-overlay-container .footer-site .v-list .v-list-item { height: 40px; min-height: 40px; padding: 0 20px; box-sizing: border-box; }
-.v-overlay-container .footer-site .v-list .v-list-item:hover { background: #F0F3F7; }
-.v-overlay-container .footer-site .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
-.v-overlay-container .footer-site .v-list .v-list-item .v-list-item-title { font-size: 16px; color: #222; }
-.v-overlay-container .footer-site .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; }
+.footer-site .v-list { box-shadow: none; border: 1px solid #222; padding: 0; }
+.footer-site .v-list .v-list-item { height: 40px; min-height: 40px; padding: 0 20px; box-sizing: border-box; }
+.footer-site .v-list .v-list-item:hover { background: #F0F3F7; }
+.footer-site .v-list .v-list-item .v-list-item__overlay { opacity: 0; }
+.footer-site .v-list .v-list-item .v-list-item-title { font-size: 16px; color: #222; }
+.footer-site .v-list .v-list-item:hover .v-list-item-title { font-weight: 600; color: #000; }
 </style>
