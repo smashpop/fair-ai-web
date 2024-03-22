@@ -19,9 +19,17 @@ const abstract = computed(() => {
       <v-col>
         <v-container fluid class="pa-0">
           <v-row no-gutters>
-            <div class="text-20 font-weight-semi-bold text-black line-height-normal">
+            <v-btn
+              style="letter-spacing: 0;"
+              class="btn-plain-custom text-20 font-weight-semi-bold text-black line-height-normal"
+              :href="props.report.url"
+              rel="noopener noreferrer"
+              target="_blank"
+              variant="plain"
+              @click.stop
+            >
               {{ props.report.title }}
-            </div>
+            </v-btn>
           </v-row>
 
           <v-row no-gutters class="align-center mt-3">

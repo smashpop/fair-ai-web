@@ -71,6 +71,7 @@ $sizes: (
 .bo-sch .v-input .v-input__control .v-field__append-inner > i { display: none; }
 
 .btn-plain-custom { min-width: auto; height: auto !important; opacity: 1 !important; padding: 0; line-height: 1.5; }
+.btn-plain-custom .v-btn__content { white-space: normal;}
 
 .board { padding-bottom: 100px; }
 .board .text-body-1 {}
