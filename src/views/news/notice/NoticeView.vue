@@ -42,10 +42,6 @@ watch(
 </script>
 
 <template>
-  <div class="d-flex justify-space-between">
-    <strong class="pa-0 mb-4 text-h6 font-weight-bold"> 공지사항 </strong>
-  </div>
-
   <v-divider class="mb-2"></v-divider>
 
   <v-list>
