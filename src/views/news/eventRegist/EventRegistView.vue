@@ -151,6 +151,7 @@ async function addEventProc() {
                   v-model="eventRequest.eventName"
                   variant="outlined"
                   density="compact"
+                  hide-details
                 />
               </v-col>
             </v-row>
@@ -164,6 +165,7 @@ async function addEventProc() {
                   clearable
                   clear-icon="mdi-close-circle"
                   auto-grow
+                  hide-details
                   rows="10"
                   row-height="25"
                 />
@@ -172,14 +174,49 @@ async function addEventProc() {
 
             <p class="text-body-1 text-color-222 font-weight-bold mt-7 mb-2">행사 일정 *</p>
 
-            <v-row no-gutters>
-              <v-col>
-                <DatePicker v-model="eventRequest.startDate"/>
-              </v-col>
-              ~
-              <v-col>
-                <DatePicker v-model="eventRequest.endDate"/>
-              </v-col>
+            <v-row no-gutters class="d-flex justity-start">
+              <v-col class="d-flex align-center">
+                <v-sheet width="177">
+                  <DatePicker v-model="eventRequest.startDate"/>  
+                </v-sheet>
+
+                <v-sheet width="127" class="mx-2">
+                  <v-select
+                  v-model="select"
+                  :hint="`${select.state}, ${select.abbr}`"
+                  :items="items"
+                  item-title="state"
+                  item-value="abbr"
+                  label="Select"
+                  return-object
+                  single-line
+                  hide-details
+                  class="select-custom"
+                  style="width: 127px; height: 40px;"
+                ></v-select>
+                </v-sheet>         
+
+                ~   
+
+                <v-sheet width="177" class="mx-2">
+                  <DatePicker v-model="eventRequest.endDate"/>
+                </v-sheet>
+
+                <v-sheet width="127">
+                  <v-select
+                  v-model="select"
+                  :hint="`${select.state}, ${select.abbr}`"
+                  :items="items"
+                  item-title="state"
+                  item-value="abbr"
+                  label="Select"
+                  return-object
+                  single-line
+                  hide-details
+                  class="select-custom"
+                  style="width: 127px; height: 40px;"
+                ></v-select>
+                </v-sheet>                </v-col>
             </v-row>
 
             <v-row no-gutters class="justify-space-between mt-7">
@@ -197,7 +234,6 @@ async function addEventProc() {
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">비용</p>
                 <v-text-field
                   v-model="eventRequest.fee"
-                  label="비용"
                   variant="outlined"
                   density="compact"
                   hide-details
@@ -210,10 +246,11 @@ async function addEventProc() {
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">행사 URL</p>
                 <v-text-field
                   v-model="eventRequest.url"
-                  label="url"
                   variant="outlined"
                   density="compact"
+                  hide-details
                 />
+                <p class="mt-2 text-body-2 text-color-999">담당자 검토를 거쳐 최종적으로 등록되며, 등록 후 입력하신 이메일이나, 연락처로 안내 드립니다.</p>
               </v-col>
 
               <v-col style="width: 493px; flex: 0 0 auto;">
@@ -226,6 +263,7 @@ async function addEventProc() {
                   show-size
                   variant="outlined"
                   density="compact"
+                  hide-details
                 >
                   <template #selection="{ fileNames }">
                     <template v-for="fileName in fileNames" :key="fileName">
@@ -235,13 +273,14 @@ async function addEventProc() {
                     </template>
                   </template>
                 </v-file-input>
+                <p class="mt-2 text-body-2 text-color-999">행사 포스터나 안내문 등의 파일을 첨부해 주세요.</p>
               </v-col>
             </v-row>
 
             <v-row no-gutters class="mt-7">
               <v-col>
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">개인정보 수집 및 이용동의</p>
-                <textarea readonly class="privacy scroll">(재)엔씨문화재단(이하 ‘재단’)은 이용자의 개인정보를 중요시하며, ‘개인정보보호법’ 등 재단이 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다. 재단은 개인정보 처리방침을 통하여 정보주체(이하 ‘이용자’)께서 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+                <textarea readonly class="privacy scroll text-body-2 text-black">(재)엔씨문화재단(이하 ‘재단’)은 이용자의 개인정보를 중요시하며, ‘개인정보보호법’ 등 재단이 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다. 재단은 개인정보 처리방침을 통하여 정보주체(이하 ‘이용자’)께서 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
 
 1. 처리하는 개인정보의 항목 및 수집 방법
 수집하려는 개인정보의 항목
@@ -253,6 +292,20 @@ async function addEventProc() {
 - 회원 탈퇴 시 까지
 
 동의를 거부하실 수 있으나 동의를 거부하실 경우 회원가입이 제한됩니다.</textarea>                
+              </v-col>
+            </v-row>
+
+            <v-row>
+              <v-col>
+                <div>
+                  <v-checkbox
+                    label="개인정보 수집 및 이용에 동의합니다."
+                    value=""
+                    hide-details
+                    class="input-chk-custom"
+                    :ripple="false"
+                  ></v-checkbox>
+                </div>
               </v-col>
             </v-row>
           </v-card-text>
@@ -275,3 +328,17 @@ async function addEventProc() {
   </v-snackbar>
   <DialogWrapper />
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        select: { state: '오전 09:30', abbr: '0930' },
+        items: [
+          { state: '오전 09:30', abbr: '0930' },
+          { state: '오전 10:00', abbr: '1000' },
+        ],
+      }
+    },
+  }
+</script>

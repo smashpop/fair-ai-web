@@ -170,9 +170,22 @@ textarea.privacy { width: 100%; border: 1px solid #CFCFCF; padding: 20px 20px 0 
 .chip-country { border-radius: 6px; height: 30px !important; padding: 0 10px 0 28px !important; background: url('@/assets/images/icon-earth.svg') 10px center no-repeat; }
 
 
+.select-custom {}
+.select-custom .v-input__control { height: 40px; background: #fff; border: 1px solid rgba(0,0,0,0.38); border-radius: 4px; box-sizing: border-box; }
+.select-custom .v-input__control .v-field { width: 100%; height: 40px; padding: 0; }
+.select-custom .v-input__control .v-field .v-field__overlay { display: none; }
+.select-custom .v-input__control .v-field .v-field__field { width: 100%; height: 40px; }
+.select-custom .v-input__control .v-field .v-field__field .v-field__input { height: 40px; min-height: auto; padding: 0 10px; }
+
+.select-custom .v-input__control .v-field .v-field__append-inner { width: 100%; height: 40px; }
+
+.select-custom .v-input__control .v-field .v-field__outline { display: none; }
+
+
+
 /* 달력 */
 .v-overlay-container {}
-.v-overlay-container .v-date-picker { width: auto; padding: 8px 0; }
+.v-overlay-container .v-date-picker { width: auto; padding: 8px 0; margin: 10px 0; }
 .v-overlay-container .v-date-picker .v-picker-title { display: none; }
 .v-overlay-container .v-date-picker .v-picker__header { display: none; }
 .v-overlay-container .v-date-picker .v-picker__body { width: auto; min-width: auto; max-width: none; padding: 16px; box-sizing: border-box; }
@@ -194,9 +207,10 @@ textarea.privacy { width: 100%; border: 1px solid #CFCFCF; padding: 20px 20px 0 
 .date-input { height: 40px; }
 .date-input .v-input__control { height: 40px; }
 .date-input .v-input__control .v-field__field { height: 40px; }
-.date-input .v-input__control .v-field__field > input { height: 40px; padding: 0; min-height: 40px; background: url('@/assets/images/ico_calendar.svg') calc(100% - 10px) center no-repeat; }
+.date-input .v-input__control .v-field__field > input { height: 40px; padding: 0; min-height: 40px; background: url('@/assets/images/ico_calendar.svg') calc(100% - 10px) center no-repeat; padding: 0 40px 0 10px; }
 
 
+/* 행사 스케줄 */
 .calendar-custom .fc .fc-header-toolbar { justify-content: center; height: 42px; position: relative; margin-bottom: 23px; }
 .calendar-custom .fc .fc-header-toolbar .fc-toolbar-chunk {}
 .calendar-custom .fc .fc-header-toolbar .fc-toolbar-chunk:nth-of-type(1) { padding: 0 62px; font-size: 34px; font-weight: 700; color: #000; }
