@@ -33,7 +33,7 @@ const summary = computed(() => {
       </v-col>
 
       <v-col style="width: auto;">
-        <p class="text-body-1" style="word-break: break-word;">
+        <p class="text-body-1 list" style="word-break: break-word;">
           {{ props.item.url }}
         </p>
       </v-col>
@@ -44,4 +44,9 @@ const summary = computed(() => {
 <style lang="scss" scoped>
 .flag { border: 1px solid #f4f4f4; }
 //.flag { zoom: 1.54; }
+
+.list { text-decoration: underline; text-underline-position: under; padding-left: 12px; position: relative; }
+.list:hover { color: var(--main-color); }
+.list::before { content: ''; position: absolute; left: 0; top: 9px; width: 3px; height: 3px; background: #555; border-radius: 3px; }
+.list:hover::before { background: var(--main-color); }
 </style>
