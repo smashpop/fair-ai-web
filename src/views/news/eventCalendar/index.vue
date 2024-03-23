@@ -61,7 +61,7 @@ loadFromServer()
 
   <v-sheet class="mx-auto board mt-15" width="1360">
     <v-container fluid class="pa-0">
-      <div>
+      <div class="calendar-custom">
         <FullCalendar :options="calendarOptions" />
       </div>
     </v-container>
@@ -87,4 +87,5 @@ loadFromServer()
 </template>
 -->
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
