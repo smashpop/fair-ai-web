@@ -46,8 +46,8 @@ function updateDate(val) {
           :model-value="model"
           :label="label"
           variant="outlined"
-          density="compact"
-          append-inner-icon="mdi-calendar"
+          class="date-input"
+          hide-details
         ></v-text-field>
       </template>
 

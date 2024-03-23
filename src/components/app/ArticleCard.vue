@@ -48,7 +48,7 @@ const previewText = computed(() => {
                 variant="plain"
                 @click.stop
 
-                class="d-flex text-subtitle-1 font-weight-medium btn-plain-custom btn-more"
+                class="d-flex text-subtitle-1 font-weight-medium btn-plain-custom btn-link"
               >
               자세히보기
               </v-btn>

@@ -1,5 +1,6 @@
 <script setup>
 // Components
+import DatePicker from '@/components/ui/DatePicker.vue'
 
 // Utilities
 import { ref } from 'vue'
@@ -13,12 +14,17 @@ const items = ref([])
         발행일 
       </div>
 
-      <div class="d-flex jutify-space-between align-center mt-5">
-        <v-text-field variant="outlined" density="compact" hide-details></v-text-field> - 
-        <v-text-field variant="outlined" density="compact" hide-details></v-text-field>
+      <div class="d-flex justify-space-between align-center mt-5">
+        <v-sheet width="114">
+          <DatePicker/>
+        </v-sheet>
+         -
+         <v-sheet width="114">
+          <DatePicker/> 
+         </v-sheet>
       </div>
 
-      <v-btn block size="large" variant="flat" class="bg-main-color mt-3">
+      <v-btn block variant="text" class="bg-main-color mt-3">
         <div class="text-body-1 font-weight-medium text-white">적용</div>
       </v-btn>
     </v-row>

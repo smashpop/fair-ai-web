@@ -71,7 +71,7 @@ $sizes: (
 .bo-sch .v-input .v-input__control .v-field__append-inner > i { display: none; }
 
 .btn-plain-custom { min-width: auto; height: auto !important; opacity: 1 !important; padding: 0; line-height: 1.5; }
-.btn-plain-custom .v-btn__content { white-space: normal;}
+.btn-plain-custom .v-btn__content { white-space: normal ;}
 
 .board { padding-bottom: 100px; }
 .board .text-body-1 {}
@@ -162,4 +162,33 @@ textarea.privacy { width: 100%; border: 1px solid #CFCFCF; padding: 20px 20px 0 
 .btn-more .v-btn__content { font-weight: 500; padding-right: 24px; background: url('@/assets/images/sort-arrow-close.svg') 100% center no-repeat; }
 .btn-more.active .v-btn__content { color: var(--main-color); background: url('@/assets/images/sort-arrow-open.svg') 100% center no-repeat; }
 
+.btn-link .v-btn__content { font-weight: 500; padding-right: 14px; background: url('@/assets/images/btn-link.svg') 100% center no-repeat; }
+
 .chip-country { border-radius: 6px; height: 30px !important; padding: 0 10px 0 28px !important; background: url('@/assets/images/icon-earth.svg') 10px center no-repeat; }
+
+
+/* 달력 */
+.v-overlay-container {}
+.v-overlay-container .v-date-picker { width: auto; padding: 8px 0; }
+.v-overlay-container .v-date-picker .v-picker-title { display: none; }
+.v-overlay-container .v-date-picker .v-picker__header { display: none; }
+.v-overlay-container .v-date-picker .v-picker__body { width: auto; min-width: auto; max-width: none; padding: 16px; box-sizing: border-box; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-controls { position: relative; display: flex; justify-content: center; padding: 0; box-sizing: border-box; height: 20px; padding: 0 8px; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-controls > button:nth-of-type(1) { position: relative; z-index: 1; height: 20px; font-size: 17px; color: #000; font-weight: 700; line-height: 1; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-controls > button+button { display: none; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-controls > .v-spacer { display: none; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-controls > .v-date-picker-controls__month { position: absolute; left: 0; top: 0; width: 100%; z-index: 2; display: flex; justify-content: space-between; height: 20px; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-controls > .v-date-picker-controls__month > button { height: 20px; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-controls > .v-date-picker-controls__month > button > .v-btn__overlay { display: none; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-month { width: 100%; padding: 0; min-width: auto; margin-top: 12px; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-month .v-date-picker-month__days {}
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-month .v-date-picker-month__days .v-date-picker-month__day { width: 41px; height: 32px; font-size: 14px; color: #000; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-month .v-date-picker-month__days .v-date-picker-month__day .bg-primary { width: 41px; height: 32px; background-color: var(--main-color) !important; border-radius: 100px !important; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-month .v-date-picker-month__days .v-date-picker-month__day > button > .v-btn__overlay { display: none; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-month .v-date-picker-month__days .v-date-picker-month__day > button > .v-btn__content { font-size: 14px; color: #000; }
+.v-overlay-container .v-date-picker .v-picker__body .v-date-picker-month .v-date-picker-month__days .v-date-picker-month__day > button.bg-primary > .v-btn__content { color: #fff; }
+
+.date-input { height: 40px; }
+.date-input .v-input__control { height: 40px; }
+.date-input .v-input__control .v-field__field { height: 40px; }
+.date-input .v-input__control .v-field__field > input { height: 40px; padding: 0; min-height: 40px; background: url('@/assets/images/ico_calendar.svg') calc(100% - 10px) center no-repeat; }
