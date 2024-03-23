@@ -59,11 +59,25 @@ loadFromServer()
   <v-divider class="mt-4" :thickness="1" />
 
 
-  <v-sheet class="mx-auto board mt-15" width="1360">
+  <v-sheet class="mx-auto mt-15" width="1360">
     <v-container fluid class="pa-0">
       <div class="calendar-custom">
         <FullCalendar :options="calendarOptions" />
       </div>
+    </v-container>
+  </v-sheet>
+
+  <v-sheet class="mx-auto mt-15 d-flex align-center" width="1360" height="182" style="margin-bottom: 210px; border: 1px solid #cfcfcf; border-radius: 8px;">
+    <v-container class="pa-0 d-flex flex-column align-center" fluid>
+      <v-row no-gutters class="d-flex justify-space-between">
+        <p class="text-body-1 text-color-555 font-weight-medium"> AI 윤리 관련 세미나, 행사 예정이시라면 저희에게 알려 주세요. 검토 후 캘린더에 등록해 드립니다.</p>
+      </v-row>
+
+      <v-row no-gutters class="mt-7">
+        <v-btn variant="text" href="/news/event-regist" class="regist">
+          행사등록 제안
+        </v-btn>
+      </v-row>
     </v-container>
   </v-sheet>
 </template>
@@ -88,4 +102,5 @@ loadFromServer()
 -->
 
 <style lang="scss" scoped>
+.regist { padding: 0; margin: 0; width: 200px; height: 60px; text-align: center; background: #222; border-radius: 30px; color: #fff; font-size: 14px; font-weight: 700; }
 </style>
