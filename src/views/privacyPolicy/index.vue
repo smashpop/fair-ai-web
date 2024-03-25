@@ -197,7 +197,7 @@ import { ref } from 'vue'
               </p>
             </div>
 
-            <div class="table1">
+            <div class="privacy-table sec1">
               <ul>
                 <li>구분</li>
                 <li>수집방법</li>
@@ -222,7 +222,7 @@ import { ref } from 'vue'
               <ul>
                 <li>웹사이트 이용</li>
                 <li>자동생성</li>
-                <li>이용자의 브라우저 종류 및 OS, 접속 기록(IP Address, 접속시간), 쿠키정보</li>
+                <li>이용자의 브라우저 종류 및 OS,<br>접속 기록(IP Address, 접속시간), 쿠키정보</li>
                 <li>·</li>
               </ul>
             </div>
@@ -342,7 +342,17 @@ import { ref } from 'vue'
                 </li>
 
                 <li class="mt-2">
-                  table
+                  <div class="privacy-table sec5">
+                    <ul>
+                      <li>위탁  받는 자(수탁자)</li>
+                      <li>위탁하는 업무의 내용</li>
+                    </ul>
+
+                    <ul>
+                      <li>㈜인픽스</li>
+                      <li>웹사이트 유지보수</li>
+                    </ul>
+                  </div>
                 </li>
 
                 <li class="d-flex mt-4">
@@ -426,7 +436,82 @@ import { ref } from 'vue'
                   </div>
                 </li>
 
-                <li>table</li>
+                <li>
+                  <div class="privacy-table sec7">
+                    <ul>
+                      <li>쿠키설정 방법</li>
+                    </ul>
+
+                    <ul>
+                      <li>Chrome</li>
+                      <li>
+                        웹브라우저 우측 상단의
+                        <span>
+                          <v-img
+                            src="@/assets/images/ico_browser_setting1.svg"
+                            width="22"
+                          />
+                        </span>
+                        <span>→</span> 
+                        <span class="box">설정</span>
+                        <span>→</span> 
+                        <span class="box">개인 정보 보호 및 보안</span>
+                        <span>→</span> 
+                        <span class="box">서드 파티 쿠키</span>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li>MicrosoftEdge</li>
+                      <li>
+                        웹브라우저 우측 상단의
+                        <span>
+                          <v-img
+                            src="@/assets/images/ico_browser_setting2.svg"
+                            width="22"
+                          />
+                        </span>
+                        <span>→</span> 
+                        <span class="box">쿠키 및 사이트 권한</span>
+                        <span>→</span> 
+                        <span class="box">쿠키 및 저장된 데이터</span>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li>Whale</li>
+                      <li>
+                        웹브라우저 우측 상단의
+                        <span>
+                          <v-img
+                            src="@/assets/images/ico_browser_setting1.svg"
+                            width="22"
+                          />
+                        </span>
+                        <span>→</span> 
+                        <span class="box">설정</span>
+                        <span>→</span> 
+                        <span class="box">개인정보 보호</span>
+                        <span>→</span> 
+                        <span class="box">쿠키 및 기타 사이트 데이터</span>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li>Safari</li>
+                      <li>
+                        화면 좌측 상단의
+                        <span class="box">Safari 메뉴</span>
+                        <span>→</span> 
+                        <span class="box">설정</span>
+                        <span>→</span> 
+                        <span class="box">개인정보보호</span>
+                        <span>→</span> 
+                        <span class="box">모든 쿠키 차단 체크해제</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
             </div>
           </v-sheet>
@@ -542,8 +627,26 @@ import { ref } from 'vue'
             <div>
               <p>재단은 이용자의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인정보보호책임자를 지정하고 있습니다.</p>
 
-              <div class="mt-5">
-                table
+              <div class="mt-5 privacy-table sec10">
+                <ul>
+                  <li>개인정보 보호책임자</li>
+                  <li>개인정보 고충처리책임부서</li>
+                </ul>
+
+                <ul>
+                  <li>박명진</li>
+                  <li>사업팀</li>
+                </ul>
+                
+                <ul>
+                  <li>contact@ncfoundation.or.kr</li>
+                  <li>·</li>
+                </ul>
+
+                <ul>
+                  <li>02-6320-2400</li>
+                  <li>02-6320-2400</li>
+                </ul>
               </div>
 
               <p class="mt-5">이용자는 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보보호책임자에게 신고하실 수 있습니다. 재단은 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.</p>
@@ -639,15 +742,33 @@ export default {
 .privacy-list { list-style: none; }
 
 
-.table1 {}
-.table1 > ul { list-style: none; display: flex; justify-content: space-between; border-bottom: 1px solid #e4e4e4; }
-.table1 > ul:nth-of-type(1) { border-top: 1px solid #e4e4e4; background: #f4f4f4; }
-.table1 > ul~ul:hover { background: #f9f9f9; }
-.table1 > ul > li { min-height: 50px; display: flex; text-align: center;justify-content: center; align-items: center; padding: 10px 0; }
-.table1 > ul > li:nth-of-type(1) { width:  220px; margin-left: 30px; }
-.table1 > ul > li:nth-of-type(2) { width: 220px; }
-.table1 > ul > li:nth-of-type(3) { width: 300px; }
-.table1 > ul > li:nth-of-type(4) { width: 170px; margin-right: 30px; }
+.privacy-table {}
+.privacy-table > ul { list-style: none; color: #555; font-size: 14px; line-height: 22px; display: flex; justify-content: space-between; border-bottom: 1px solid #e4e4e4; }
+.privacy-table > ul:nth-of-type(1) { border-top: 1px solid #e4e4e4; background: #f4f4f4; color: #222; font-weight: 600; }
+.privacy-table > ul~ul:hover { background: #f9f9f9; }
+
+
+.privacy-table > ul > li { min-height: 50px; display: flex; text-align: center;justify-content: center; align-items: center; padding: 10px 0; }
+.privacy-table > ul > li:nth-of-type(1) { margin-left: 30px; }
+.privacy-table > ul > li:last-of-type { margin-right: 30px; }
+
+.privacy-table.sec1 > ul~ul > li:nth-of-type(1) { font-weight: 600; color: #222; }
+.privacy-table.sec1 > ul > li:nth-of-type(1) { width:  220px; }
+.privacy-table.sec1 > ul > li:nth-of-type(2) { width: 220px; }
+.privacy-table.sec1 > ul > li:nth-of-type(3) { width: 300px; }
+.privacy-table.sec1 > ul > li:nth-of-type(4) { width: 170px; }
+
+.privacy-table.sec5 > ul > li { width: 473px; }
+
+.privacy-table.sec7 > ul:nth-of-type(1) > li { width: 100%; }
+.privacy-table.sec7 > ul~ul { justify-content: flex-start; }
+.privacy-table.sec7 > ul~ul > li { text-align: left; justify-content: flex-start;}
+.privacy-table.sec7 > ul~ul > li:nth-of-type(1) { width: 152px; font-weight: 600; color: #555; }
+.privacy-table.sec7 > ul~ul > li:nth-of-type(2) { padding-left: 8px; display: flex; }
+.privacy-table.sec7 > ul~ul > li:nth-of-type(2) > span { margin-left: 8px; } 
+.privacy-table.sec7 > ul~ul > li:nth-of-type(2) > span.box { font-size: 12px; color: #555; font-weight: 500; padding: 0 6px; line-height: 22px; border-radius: 2px;  background: #e4e4e4; }
+
+.privacy-table.sec10 > ul > li { width: 473px; }
 
 /*
 .table-custom {}
