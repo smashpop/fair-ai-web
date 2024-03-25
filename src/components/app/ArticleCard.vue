@@ -17,53 +17,58 @@ const previewText = computed(() => {
 </script>
 
 <template>
-  <v-card class="mx-2" flat>
-    <v-row dense>
-      <v-col cols="12" md="9">
-        <v-container>
-          <v-row>
-            <div class="text-20 my-2 mr-12" style="font-weight: 600">
+  <v-card flat>
+    <v-row no-gutters justify="space-between" align="center">
+      <v-col class=""> 
+        <v-container fluid class="pa-0">
+          <v-row no-gutters>
+            <div class="text-20 font-weight-semi-bold text-black line-height-normal">
               {{ props.article.title }}
             </div>
           </v-row>
 
-          <v-row style="height: 100px">
-            <div class="text-medium-emphasis text-body-2 mr-12">{{ previewText }}...</div>
+          <v-row no-gutters class="mt-5">
+            <div class="text-body-1">{{ previewText }}</div>
           </v-row>
 
-          <v-row>
-            <span class="font-weight-bold text-medium-emphasis text-body-1 ml-1">
+          <v-row no-gutters class="mt-3 align-center info">
+            <span class="font-weight-bold text-body-1">
               {{ props.article.mediaName }}
             </span>
-            <span class="text-medium-emphasis text-body-1 ml-6">
-              {{ parseDate(props.article.publishedDate) }}
+
+            <span class="text-body-1 mx-2" style="color: #727171;">
+              | {{ parseDate(props.article.publishedDate) }} |
             </span>
-            <span class="text-subtitle-1 text-medium-emphasis font-weight-bold ml-6"
-              >자세히보기</span
-            >
-            <span class="ml-1">
+
+            <span class="">
               <v-btn
                 :href="props.article.url"
                 rel="noopener noreferrer"
                 target="_blank"
-                variant="text"
+                variant="plain"
                 @click.stop
+
+                class="d-flex text-subtitle-1 font-weight-medium btn-plain-custom btn-link"
               >
-                <v-icon icon="mdi-arrow-top-right" size="large" start />
+              자세히보기
               </v-btn>
             </span>
           </v-row>
         </v-container>
       </v-col>
 
-      <v-col cols="12" md="3">
+      <v-col class="ml-5" style="max-width: 210px">
         <v-img
           :src="props.article.thumbnailUrl ? props.article.thumbnailUrl : tempImageSrc"
-          height="160"
-          class="mt-2 rounded"
+          width="210"
+          height="116"
+          class="rounded"
           cover
         />
       </v-col>
     </v-row>
   </v-card>
 </template>
+
+<style lang="scss" scoped>
+</style>

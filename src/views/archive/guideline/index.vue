@@ -5,22 +5,39 @@ import GuidelineView from './GuidelineView.vue'
 </script>
 
 <template>
-  <v-container fluid class="bg-white">
-    <div class="mx-16">
-      <v-sheet class="text-center mx-auto px-4" height="80" max-width="800" width="100%">
-        <div class="text-h2 font-weight-black text-black my-5">가이드라인</div>
-      </v-sheet>
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+    <p class="text-68 font-weight-bold text-black">가이드라인</p>
+  </v-sheet>
 
-      <v-row class="my-4" justify="center">
-        <SmallSearchField />
-      </v-row>
-      <v-divider class="my-4 border-opacity-100" :thickness="3" />
+  <v-sheet class="bo-sch mt-3 d-flex justify-center mx-auto" width="1360">
+    <SmallSearchField />
+  </v-sheet>
 
-      <v-row>
-        <v-col cols="12" md="10">
-          <GuidelineView />
+  <v-divider class="mt-15 mb-4" :thickness="1" />
+    <v-sheet class="mx-auto snb" width="1360">
+      <v-btn variant="plain" :ripple="false" class="btn-plain-custom on">국가</v-btn>
+      <v-btn variant="plain" :ripple="false" class="btn-plain-custom">국제기구</v-btn>
+    </v-sheet>
+  <v-divider class="mt-4" :thickness="1" />
+
+
+  <v-sheet class="mx-auto board mt-15" width="1360">
+    <v-container class="pa-0" fluid>
+      <v-row justify="space-between" align="center" no-gutters>
+        <v-col class="d-flex align-center line-height-normal">
+          <p class="text-34 font-weight-bold text-black">국가</p>
+        </v-col>
+
+        <v-col class="d-flex justify-end">
+          <p class="text-black font-weight-medium">업데이트 : <span class="text-color-727171">2024.01.21</span></p>
         </v-col>
       </v-row>
-    </div>
-  </v-container>
+
+      <v-divider class="border-opacity-100 mt-5" :thickness="3" />
+
+      <v-row no-gutters class="justify-space-between">
+        <GuidelineView />
+      </v-row>
+    </v-container>
+  </v-sheet>
 </template>

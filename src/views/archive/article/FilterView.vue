@@ -1,5 +1,6 @@
 <script setup>
 // Components
+import DatePicker from '@/components/ui/DatePicker.vue'
 
 // Utilities
 import { ref } from 'vue'
@@ -7,97 +8,43 @@ const items = ref([])
 </script>
 
 <template>
-  <v-container>
-    <div class="mx-0">
-      <v-row class="my-4" justify="center">
-        <div class="text-14 text-black my-5">
-          저자, 설명 등의 조합 키워드 검색은 상세검색을 이용해 주세요.
-        </div>
-        <v-btn block rounded="xl" size="large" variant="outlined">
-          <div class="text-16 font-weight-black text-black">상세검색</div>
-        </v-btn>
-      </v-row>
+  <v-container class="pa-0">
+    <v-row no-gutters class="mt-10 flex-column">
+      <div class="text-16 text-color-555 font-weight-semi-bold">
+        발행일 
+      </div>
 
-      <v-divider class="my-6" />
+      <div class="d-flex justify-space-between align-center mt-5">
+        <v-sheet width="114">
+          <DatePicker/>
+        </v-sheet>
+         -
+         <v-sheet width="114">
+          <DatePicker/> 
+         </v-sheet>
+      </div>
 
-      <v-row class="my-4" justify="start" dense>
-        <div class="text-16 font-weight-bold text-black text-medium-emphasis">발행연도</div>
-      </v-row>
-      <v-row dense>
-        <v-col cols="8">
-          <div>
-            <v-checkbox
-              v-model="items"
-              label="2024 (98)"
-              color="info"
-              value="info"
-              density="compact"
-              hide-details
-            ></v-checkbox>
-          </div>
+      <v-btn block variant="text" class="bg-main-color mt-3">
+        <div class="text-body-1 font-weight-medium text-white">적용</div>
+      </v-btn>
+    </v-row>
 
-          <div>
-            <v-checkbox
-              v-model="items"
-              label="2023 (1128)"
-              color="info"
-              value="info"
-              density="compact"
-              hide-details
-            ></v-checkbox>
-          </div>
+    <v-divider class="my-7" style="border-color: #a0a0a0; opacity: 1;" />
 
-          <div>
-            <v-checkbox
-              v-model="items"
-              label="2022 (156)"
-              color="info"
-              value="info"
-              density="compact"
-              hide-details
-            ></v-checkbox>
-          </div>
+    <v-row justify="start" no-gutters class="flex-column">
+      <div class="text-16 text-color-555 font-weight-semi-bold">
+        최근 인기 키워드 
+      </div>
 
-          <div>
-            <v-checkbox
-              v-model="items"
-              label="2021 (214)"
-              color="info"
-              value="info"
-              density="compact"
-              hide-details
-            ></v-checkbox>
-          </div>
-        </v-col>
-      </v-row>
+      <div class="side-keyword mt-5 scroll3">
+        <p><v-btn rounded="xl" variant="outlined">#인공지능 윤리</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#자율주행</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#Mid journey</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#Urban Transportation System</v-btn></p>
+        <p><v-btn rounded="xl" variant="outlined">#차세대 전력반도체</v-btn></p>
+      </div>
+    </v-row>
 
-      <v-divider class="my-6" />
-
-      <v-row class="my-4" justify="start" dense>
-        <div class="text-16 font-weight-bold text-black text-medium-emphasis">국내/해외</div>
-      </v-row>
-
-      <v-row dense>
-        <v-col cols="8">
-          <v-checkbox
-            v-model="items"
-            label="국내"
-            color="info"
-            value="info"
-            density="compact"
-            hide-details
-          ></v-checkbox>
-          <v-checkbox
-            v-model="items"
-            label="해외"
-            color="info"
-            value="info"
-            density="compact"
-            hide-details
-          ></v-checkbox>
-        </v-col>
-      </v-row>
-      <v-divider class="my-6" />
-    </div>
+    <v-divider class="mt-7" style="border-color: #a0a0a0; opacity: 1;" />
   </v-container>
 </template>
