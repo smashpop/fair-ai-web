@@ -45,7 +45,12 @@ watch(
 </script>
 
 <template>
-  <v-sheet v-for="(item, index) in items" :key="index" width="650" style="padding: 30px 0 35px; min-height: 160px; border-bottom: 1px solid #e4e4e4;">
+  <v-sheet
+    v-for="(item, index) in items"
+    :key="index"
+    width="650"
+    style="padding: 30px 0 35px; min-height: 160px; border-bottom: 1px solid #e4e4e4"
+  >
     <GuidelineCard :item="item" />
   </v-sheet>
 </template>

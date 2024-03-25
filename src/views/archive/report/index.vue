@@ -6,7 +6,7 @@ import FilterView from './FilterView'
 </script>
 
 <template>
-  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180">
     <p class="text-68 font-weight-bold text-black">보고서</p>
   </v-sheet>
 
@@ -19,14 +19,15 @@ import FilterView from './FilterView'
       <v-row justify="space-between" align="center" no-gutters>
         <v-col class="d-flex align-center line-height-normal">
           <p class="text-34 font-weight-bold text-main-color">1,016</p>
-          <p class="text-color-555" style="margin-left: 6px;">건의 자료가<br>있습니다.</p>
+          <p class="text-color-555" style="margin-left: 6px">건의 자료가<br />있습니다.</p>
         </v-col>
 
-<v-col class="d-flex justify-end">
-          <v-btn 
+        <v-col class="d-flex justify-end">
+          <v-btn
             class="btn-plain-custom btn-excel text-black font-weight-medium text-body-1"
-            variant="plain" 
-            :ripple="false">
+            variant="plain"
+            :ripple="false"
+          >
             <span>엑셀 다운로드</span>
             <v-img
               src="@/assets/images/icon-download.svg"
@@ -40,11 +41,11 @@ import FilterView from './FilterView'
           <v-sheet class="list-sort ml-8">
             <v-menu location="bottom" attach>
               <template v-slot:activator="{ props }">
-                <v-btn 
-                  v-bind="props" 
-                  variant="plain" 
-                  class="btn-plain-custom text-black font-weight-medium text-body-1" 
-                  rounded="0" 
+                <v-btn
+                  v-bind="props"
+                  variant="plain"
+                  class="btn-plain-custom text-black font-weight-medium text-body-1"
+                  rounded="0"
                   :ripple="false"
                 >
                   최신순
@@ -82,5 +83,4 @@ import FilterView from './FilterView'
   </v-sheet>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

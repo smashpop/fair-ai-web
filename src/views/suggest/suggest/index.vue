@@ -4,7 +4,7 @@ import SuggestView from './SuggestView'
 </script>
 
 <template>
-  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180">
     <p class="text-68 font-weight-bold text-black">문의·제안 등록</p>
   </v-sheet>
 
@@ -15,7 +15,7 @@ import SuggestView from './SuggestView'
       <v-row no-gutters>
         <v-sheet width="1360" class="mx-auto pt-15">
           <SuggestView />
-        </v-sheet>       
+        </v-sheet>
       </v-row>
     </v-container>
   </v-sheet>

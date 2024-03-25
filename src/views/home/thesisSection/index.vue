@@ -4,7 +4,7 @@ import ThesisCard from '../components/ThesisCard'
 
 // Utilities
 import { ref } from 'vue'
-import { fetchList } from '@/apis/card'
+import { fetchList } from '@/apis/curation'
 
 const items = ref([])
 const loading = ref(false)
@@ -23,7 +23,7 @@ async function loadFromServer() {
     })
 
   loading.value = false
-  console.log('card items=', items.value)
+  console.log('curation items=', items.value)
 }
 
 // initial load

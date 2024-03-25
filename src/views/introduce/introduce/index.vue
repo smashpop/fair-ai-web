@@ -4,7 +4,7 @@ import ContentV1 from '@/components/content/Content-v1'
 </script>
 
 <template>
-  <v-container fluid class="pa-0" style="min-width: 1360px;">
+  <v-container fluid class="pa-0" style="min-width: 1360px">
     <ContentV1 />
   </v-container>
 </template>

@@ -20,7 +20,7 @@ const abstract = computed(() => {
         <v-container fluid class="pa-0">
           <v-row no-gutters>
             <v-btn
-              style="letter-spacing: 0;"
+              style="letter-spacing: 0"
               class="btn-plain-custom text-20 font-weight-semi-bold text-black line-height-normal"
               :href="props.report.url"
               rel="noopener noreferrer"
@@ -54,7 +54,12 @@ const abstract = computed(() => {
           </v-row>
 
           <v-row no-gutters class="mt-6">
-            <div class="text-body-1 text-color-555 more-text close" v-bind:id="'more-text-'+props.report.id">{{ abstract }}...</div>
+            <div
+              class="text-body-1 text-color-555 more-text close"
+              v-bind:id="'more-text-' + props.report.id"
+            >
+              {{ abstract }}...
+            </div>
           </v-row>
 
           <v-row no-gutters justify="end" class="mt-3">
@@ -65,7 +70,7 @@ const abstract = computed(() => {
               :ripple="false"
               @click="moreChk(props.report.id)"
             >
-              {{btnText}}
+              {{ btnText }}
             </v-btn>
           </v-row>
 
@@ -96,34 +101,46 @@ const abstract = computed(() => {
 
 <script>
 export default {
-   data() {
-      return {
-        btnText: '더보기',
-        isActive: false,
-      };
-   },
+  data() {
+    return {
+      btnText: '더보기',
+      isActive: false
+    }
+  },
 
-   methods: {
-     moreChk(e) {
-      const moreElement = document.getElementById("more-text-"+e);
+  methods: {
+    moreChk(e) {
+      const moreElement = document.getElementById('more-text-' + e)
 
-      if(moreElement.classList.contains('active')){
-        moreElement.classList.replace('active', 'close');
-        this.btnText = '더보기';
-        this.isActive = false;
+      if (moreElement.classList.contains('active')) {
+        moreElement.classList.replace('active', 'close')
+        this.btnText = '더보기'
+        this.isActive = false
+      } else {
+        moreElement.classList.replace('close', 'active')
+        this.btnText = '닫기'
+        this.isActive = true
       }
-      else{
-        moreElement.classList.replace('close', 'active');
-        this.btnText = '닫기';
-        this.isActive = true;
-      }
-     }
-   },
-};
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-.author { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
-.more-text.close { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
-.more-text.active {}
+.author {
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.more-text.close {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.more-text.active {
+}
 </style>
