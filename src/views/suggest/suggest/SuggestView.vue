@@ -130,22 +130,22 @@ async function addSuggestProc() {
     <v-row no-gutters>
       <v-col>
         <v-card elevation="0">
-          <v-card-text border="0" class="pa-0 mx-auto" style="width: 1016px;">
+          <v-card-text border="0" class="pa-0 mx-auto" style="width: 1016px">
             <p class="text-16 text-black font-weight-medium">
               담당자 검토를 거쳐 최종적으로 등록되며, 등록 후 입력하신 이메일이나, 연락처로 안내
               드립니다.
             </p>
 
             <p class="text-body-1 text-color-222 font-weight-bold mt-10">구분 *</p>
-            
+
             <v-radio-group v-model="suggest.categoryId" inline density="compact" color="primary">
               <v-radio label="시스템장애" value="1"></v-radio>
               <v-radio label="자료등록 신청" value="2"></v-radio>
               <v-radio label="기타" value="3"></v-radio>
-            </v-radio-group>            
+            </v-radio-group>
 
             <v-row no-gutters class="mt-7">
-              <v-col style="width: 486px; flex: 0 0 auto;">
+              <v-col style="width: 486px; flex: 0 0 auto">
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">신청자 성명 *</p>
                 <v-text-field
                   v-model="suggest.suggestName"
@@ -157,7 +157,7 @@ async function addSuggestProc() {
             </v-row>
 
             <v-row no-gutters class="mt-7 justify-space-between">
-              <v-col style="width: 486px; flex: 0 0 auto;">
+              <v-col style="width: 486px; flex: 0 0 auto">
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">이메일 *</p>
                 <v-text-field
                   v-model="suggest.suggestEmail"
@@ -167,7 +167,7 @@ async function addSuggestProc() {
                 />
               </v-col>
 
-              <v-col style="width: 500px; flex: 0 0 auto;">
+              <v-col style="width: 500px; flex: 0 0 auto">
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">연락처 *</p>
                 <v-text-field
                   v-model="suggest.suggestTel"
@@ -206,7 +206,7 @@ async function addSuggestProc() {
             </v-row>
 
             <v-row no-gutters class="mt-7">
-              <v-col style="width: 500px; flex: 0 0 auto;">
+              <v-col style="width: 500px; flex: 0 0 auto">
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">첨부파일</p>
                 <v-file-input
                   v-model="fileList"
@@ -230,8 +230,11 @@ async function addSuggestProc() {
 
             <v-row no-gutters class="mt-7">
               <v-col>
-                <p class="text-body-1 text-color-222 font-weight-bold mb-2">개인정보 수집 및 이용동의</p>
-                <textarea readonly class="privacy scroll">(재)엔씨문화재단(이하 ‘재단’)은 이용자의 개인정보를 중요시하며, ‘개인정보보호법’ 등 재단이 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다. 재단은 개인정보 처리방침을 통하여 정보주체(이하 ‘이용자’)께서 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+                <p class="text-body-1 text-color-222 font-weight-bold mb-2">
+                  개인정보 수집 및 이용동의
+                </p>
+                <textarea readonly class="privacy scroll">
+(재)엔씨문화재단(이하 ‘재단’)은 이용자의 개인정보를 중요시하며, ‘개인정보보호법’ 등 재단이 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다. 재단은 개인정보 처리방침을 통하여 정보주체(이하 ‘이용자’)께서 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
 
 1. 처리하는 개인정보의 항목 및 수집 방법
 수집하려는 개인정보의 항목
@@ -242,12 +245,17 @@ async function addSuggestProc() {
 개인정보의 보유 및 이용 기간
 - 회원 탈퇴 시 까지
 
-동의를 거부하실 수 있으나 동의를 거부하실 경우 회원가입이 제한됩니다.</textarea>                
+동의를 거부하실 수 있으나 동의를 거부하실 경우 회원가입이 제한됩니다.</textarea
+                >
               </v-col>
             </v-row>
           </v-card-text>
 
-          <v-divider class="border-opacity-100 mt-15 mb-10" style="border-color: #E4E4E4;" :thickness="1" />
+          <v-divider
+            class="border-opacity-100 mt-15 mb-10"
+            style="border-color: #e4e4e4"
+            :thickness="1"
+          />
 
           <v-card-actions class="justify-center submit-btn pa-0">
             <v-btn variant="plain" class="btn-plain-custom submit" @click.stop="addSuggest">

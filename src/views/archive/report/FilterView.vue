@@ -11,10 +11,17 @@ const items = ref([])
     <div>
       <v-row no-gutters>
         <div class="text-14 text-color-222 font-weight-medium">
-          저자, 설명 등의 조합 키워드 검색은 <br>상세검색을 이용해 주세요.
+          저자, 설명 등의 조합 키워드 검색은 <br />상세검색을 이용해 주세요.
         </div>
 
-        <v-btn block rounded="xl" variant="plain" style="width: 100%; height: 44px; border: 1px solid #000; opacity: 1;" class="mt-4" :ripple="false">
+        <v-btn
+          block
+          rounded="xl"
+          variant="plain"
+          style="width: 100%; height: 44px; border: 1px solid #000; opacity: 1"
+          class="mt-4"
+          :ripple="false"
+        >
           <div class="text-16 font-weight-semi-bold text-black">상세검색</div>
         </v-btn>
       </v-row>
@@ -26,7 +33,7 @@ const items = ref([])
       </v-row>
 
       <v-row no-gutters class="mt-5">
-        <v-col class="scroll2" style="max-height: 195px;">
+        <v-col class="scroll2" style="max-height: 195px">
           <div>
             <v-checkbox
               v-model="items"

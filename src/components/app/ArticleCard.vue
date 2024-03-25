@@ -19,7 +19,7 @@ const previewText = computed(() => {
 <template>
   <v-card flat>
     <v-row no-gutters justify="space-between" align="center">
-      <v-col class=""> 
+      <v-col class="">
         <v-container fluid class="pa-0">
           <v-row no-gutters>
             <div class="text-20 font-weight-semi-bold text-black line-height-normal">
@@ -36,7 +36,7 @@ const previewText = computed(() => {
               {{ props.article.mediaName }}
             </span>
 
-            <span class="text-body-1 mx-2" style="color: #727171;">
+            <span class="text-body-1 mx-2" style="color: #727171">
               | {{ parseDate(props.article.publishedDate) }} |
             </span>
 
@@ -47,10 +47,9 @@ const previewText = computed(() => {
                 target="_blank"
                 variant="plain"
                 @click.stop
-
                 class="d-flex text-subtitle-1 font-weight-medium btn-plain-custom btn-link"
               >
-              자세히보기
+                자세히보기
               </v-btn>
             </span>
           </v-row>
@@ -70,5 +69,4 @@ const previewText = computed(() => {
   </v-card>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

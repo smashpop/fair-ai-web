@@ -20,7 +20,7 @@ const description = computed(() => {
 <template>
   <v-card flat>
     <v-row no-gutters>
-      <v-col style="max-width: 210px;">
+      <v-col style="max-width: 210px">
         <v-img
           :src="props.item.imageUrl ? props.item.imageUrl : tempImageSrc"
           width="210"
@@ -52,7 +52,7 @@ const description = computed(() => {
                 variant="plain"
                 @click.stop
               >
-                {{props.item.url}}
+                {{ props.item.url }}
               </v-btn>
             </span>
           </v-row>

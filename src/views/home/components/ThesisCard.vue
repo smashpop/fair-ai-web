@@ -1,6 +1,6 @@
 <script setup>
 // Utilities
-import { cardImageSrc } from '@/utils/common'
+import { imageLibSrc } from '@/utils/common'
 
 const props = defineProps({
   card: {
@@ -16,7 +16,7 @@ const props = defineProps({
       <span class="text-subtitle-1 font-weight-bold text-blue mb-4">논문</span>
       <span class="text-subtitle-1 font-weight-bold text-medium-emphasis mb-4 mx-2">|</span>
       <span class="text-subtitle-1 text-medium-emphasis mb-4">
-        {{ props.card.thesis.orgType }}
+        {{ props.card.id }}
       </span>
       <div>
         <v-sheet height="150" elevation="0">
@@ -29,7 +29,7 @@ const props = defineProps({
       <div>
         <v-row>
           <v-col cols="12" md="5">
-            <v-img width="163" height="210" :src="cardImageSrc(props.card.id)" />
+            <v-img width="163" height="210" :src="imageLibSrc(props.card.id)" />
           </v-col>
 
           <v-col cols="12" md="7" align-self="end" class="mb-2">

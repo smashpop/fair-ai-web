@@ -5,7 +5,7 @@ import CurriculumView from './CurriculumView.vue'
 </script>
 
 <template>
-  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180">
     <p class="text-68 font-weight-bold text-black">전공/커리큘럼</p>
   </v-sheet>
 
@@ -25,5 +25,4 @@ import CurriculumView from './CurriculumView.vue'
   </v-sheet>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

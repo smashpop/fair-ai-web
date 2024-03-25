@@ -5,7 +5,7 @@ import SmallSearchField from '@/components/app/SmallSearchField'
 </script>
 
 <template>
-  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180">
     <p class="text-68 font-weight-bold text-black">FAQ</p>
   </v-sheet>
 
@@ -14,13 +14,12 @@ import SmallSearchField from '@/components/app/SmallSearchField'
   </v-sheet>
 
   <v-divider class="mt-15 mb-4" :thickness="1" />
-    <v-sheet class="mx-auto snb" width="1360">
-      <v-btn variant="plain" :ripple="false" class="btn-plain-custom on">전체 <span>23</span></v-btn>
-      <v-btn variant="plain" :ripple="false" class="btn-plain-custom">검색관련 <span>15</span></v-btn>
-      <v-btn variant="plain" :ripple="false" class="btn-plain-custom">자료관련 <span>8</span></v-btn>
-    </v-sheet>
+  <v-sheet class="mx-auto snb" width="1360">
+    <v-btn variant="plain" :ripple="false" class="btn-plain-custom on">전체 <span>23</span></v-btn>
+    <v-btn variant="plain" :ripple="false" class="btn-plain-custom">검색관련 <span>15</span></v-btn>
+    <v-btn variant="plain" :ripple="false" class="btn-plain-custom">자료관련 <span>8</span></v-btn>
+  </v-sheet>
   <v-divider class="mt-4" :thickness="1" />
-
 
   <v-sheet class="mx-auto board mt-15" width="1360">
     <v-container class="pa-0" fluid>
@@ -39,7 +38,7 @@ import SmallSearchField from '@/components/app/SmallSearchField'
       <v-row no-gutters>
         <v-sheet class="w-100">
           <FaqView />
-        </v-sheet>        
+        </v-sheet>
       </v-row>
     </v-container>
   </v-sheet>

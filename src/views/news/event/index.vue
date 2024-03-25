@@ -6,7 +6,7 @@ import FilterView from './FilterView'
 </script>
 
 <template>
-  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180">
     <p class="text-68 font-weight-bold text-black">관련행사</p>
   </v-sheet>
 
@@ -15,12 +15,15 @@ import FilterView from './FilterView'
   </v-sheet>
 
   <v-divider class="mt-15 mb-4" :thickness="1" />
-    <v-sheet class="mx-auto snb" width="1360">
-      <v-btn variant="plain" :ripple="false" href="/news/event-calendar" class="btn-plain-custom">월간</v-btn>
-      <v-btn variant="plain" :ripple="false" href="/news/event" class="btn-plain-custom on">목록</v-btn>
-    </v-sheet>
+  <v-sheet class="mx-auto snb" width="1360">
+    <v-btn variant="plain" :ripple="false" href="/news/event-calendar" class="btn-plain-custom"
+      >월간</v-btn
+    >
+    <v-btn variant="plain" :ripple="false" href="/news/event" class="btn-plain-custom on"
+      >목록</v-btn
+    >
+  </v-sheet>
   <v-divider class="mt-4" :thickness="1" />
-
 
   <v-sheet class="mx-auto board mt-15" width="1360">
     <v-container fluid class="pa-0">

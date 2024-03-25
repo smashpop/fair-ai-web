@@ -4,7 +4,7 @@ import EventRegistView from './EventRegistView'
 </script>
 
 <template>
-  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180"> 
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180">
     <p class="text-68 font-weight-bold text-black">행사등록 제안</p>
   </v-sheet>
 
@@ -15,7 +15,7 @@ import EventRegistView from './EventRegistView'
       <v-row no-gutters>
         <v-sheet width="1360" class="mx-auto pt-15">
           <EventRegistView />
-        </v-sheet>       
+        </v-sheet>
       </v-row>
     </v-container>
   </v-sheet>

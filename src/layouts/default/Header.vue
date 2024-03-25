@@ -10,7 +10,13 @@ function onScroll() {
 </script>
 
 <template>
-  <v-app-bar v-scroll.self="onScroll" color="transparent" flat height="72" :class="{ active: isScrollDown }">
+  <v-app-bar
+    v-scroll.self="onScroll"
+    color="transparent"
+    flat
+    height="72"
+    :class="{ active: isScrollDown }"
+  >
     <template #prepend>
       <logo />
 
@@ -88,7 +94,7 @@ function onScroll() {
                   <div>공지사항</div>
                 </v-btn>
                 <v-btn to="/news/event-calendar" variant="plain" :ripple="false">
-                  <div>관련행사 </div>
+                  <div>관련행사</div>
                 </v-btn>
                 <v-btn to="/news/event-regist" variant="plain" :ripple="false">
                   <div>행사등록 신청</div>
@@ -118,7 +124,7 @@ function onScroll() {
             </v-list-item>
           </v-list>
         </v-menu>
-      </div>      
+      </div>
     </template>
 
     <template #append>
@@ -137,54 +143,125 @@ window.addEventListener('scroll', function(){
 */
 
 export default {
-   data() {
-      return {
-         isScrollDown: false,    // class active 변수
-         scrollTop: 0,           // 스크롤 값 저장용
-      };
-   },
+  data() {
+    return {
+      isScrollDown: false, // class active 변수
+      scrollTop: 0 // 스크롤 값 저장용
+    }
+  },
 
-   // 1번 가상 돔 마운트 시, 이벤트 등록
-   mounted() {
-      document.addEventListener('scroll', this.handleScroll);
-   },
-   // 3번 마운트 해제 전, 이벤트 삭제하기
-   beforeUnmount() {
-      document.removeEventListener('scroll', this.handleScroll);
-   },
-   methods: {
-     // 2번 이벤트 액션
-      handleScroll: function (e) {
-        this.scrollTop = window.scrollY;
-        if (this.scrollTop > 0) {
-          this.isScrollDown = true;
-        } else {
-          this.isScrollDown = false;
-        }
-        //console.log(this.scrollTop);
+  // 1번 가상 돔 마운트 시, 이벤트 등록
+  mounted() {
+    document.addEventListener('scroll', this.handleScroll)
+  },
+  // 3번 마운트 해제 전, 이벤트 삭제하기
+  beforeUnmount() {
+    document.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    // 2번 이벤트 액션
+    handleScroll: function (e) {
+      this.scrollTop = window.scrollY
+      if (this.scrollTop > 0) {
+        this.isScrollDown = true
+      } else {
+        this.isScrollDown = false
       }
-   },
-};
+      //console.log(this.scrollTop);
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 .v-app-bar:hover::v-deep .v-toolbar__content,
-.v-app-bar.active::v-deep .v-toolbar__content { background: #fff;}
-.v-app-bar::v-deep .v-toolbar__content { min-width: 1360px; border-bottom: 1px solid rgba(0,0,0,0.15); }
-.v-app-bar::v-deep .v-toolbar__prepend > div:nth-of-type(2) { margin-left: 75px; }
-.v-app-bar::v-deep .v-toolbar__prepend .v-btn { opacity: 1; padding: 0; font-size: 20px; font-weight: 700; color: #000; height: 72px !important; }
-.v-app-bar::v-deep .v-toolbar__prepend .v-btn~.v-btn { margin-left: 35px; }
-.v-app-bar::v-deep .v-toolbar__prepend .v-btn:hover { color: #136BFC; }
+.v-app-bar.active::v-deep .v-toolbar__content {
+  background: #fff;
+}
+.v-app-bar::v-deep .v-toolbar__content {
+  min-width: 1360px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.v-app-bar::v-deep .v-toolbar__prepend > div:nth-of-type(2) {
+  margin-left: 75px;
+}
+.v-app-bar::v-deep .v-toolbar__prepend .v-btn {
+  opacity: 1;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  height: 72px !important;
+}
+.v-app-bar::v-deep .v-toolbar__prepend .v-btn ~ .v-btn {
+  margin-left: 35px;
+}
+.v-app-bar::v-deep .v-toolbar__prepend .v-btn:hover {
+  color: #136bfc;
+}
 
-.v-btn::v-deep .v-btn__content > p { color: #222; }
-.calendar { padding-right: 25px; background: url('/src/assets/images/calendar.svg') 100% 1px no-repeat; }
+.v-btn::v-deep .v-btn__content > p {
+  color: #222;
+}
+.calendar {
+  padding-right: 25px;
+  background: url('/src/assets/images/calendar.svg') 100% 1px no-repeat;
+}
 
-.v-overlay-container .v-menu {}
-.v-overlay-container .v-menu::after { content: ''; position: fixed; top: 72px; left: 0; width: 100%; height: 80px; background: #fff; z-index: -1; }
-.v-overlay-container .v-menu::v-deep .v-overlay__content {}
-.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list { background: transparent; }
-.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list .v-list-item { height: 80px !important; padding: 0; }
-.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list .v-list-item .v-list-item__content .v-btn { opacity: 1; font-size: 16px; color: #555; font-weight: 500; line-height: normal; padding: 0; min-width: auto; }
-.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list .v-list-item .v-list-item__content .v-btn~.v-btn { margin-left: 72px; }
-.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list .v-list-item .v-list-item__content .v-btn:hover { color: #136BFC; font-weight: 700; }
+.v-overlay-container .v-menu {
+}
+.v-overlay-container .v-menu::after {
+  content: '';
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  z-index: -1;
+}
+.v-overlay-container .v-menu::v-deep .v-overlay__content {
+}
+.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list {
+  background: transparent;
+}
+.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list .v-list-item {
+  height: 80px !important;
+  padding: 0;
+}
+.v-overlay-container
+  .v-menu::v-deep
+  .v-overlay__content
+  .v-list
+  .v-list-item
+  .v-list-item__content
+  .v-btn {
+  opacity: 1;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0;
+  min-width: auto;
+}
+.v-overlay-container
+  .v-menu::v-deep
+  .v-overlay__content
+  .v-list
+  .v-list-item
+  .v-list-item__content
+  .v-btn
+  ~ .v-btn {
+  margin-left: 72px;
+}
+.v-overlay-container
+  .v-menu::v-deep
+  .v-overlay__content
+  .v-list
+  .v-list-item
+  .v-list-item__content
+  .v-btn:hover {
+  color: #136bfc;
+  font-weight: 700;
+}
 </style>
