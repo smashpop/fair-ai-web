@@ -1,6 +1,13 @@
 import request from '@/utils/request'
 import requestStorage from '@/utils/requestStorage'
 
+export function fetchEvent(id) {
+  return request({
+    url: `/ai-event/${id}`,
+    method: 'get'
+  })
+}
+
 export function fetchEventList() {
   return request({
     url: '/ai-event-list',

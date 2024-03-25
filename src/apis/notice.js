@@ -2,6 +2,13 @@ import request from '@/utils/request'
 import requestStorage from '@/utils/requestStorage'
 import fileDownload from 'js-file-download'
 
+export function fetchNotice(id) {
+  return request({
+    url: `/ai-notice/${id}`,
+    method: 'get'
+  })
+}
+
 export function fetchList(data) {
   return request({
     url: '/ai-notice-page',
@@ -9,6 +16,7 @@ export function fetchList(data) {
     data
   })
 }
+
 
 export function fetchLastList(data) {
   return request({

@@ -31,7 +31,7 @@ const previewText = computed(() => {
             <div class="text-body-1">{{ previewText }}</div>
           </v-row>
 
-          <v-row no-gutters class="mt-3 align-center info">
+          <v-row no-gutters class="mt-3 align-center bg-info">
             <span class="font-weight-bold text-body-1">
               {{ props.article.mediaName }}
             </span>
@@ -46,8 +46,8 @@ const previewText = computed(() => {
                 rel="noopener noreferrer"
                 target="_blank"
                 variant="plain"
-                @click.stop
                 class="d-flex text-subtitle-1 font-weight-medium btn-plain-custom btn-link"
+                @click.stop
               >
                 자세히보기
               </v-btn>

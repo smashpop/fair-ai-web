@@ -1,6 +1,7 @@
 <script setup>
 // Utilities
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 import tempImageSrc from '@/assets/images/TempImage.png'
 
 const props = defineProps({
@@ -12,10 +13,15 @@ const props = defineProps({
 const contents = computed(() => {
   return props.event.contents ? props.event.contents.substring(0, 500) : null
 })
+const router = useRouter()
 </script>
 
 <template>
-  <v-card class="pa-2" flat>
+  <v-card 
+    class="pa-2" 
+    flat
+    @click="router.push({ name: 'EventPage', params: { id: event.id } })"
+  >
     <v-row>
       <v-col cols="12" md="2">
         <v-img
