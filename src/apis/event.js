@@ -10,7 +10,7 @@ export function fetchEvent(id) {
 
 export function fetchEventList() {
   return request({
-    url: '/ai-event-list',
+    url: '/ai-event',
     method: 'get'
   })
 }
