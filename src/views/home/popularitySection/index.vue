@@ -35,17 +35,22 @@ loadFromServer()
 </script>
 
 <template>
-  <v-row v-if="populars.length" no-gutters>
-    <v-col cols="12" md="4">
+  <p class="text-18 font-weight-medium text-black"><strong style="font-weight: 800;">'자율주행'</strong> 관련 인기자료</p>
+
+  <v-row v-if="populars.length" no-gutters class="justify-space-between mt-5">
+    <v-col style="flex: 0 0 auto; width: auto;">
       <ThesisCard :card="populars[0].popular_item_list[0]" />
     </v-col>
 
-    <v-col cols="12" md="4">
+    <v-col style="flex: 0 0 auto; width: auto;">
       <ThesisCard :card="populars[0].popular_item_list[1]" />
     </v-col>
 
-    <v-col cols="12" md="4">
+    <v-col style="flex: 0 0 auto; width: auto;">
       <ThesisCard :card="populars[0].popular_item_list[2]" />
     </v-col>
   </v-row>
 </template>
+
+<style lang="scss" scoped>
+</style>

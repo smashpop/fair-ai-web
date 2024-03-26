@@ -24,21 +24,22 @@ function clickProc(keyword) {
 </script>
 
 <template>
-  <v-container>
-    <v-row align="center" class="mx-0" style="height: 460px">
-      <v-col cols="6">
+  <v-container fluid class="pa-0">
+    <v-row no-gutters class="align-center">
+      <v-col>
         <div>
           <strong class="text-68 font-weight-light text-black letter">AI 윤리 관련</strong>
         </div>
         <div>
-          <strong class="text-68 font-weight-black text-black letter">최근 이슈</strong>
+          <strong class="text-68 font-weight-black text-black letter">인기 검색어</strong>
           <strong class="text-68 font-weight-light text-black letter">에 대해</strong>
         </div>
         <div>
           <strong class="text-68 font-weight-light text-black letter">알아보세요.</strong>
         </div>
       </v-col>
-      <v-col cols="6">
+
+      <v-col>
         <!-- <SearchField class="ms-2" @search="searchProc" /> -->
         <SearchField class="ms-2" @click="clickProc" />
       </v-col>
@@ -48,7 +49,7 @@ function clickProc(keyword) {
 
 <style lang="scss" scoped>
 .letter {
-  line-height: 1.2em;
-  letter-spacing: -0.0625em;
+  line-height: normal;
+  letter-spacing: 0;
 }
 </style>

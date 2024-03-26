@@ -41,34 +41,31 @@ watch(
 </script>
 
 <template>
-  <v-sheet class="mx-16" elevation="0">
-    <div class="mx-16">
-      <v-divider class="mb-1" color="black" :thickness="3"></v-divider>
+  <v-sheet width="1360" class="mx-auto" elevation="0" style="padding: 70px 0 100px;">
+    <v-divider class="border-opacity-100" :thickness="3"></v-divider>
 
-      <div class="d-flex justify-space-between" style="height: 60px">
-        <strong class="text-20 font-weight-bold"> 공지사항 </strong>
-        <v-btn size="small" variant="flat" class="text-primary text-capitalize"> View All </v-btn>
-      </div>
-
-      <v-divider class="mb-1"></v-divider>
-
-      <v-list>
-        <v-list-item v-for="(item, index) in items" :key="index">
-          <div class="d-flex justify-space-between align-center" style="height: 40px">
-            <div class="d-flex align-baseline flex-1">
-              <div class="text-16 font-weight-medium">
-                {{ item.title }}
-              </div>
-            </div>
-
-            <div class="text-body-2">
-              {{ item.updatedAt ? parseDate(item.updatedAt) : parseDate(item.createdAt) }}
-            </div>
-          </div>
-          <v-divider class="my-2"></v-divider>
-        </v-list-item>
-      </v-list>
+    <div class="d-flex justify-space-between align-center" style="height: 80px">
+      <strong class="text-20 font-weight-bold text-black"> 공지사항 </strong>
+      <v-btn variant="plain" class="text-16 text-black font-weight-semi-bold btn-plain-custom" :ripple="false"> 전체보기 </v-btn>
     </div>
+
+    <v-divider class="border-opacity-100"></v-divider>
+
+    <v-list style="padding: 0; margin: 0;">
+      <v-list-item v-for="(item, index) in items" :key="index" style="padding: 0; margin: 0;">
+        <div class="d-flex justify-space-between align-center" style="height: 80px">
+          <div class="text-16 font-weight-semi-bold text-black">
+            {{ item.title }}
+          </div>
+
+          <div class="text-16 text-color-727171">
+            {{ item.updatedAt ? parseDate(item.updatedAt) : parseDate(item.createdAt) }}
+          </div>
+        </div>
+
+        <v-divider class="border-opacity-100"></v-divider>
+      </v-list-item>
+    </v-list>
   </v-sheet>
 </template>
 
