@@ -33,19 +33,19 @@ loadFromServer()
 <template>
   <v-sheet elevation="0" class="mx-auto" width="1360" style="min-width: 1360px; background: transparent; padding-bottom: 100px;">
     <v-row no-gutters class="justify-space-between">
-      <v-col style="flex: 0 0 auto; width: auto; ">
+      <v-col style="flex: 0 0 auto; width: 400px; height: 400px; background: #fff;">
         <ThesisCard :card="items[0]" />
       </v-col>
 
       <v-divider vertical />
 
-      <v-col style="flex: 0 0 auto; width: auto; ">
+      <v-col style="flex: 0 0 auto; width: 400px; height: 400px; background: #fff;">
         <ThesisCard :card="items[1]" />
       </v-col>
 
       <v-divider vertical />
 
-      <v-col style="flex: 0 0 auto; width: auto; ">
+      <v-col style="flex: 0 0 auto; width: 400px; height: 400px; background: #fff;">
         <ThesisCard :card="items[2]" />
       </v-col>
     </v-row>

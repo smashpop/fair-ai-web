@@ -31,7 +31,7 @@ const previewText = computed(() => {
             <div class="text-body-1">{{ previewText }}</div>
           </v-row>
 
-          <v-row no-gutters class="mt-3 align-center bg-info">
+          <v-row no-gutters class="mt-3 align-center">
             <span class="font-weight-bold text-body-1">
               {{ props.article.mediaName }}
             </span>

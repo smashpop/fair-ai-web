@@ -45,16 +45,7 @@ watch(
 <template>
   <div class="bg_image">
     <v-sheet class="mx-auto" width="1360" style="min-width: 1360px; background: transparent;">
-      <v-row no-gutters>
-        <v-col cols="2" class="mt-12">
-          <strong class="text-48 font-weight-bold text-white">행사안내</strong>
-        </v-col>
-
-        <v-col cols="9">
-          <div class="py-6" />
-          <EventPoster />
-        </v-col>
-      </v-row>
+      <EventPoster />
     </v-sheet>
   </div>
 </template>
@@ -62,6 +53,8 @@ watch(
 <style lang="scss" scoped>
 .bg_image {
   background: url('@/assets/images/EventImage.png');
-  height: 740px;
+  height: 670px;
+  padding-top: 60px;
+  box-sizing: border-box;
 }
 </style>

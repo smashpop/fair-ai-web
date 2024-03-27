@@ -14,7 +14,7 @@ import NoticeSection from './noticeSection'
   <p style="position: absolute; top: 0; left: 0; width: 100%; height: 860px; background: green;"></p>
   <v-container class="pa-0" fluid style="position: relative; z-index: 2; padding-top: 118px !important; height: 788px;">
     <v-row no-gutters>
-      <v-sheet class="mx-auto" width="1360" style="background: transparent; min-width: 1360px;">
+      <v-sheet class="mx-auto" width="1360" style="background: transparent; min-width: 1360px;">        
         <SearchSection />
       </v-sheet>
 
@@ -47,3 +47,23 @@ import NoticeSection from './noticeSection'
     <NoticeSection />
   </v-container>
 </template>
+
+<!--
+<p @click="schTypeSelect('최근이슈')">{{ schType }}</p>
+<script>
+export default {
+  data() {
+    return {
+      schType: '인기검색어'
+    }
+  },
+
+    methods: {
+      schTypeSelect: function (keyword) {
+        this.schType = keyword;
+        console.log(1, this.schType);
+      }
+   },
+};
+</script>
+-->
