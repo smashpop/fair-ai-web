@@ -3,15 +3,15 @@
 import ArticleView from './ArticleView'
 </script>
 
-<template>
-  <v-sheet elevation="0">
+<template> 
+  <v-sheet elevation="0" class="mx-auto" width="1360" height="687" style="padding-top: 188px !important; background: transparent; min-width: 1360px;">
     <v-row no-gutters>
-      <v-col cols="12" md="4">
-        <v-container>
-          <div style="height: 180px">
-            <strong class="text-48 font-weight-black mb-24">최근AI이슈</strong>
-          </div>
-
+      <v-col class="d-flex flex-column justify-space-between">
+        <div>
+          <strong class="text-48 font-weight-bold text-black letter">최근 AI 이슈</strong>
+        </div>
+        
+        <div>
           <div class="mt-24">
             <strong class="text-subtitle-1 font-weight-black text-disabled">이슈관련 키워드</strong>
           </div>
@@ -46,12 +46,19 @@ import ArticleView from './ArticleView'
               <strong class="text-subtitle-1 font-weight-black text-disabled">#학습 콘텐츠</strong>
             </v-btn>
           </div>
-        </v-container>
+        </div>
       </v-col>
 
-      <v-col cols="12" md="8">
+      <v-col style="width: 900px; flex: 0 0 auto;">
         <ArticleView />
       </v-col>
     </v-row>
   </v-sheet>
 </template>
+
+<style lang="scss" scoped>
+.letter {
+  line-height: normal;
+  letter-spacing: 0;
+}
+</style>

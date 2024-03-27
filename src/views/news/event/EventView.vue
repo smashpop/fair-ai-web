@@ -1,6 +1,6 @@
 <script setup>
 // Components
-import EventCard from '@/components/app/EventCard'
+import EventCard from './EventCard'
 
 // Utilities
 import { ref, watch } from 'vue'

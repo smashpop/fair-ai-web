@@ -1,6 +1,7 @@
 <script setup>
 // Utilities
 import { ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 import { fetchList } from '@/apis/notice'
 import { parseDate } from '@/utils/util'
 
@@ -13,6 +14,7 @@ const serverOptions = ref({
   sortBy: 'createdAt',
   sortType: 'desc'
 })
+const router = useRouter()
 
 async function loadFromServer() {
   loading.value = true
@@ -20,6 +22,8 @@ async function loadFromServer() {
   await fetchList(serverOptions.value)
     .then((response) => {
       items.value = response.data.items
+      console.log('notice=', items.value)
+
       serverItemsLength.value = response.data.total
     })
     .catch((error) => {
@@ -42,20 +46,20 @@ watch(
 </script>
 
 <template>
-  <div class="d-flex justify-space-between">
-    <strong class="pa-0 mb-4 text-h6 font-weight-bold"> 공지사항 </strong>
-  </div>
-
   <v-divider class="mb-2"></v-divider>
 
   <v-list>
     <v-list-item v-for="(item, index) in items" :key="index">
-      <div class="d-flex justify-space-between align-center" style="height: 40px">
-        <div class="d-flex align-baseline flex-1">
-          <div class="text-18 font-weight-medium">
-            {{ item.title }}
-          </div>
-        </div>
+      <div
+        class="d-flex justify-space-between align-center" 
+        style="height: 40px" 
+        align-baseline 
+        d-flex
+        text-18
+        font-weight-medium
+        @click="router.push({ name: 'NoticePage', params: { id: item.id } })"
+      >
+        {{ item.title }}
 
         <div class="text-16">
           {{ item.updatedAt ? parseDate(item.updatedAt) : parseDate(item.createdAt) }}

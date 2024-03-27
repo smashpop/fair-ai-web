@@ -45,10 +45,14 @@ watch(
 </script>
 
 <template>
-  <div v-for="(item, index) in items" :key="index">
+  <v-sheet
+    v-for="(item, index) in items"
+    :key="index"
+    width="650"
+    style="padding: 30px 0 35px; min-height: 160px; border-bottom: 1px solid #e4e4e4"
+  >
     <GuidelineCard :item="item" />
-    <v-divider class="mb-2 mx-2" />
-  </div>
+  </v-sheet>
 </template>
 
 <style lang="scss" scoped></style>

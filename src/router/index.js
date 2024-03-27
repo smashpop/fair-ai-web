@@ -125,12 +125,30 @@ const news = {
       component: () => import('@/views/news/notice')
     },
     {
+      path: 'notice-page/:id',
+      name: 'NoticePage',
+      meta: {
+        title: '공지사항Page'
+      },
+      props:true,
+      component: () => import('@/views/news/noticePage')
+    },
+    {
       path: 'event',
       name: 'Event',
       meta: {
         title: '관련행사'
       },
       component: () => import('@/views/news/event')
+    },
+    {
+      path: 'event-page/:id',
+      name: 'EventPage',
+      meta: {
+        title: '관련행사Page'
+      },
+      props:true,
+      component: () => import('@/views/news/eventPage')
     },
     {
       path: 'event-calendar',

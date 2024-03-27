@@ -5,22 +5,24 @@ import CurriculumView from './CurriculumView.vue'
 </script>
 
 <template>
-  <v-container fluid class="bg-white">
-    <div class="mx-16">
-      <v-sheet class="text-center mx-auto px-4" height="80" max-width="800" width="100%">
-        <div class="text-h2 font-weight-black text-black my-5">교육커리큘럼</div>
-      </v-sheet>
+  <v-sheet class="mx-auto d-flex justify-center align-end" width="1360" height="180">
+    <p class="text-68 font-weight-bold text-black">전공/커리큘럼</p>
+  </v-sheet>
 
-      <v-row class="my-4" justify="center">
-        <SmallSearchField />
-      </v-row>
-      <v-divider class="my-4 border-opacity-100" :thickness="3" />
+  <v-sheet class="bo-sch mt-3 d-flex justify-center mx-auto" width="1360">
+    <SmallSearchField />
+  </v-sheet>
 
-      <v-row>
-        <v-col cols="12" md="10">
+  <v-sheet class="mx-auto board mt-15" width="1360">
+    <v-container class="pa-0" fluid>
+      <v-divider class="border-opacity-100 mt-5" :thickness="3" />
+      <v-row no-gutters>
+        <v-col class="pt-10">
           <CurriculumView />
         </v-col>
       </v-row>
-    </div>
-  </v-container>
+    </v-container>
+  </v-sheet>
 </template>
+
+<style lang="scss" scoped></style>
