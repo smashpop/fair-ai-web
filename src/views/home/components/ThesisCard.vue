@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
   <v-container fluid class="pa-0 ma-0 data">
-    <v-sheet v-if="props.card" elevation="0" style="height: 100%; background: #fff;" class="px-8 pt-5 pb-8 d-flex flex-column">
+    <v-sheet v-if="props.card" elevation="0" style="height: 100%; background: #fff;" class="d-flex flex-column">
       <v-row no-gutters class="flex-0-0">
         <span class="text-subtitle-1 font-weight-bold text-main-color">{{ props.card.type }}</span>
         <span class="text-subtitle-1 mx-2" style="color: #cfcfcf;">|</span>
@@ -118,5 +118,5 @@ const props = defineProps({
 
 .ellipsis-line3 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
 
-.data { width: 440px; height: 400px; flex: 0 0 auto; max-width: none; }
+.data { width: auto; height: auto; flex: 0 0 auto; max-width: none; }
 </style>
