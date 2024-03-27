@@ -11,8 +11,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <v-container>
-    <v-sheet v-if="props.card" class="pa-4" elevation="0">
+  <v-container fluid class="pa-0">
+    <v-sheet v-if="props.card" elevation="0" style="background: transparent;">
       <div>
         <v-img 
           width="410" 
@@ -20,17 +20,35 @@ const props = defineProps({
           cover 
           :src="card.thumbnailUrl ? card.thumbnailUrl : tempImageSrc" />
       </div>
-      <div>
-        <v-sheet class="my-4" height="100" elevation="0">
-          <strong class="text-30 font-weight-black">
+
+      <div class="mt-7">
+        <v-sheet elevation="0" style="background: transparent;">
+          <strong class="text-30 font-weight-semi-bold text-black letter">
             {{ props.card ? props.card.title : '' }}
           </strong>
         </v-sheet>
       </div>
 
       <div>
-        <strong class="text-subtitle-1 mb-4">매일경제 자세히보기</strong>
+        <p>{{ props.card.mediaName }}</p>
+        <p>1시간</p>
+        <v-btn
+          :href="props.card.url"
+          rel="noopener noreferrer"
+          target="_blank"
+          variant="plain"
+          class="text-subtitle-1 font-weight-medium btn-plain-custom btn-link"
+        >
+        자세히 보기
+        </v-btn>
       </div>
     </v-sheet>
   </v-container>
 </template>
+
+<style lang="scss" scoped>
+.letter {
+  line-height: normal;
+  letter-spacing: 0;
+}
+</style>

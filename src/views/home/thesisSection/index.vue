@@ -31,17 +31,21 @@ loadFromServer()
 </script>
 
 <template>
-  <v-sheet elevation="0">
-    <v-row no-gutters>
-      <v-col cols="12" md="4">
+  <v-sheet elevation="0" class="mx-auto" width="1360" style="min-width: 1360px; background: transparent; padding-bottom: 100px;">
+    <v-row no-gutters class="justify-space-between">
+      <v-col style="flex: 0 0 auto; width: auto; ">
         <ThesisCard :card="items[0]" />
       </v-col>
-      <v-divider class="my-9" vertical />
-      <v-col cols="12" md="4">
+
+      <v-divider vertical />
+
+      <v-col style="flex: 0 0 auto; width: auto; ">
         <ThesisCard :card="items[1]" />
       </v-col>
-      <v-divider class="my-9" vertical />
-      <v-col cols="12" md="4">
+
+      <v-divider vertical />
+
+      <v-col style="flex: 0 0 auto; width: auto; ">
         <ThesisCard :card="items[2]" />
       </v-col>
     </v-row>

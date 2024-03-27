@@ -2,7 +2,7 @@
 
 <template>
   <v-footer color="#F4F4F4" class="pa-0 pt-10 pb-15">
-    <v-sheet class="mx-auto" width="1360" color="#F4F4F4">
+    <v-sheet class="mx-auto" width="1360" color="#F4F4F4" style="min-width: 1360px;">
       <v-container class="pa-0" fluid>
         <v-row no-gutters>
           <v-col class="pa-0">

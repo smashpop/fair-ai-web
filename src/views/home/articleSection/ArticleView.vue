@@ -31,17 +31,18 @@ loadFromServer()
 </script>
 
 <template>
-  <v-sheet class="mx-0" elevation="0">
-    <v-row no-gutters>
-      <v-divider class="border-opacity-100 mr-4" :thickness="3" />
+  <v-sheet class="mx-0" elevation="0" style="background: transparent;">
 
-      <v-col cols="12" md="6">
+    <v-divider class="border-opacity-100" :thickness="3" />
+
+    <v-row no-gutters class="d-flex justify-space-between">      
+      <v-col style="max-width: none; width: 410px; flex: 0 0 auto;">
         <ArticleCard :card="items[0]" />
       </v-col>
 
-      <v-divider class="my-9" vertical />
+      <v-divider vertical/>
 
-      <v-col cols="12" md="6">
+      <v-col style="max-width: none; width: 410px; flex: 0 0 auto;">
         <ArticleCard :card="items[1]" />
       </v-col>
     </v-row>
