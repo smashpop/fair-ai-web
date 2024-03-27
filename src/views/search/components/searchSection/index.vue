@@ -82,7 +82,11 @@ function clickProc(keyword) {
             <v-container fluid class="pa-0">
               <v-row no-gutters>
                 <v-col>
-                  <v-radio-group inline>
+                  <v-radio-group 
+                    inline 
+                    hide-details
+                    class="radio-gr"
+                    >
                     <v-radio label="논문" value="one"></v-radio>
                     <v-radio label="보고서" value="two"></v-radio>
                     <v-radio label="기사" value="three"></v-radio>
@@ -94,223 +98,199 @@ function clickProc(keyword) {
                 </v-col>
               </v-row>
 
-              <v-divider />
+              <v-divider style="opacity: 0.25; " />
 
-              <v-row no-gutters>
+              <v-row no-gutters class="custom pt-3">
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2">
-                      <div class="ml-6">전체</div>
-                    </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>전체</div>
+
+                  <v-text-field
+                    variant="outlined"
+                    density="compact"
+                    style="width: 239px;"
+                    hide-details
+                  ></v-text-field>
+
+                  <v-select
+                    label="AND"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    style="width: 90px;"
+                    hide-details
+                  ></v-select>
                 </v-col>
 
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2">
-                      <div class="ml-3">논문명</div>
-                    </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>논문명</div>
+
+                  <v-text-field
+                    variant="outlined"
+                    density="compact"
+                    style="width: 239px;"
+                    hide-details
+                  ></v-text-field>
+
+                  <v-select
+                    label="AND"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    style="width: 90px;"
+                    hide-details
+                  ></v-select>
                 </v-col>
 
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2">
-                      <div class="ml-6">저자</div>
-                    </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>저자</div>
+
+                  <v-text-field
+                    variant="outlined"
+                    density="compact"
+                    style="width: 239px;"
+                    hide-details
+                  ></v-text-field>
+
+                  <v-select
+                    label="AND"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    style="width: 90px;"
+                    hide-details
+                  ></v-select>
                 </v-col>
               </v-row>
 
-              <v-divider />
+              <v-divider style="opacity: 0.25;" />
 
-              <v-row dense>
+              <v-row no-gutters class="custom">
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2"> 발행기관 </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>발행기관</div>
+
+                  <v-text-field
+                    variant="outlined"
+                    density="compact"
+                    hide-details
+                    style="width: 239px;"
+                  ></v-text-field>
+
+                  <v-select
+                    label="AND"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    hide-details
+                    style="width: 90px;"
+                  ></v-select>
                 </v-col>
 
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2">
-                      <div class="ml-6">초록</div>
-                    </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>초록</div>
+
+                  <v-text-field
+                    variant="outlined"
+                    density="compact"
+                    hide-details
+                    style="width: 239px;"
+                  ></v-text-field>
+
+                  <v-select
+                    label="AND"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    hide-details
+                    style="width: 90px;"
+                  ></v-select>
                 </v-col>
 
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2"> 발행년도 </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>발행년도</div>
+
+                  <v-select
+                    label="선택하세요"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    hide-details
+                    style="width: 154px;"
+                  ></v-select>
+                  -
+                  <v-select
+                    label="선택하세요"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    hide-details
+                    style="width: 154px;"
+                  ></v-select>
                 </v-col>
               </v-row>
 
-              <v-divider />
+              <v-divider style="opacity: 0.25" />
 
-              <v-row dense>
+              <v-row no-gutters class="custom pb-3">
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2">
-                      <div class="ml-6">국내</div>
-                    </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>국내/국외</div>
+
+                  <v-select
+                    label="선택하세요"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    hide-details
+                    style="width: 335px;"
+                  ></v-select>
                 </v-col>
 
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2">
-                      <div class="ml-4">인용수</div>
-                    </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="AI윤리"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div class="ml-4">KCI 등재</div>
+
+                  <v-select
+                    label="선택하세요"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    hide-details
+                    style="width: 335px;"
+                  ></v-select>
                 </v-col>
 
                 <v-col>
-                  <v-row dense>
-                    <v-col cols="2"> 작성언어 </v-col>
-                    <v-col cols="7">
-                      <v-text-field
-                        label="선택하세요"
-                        variant="outlined"
-                        density="compact"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="3">
-                      <v-select
-                        label="AND"
-                        :items="['AND', 'OR']"
-                        density="compact"
-                        variant="outlined"
-                      ></v-select>
-                    </v-col>
-                  </v-row>
+                  <div>작성언어</div>
+
+                  <v-select
+                    label="선택하세요"
+                    :items="['AND', 'OR']"
+                    density="compact"
+                    variant="outlined"
+                    hide-details
+                    style="width: 335px;"
+                  ></v-select>
                 </v-col>
               </v-row>
 
-              <v-divider />
+              <v-divider style="opacity: 0.25;" />
 
-              <v-row>
-                <v-col> </v-col>
+              <v-row no-gutters class="pt-5 pb-7">
+                <v-col class="d-flex justify-end">
+                  <v-btn
+                    variant="plain"
+                    class="btn-plain-custom reset text-16 font-weight-bold text-color-555 d-flex justify-center align-center"
+                    :ripple="false"
+                  >
+                    초기화
+                  </v-btn>
+
+                  <v-btn
+                    variant="plain"
+                    class="btn-plain-custom search text-16 font-weight-bold text-white d-flex justify-center align-center"
+                    :ripple="false"
+                  >
+                    검색
+                  </v-btn>
+                </v-col>
               </v-row>
             </v-container>
           </template>
@@ -320,7 +300,6 @@ function clickProc(keyword) {
       <div class="py-16" />
       <div class="py-16" />
       <div class="py-16" />
-
       </v-sheet>
     </v-container>
 </template>
@@ -341,8 +320,39 @@ function clickProc(keyword) {
 .v-expansion-panels .v-expansion-panel:deep(.v-expansion-panel__shadow) { display: none; }
 
 .v-expansion-panels .v-expansion-panel:deep(.v-expansion-panel-title) { height: 64px; padding: 0; margin: 0; display: flex; justify-content: flex-end; border-bottom: 1px solid #000; color: var(--main-color); font-size: 16px; font-weight: 700; line-height: normal; }
-.v-expansion-panels .v-expansion-panel:deep(.v-expansion-panel-title--active) { min-height: auto; }
+.v-expansion-panels .v-expansion-panel:deep(.v-expansion-panel-title--active) { min-height: auto; border-bottom: 3px solid #136BFC; }
 .v-expansion-panels .v-expansion-panel:deep(.v-expansion-panel-title) > span { display: none; }
 
 .v-expansion-panels .v-expansion-panel:deep(.v-expansion-panel-text) { background: #E2E7ED; padding: 0 40px; box-sizing: border-box; }
+.v-expansion-panels .v-expansion-panel:deep(.v-expansion-panel-text) .v-expansion-panel-text__wrapper { padding: 0; }
+
+
+.radio-gr { height: 75px; display: flex; align-items: center;}
+.radio-gr:deep(.v-input__control) {}
+.radio-gr:deep(.v-input__control) .v-radio {}
+.radio-gr:deep(.v-input__control) .v-radio~.v-radio { margin-left: 24px; }
+.radio-gr:deep(.v-input__control) .v-radio .v-selection-control__wrapper { display: none; }
+.radio-gr:deep(.v-input__control) .v-radio .v-selection-control__wrapper .v-selection-control__input {}
+.radio-gr:deep(.v-input__control) .v-radio .v-selection-control__wrapper .v-selection-control__input i {}
+
+.radio-gr:deep(.v-input__control) .v-radio .v-label { position: relative; color: #000; font-size: 16px; }
+.radio-gr:deep(.v-input__control) .v-radio .v-label::before { content: ''; width: 26px; height: 26px; border-radius: 26px; background: red; margin-right: 8px; }
+.radio-gr:deep(.v-input__control) .v-radio.v-selection-control--dirty .v-label::before { background: green; }
+
+.custom .v-col { display: flex; align-items: center; justify-content: space-between; height: 68px; width: 400px; min-width: auto; }
+.custom .v-col~.v-col { margin-left: 40px; }
+.custom .v-col > div { flex: 0 0 auto; }
+.custom .v-col > div:nth-of-type(1) { font-size: 14px; color: #222; font-weight: 700; width: 65px; }
+
+.custom .v-col > .v-text-field:deep(.v-input__control) input { 
+  height: 44px; min-height: auto; padding: 0; border: 1px solid #e4e4e4; background: #fff; padding-left: 16px; /* input, select 공통 */
+}
+
+.custom .v-col > .v-select:deep(.v-input__control) .v-field { padding: 0; background: #fff; }
+.custom .v-col > .v-select:deep(.v-input__control) .v-field .v-field__input { padding: 0; height: 44px; min-height: auto; }
+.custom .v-col > .v-select:deep(.v-input__control) .v-field .v-field__input .v-select__selection-text { padding-left: 16px; }
+.custom .v-col > .v-select:deep(.v-input__control) .v-field .v-field__input input { border: 0; background: transparent;}
+
+.reset { width: 118px; height: 46px !important; border: 1px solid #a0a0a0; border-radius: 500px; background: #E2E7ED; }
+.search { width: 118px; height: 46px !important; border-radius: 500px; background: #136BFC; }
 </style>
