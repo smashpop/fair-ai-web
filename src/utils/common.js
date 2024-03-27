@@ -33,3 +33,7 @@ export function institutionTempImageSrc(id) {
     ? `${import.meta.env.VITE_APP_STORAGE_URL}/institution/temp/${id}`
     : undefined
 }
+
+export function popularImageSrc(id) {
+  return id !== undefined ? `${import.meta.env.VITE_APP_STORAGE_URL}/popular/${id}` : undefined
+}

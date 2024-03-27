@@ -8,7 +8,7 @@ console.log(dataObj)
 </script>
 
 <template>
-  <v-container class="w-75">
+  <v-container fluid class="pa-0">
     <SearchSection />
   </v-container>
 </template>
