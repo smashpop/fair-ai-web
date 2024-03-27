@@ -1,8 +1,13 @@
 <script setup>
 // Utilities
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+// Constants
+const router = useRouter()
 const scrollInvoked = ref(0)
 
+// Methods
 function onScroll() {
   scrollInvoked.value++
   console.log('scrollInvoked.value=', scrollInvoked.value)
@@ -128,7 +133,7 @@ function onScroll() {
     </template>
 
     <template #append>
-      <v-btn variant="plain" class="btn-plain-custom pr-5" :ripple="false">
+      <v-btn variant="plain" class="btn-plain-custom pr-5" :ripple="false" @click="router.push('/news/event-calendar')">
         <p class="text-16 font-weight-medium calendar">행사 캘린더</p>
       </v-btn>
     </template>
