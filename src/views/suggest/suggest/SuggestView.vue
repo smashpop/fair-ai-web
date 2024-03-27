@@ -3,14 +3,16 @@
 import { DialogWrapper } from 'vue3-promise-dialog'
 
 // Utilities
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { warning, verification } from '@/utils/util'
 
 // Apis
+import { fetchList } from '@/apis/suggestCategory'
 import { createSuggestApi, fileUploadApi } from '@/apis/suggest'
 import { createAttachFileApi } from '@/apis/attachFile'
 import { sendMailApi } from '@/apis/email'
 
+// Constants
 const suggest = ref({
   title: '',
   contents: '',
@@ -19,29 +21,35 @@ const suggest = ref({
   suggestTel: '',
   categoryId: null
 })
-
-function resetSuggest() {
-  suggest.value.title = ''
-  suggest.value.contents = ''
-  suggest.value.suggestName = ''
-  suggest.value.suggestEmail = ''
-  suggest.value.suggestTel = ''
-  suggest.value.categoryId = null
-}
-
+const suggestCategorys = ref([])
 const mail = ref({
   email: 'hl2kxm@gmail.com',
   subject: 'email test5',
   contents: 'test email5'
 })
-
 const snackbar = ref({
   flag: false,
   message: '등록이 완료되었습니다.',
   timeout: 1500
 })
-
 const fileList = ref([])
+
+// Methods
+onMounted(() => {
+  fetchSuggestCategorys()
+})
+
+async function fetchSuggestCategorys() {
+  await fetchList()
+    .then((response) => {
+      suggestCategorys.value = response.data.items
+      console.log('suggestCategorys=', suggestCategorys.value)
+
+    })
+    .catch(async (error) => {
+      console.log('>>Store-load SuggestCategory fail. error=', error)
+    })
+}
 
 async function fileUpload(suggestId) {
   try {
@@ -123,6 +131,16 @@ async function addSuggestProc() {
       console.log('>createSuggestApi() fail. error=', error)
     })
 }
+
+function resetSuggest() {
+  suggest.value.title = ''
+  suggest.value.contents = ''
+  suggest.value.suggestName = ''
+  suggest.value.suggestEmail = ''
+  suggest.value.suggestTel = ''
+  suggest.value.categoryId = null
+}
+
 </script>
 
 <template>
@@ -139,9 +157,9 @@ async function addSuggestProc() {
             <p class="text-body-1 text-color-222 font-weight-bold mt-10">구분 *</p>
 
             <v-radio-group v-model="suggest.categoryId" inline density="compact" color="primary">
-              <v-radio label="시스템장애" value="1"></v-radio>
-              <v-radio label="자료등록 신청" value="2"></v-radio>
-              <v-radio label="기타" value="3"></v-radio>
+              <span v-for="(category, index) in suggestCategorys" :key="category">
+                <v-radio class="mr-2" :label="category.name" :value="index" />
+              </span>
             </v-radio-group>
 
             <v-row no-gutters class="mt-7">

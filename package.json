@@ -27,7 +27,7 @@
     "vue-json-excel3": "^1.0.19",
     "vue-router": "^4.3.0",
     "vue3-promise-dialog": "^0.3.4",
-    "vuetify": "^3.5.11"
+    "vuetify": "^3.5.12"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
