@@ -46,7 +46,17 @@ watch(
 
     <div class="d-flex justify-space-between align-center" style="height: 80px">
       <strong class="text-20 font-weight-bold text-black"> 공지사항 </strong>
-      <v-btn variant="plain" class="text-16 text-black font-weight-semi-bold btn-plain-custom" :ripple="false"> 전체보기 </v-btn>
+      <v-btn 
+      variant="plain" 
+      class="text-16 text-black font-weight-semi-bold btn-plain-custom" 
+      :ripple="false"
+      > 
+        <span>전체보기</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none" class="ml-2">
+          <path d="M1 7H13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+         <path d="M7 1L13 7L7 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </v-btn>
     </div>
 
     <v-divider class="border-opacity-100"></v-divider>

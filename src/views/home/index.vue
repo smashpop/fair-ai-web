@@ -40,17 +40,26 @@ async function loadFromServer() {
 
 <template>
   <!-- 검색 -->
-  <p style="position: absolute; top: 0; left: 0; width: 100%; height: 860px; background: green;"></p>
+  <p 
+  v-if="populars" 
+  style="position: absolute; top: 0; left: 0; width: 100%; height: 860px; background: green;"
+  >
+    <v-img
+      max-height="64"
+      :src="popularImageSrc(populars[0].id)"
+    />
+  </p>
+  
   <v-container class="pa-0" fluid style="position: relative; z-index: 2; padding-top: 118px !important; height: 788px;">
-    <div v-if="populars">
-      <!-- 배경이미지 -->
-      <v-img
-        max-height="64"
-        :src="popularImageSrc(populars[0].id)"
-      />
-    </div>
     <v-row no-gutters>
-      <v-sheet class="mx-auto" width="1360" style="background: transparent; min-width: 1360px;">        
+      <v-sheet class="mx-auto" width="1360" style="background: transparent; min-width: 1360px;">      
+        <v-chip-group style="position: absolute; left: 50%; top: 150px;">
+          <v-chip>Chip 1</v-chip>
+
+          <v-chip>Chip 2</v-chip>
+
+          <v-chip>Chip 3</v-chip>
+        </v-chip-group>   
         <SearchSection />
       </v-sheet>
 
@@ -66,7 +75,7 @@ async function loadFromServer() {
       <ArticleSection />
     </v-row>
 
-    <v-divider class="border-opacity-100 my-15 mx-auto" width="1360" />
+    <v-divider class="border-opacity-100 mb-15 mx-auto" width="1360" />
 
     <v-row no-gutters>      
       <ThesisSection />
