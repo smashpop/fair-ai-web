@@ -133,7 +133,12 @@ function onScroll() {
     </template>
 
     <template #append>
-      <v-btn variant="plain" class="btn-plain-custom pr-5" :ripple="false" @click="router.push('/news/event-calendar')">
+      <v-btn 
+        variant="plain" 
+        class="btn-plain-custom pr-5" 
+        :ripple="false" 
+        @click="router.push('/news/event-calendar')"
+      >
         <p class="text-16 font-weight-medium calendar">행사 캘린더</p>
       </v-btn>
     </template>
@@ -172,7 +177,7 @@ export default {
       } else {
         this.isScrollDown = false
       }
-      //console.log(this.scrollTop);
+      // console.log(this.scrollTop);
     }
   }
 }
