@@ -12,15 +12,18 @@ function clickProc() {
 <template>
   <div
     class="bg-black rounded-pill cursor-pointer"
-    style="width: 660px; height: 68px; padding: 3px"
+    style="width: 670px; height: 68px; padding: 3px; box-sizing: border-box;"
     @click.stop="clickProc()"
   >
-    <div class="bg-white rounded-pill" style="width: 654px; height: 62px; padding: 6px">
-      <div
-        class="bg-black rounded-pill pa-3"
-        style="width: 110px; height: 50px; padding: 4px; margin-left: 530px"
+    <div 
+      class="bg-white rounded-pill d-flex align-center justify-end" 
+      style="width: 100%; height: 100%; padding: 0 10px;"
       >
-        <strong class="text-18 text-white font-weight-regular ml-6">검색</strong>
+      <div
+        class="bg-black rounded-pill"
+        style="width: 102px; height: 50px; line-height: 50px; text-align: center;"
+      >
+        <p class="text-18 text-white font-weight-medium">검색</p>
       </div>
     </div>
   </div>
