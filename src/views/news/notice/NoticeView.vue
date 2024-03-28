@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 import { fetchList } from '@/apis/notice'
 import { parseDate } from '@/utils/util'
 
+// Constants
 const items = ref([])
 const loading = ref(false)
 const serverItemsLength = ref(0)
@@ -51,12 +52,12 @@ watch(
   <v-list>
     <v-list-item v-for="(item, index) in items" :key="index">
       <div
-        class="d-flex justify-space-between align-center" 
+        class="d-flex justify-space-between align-center cursor-pointer" 
         style="height: 40px" 
         align-baseline 
         d-flex
         text-18
-        font-weight-medium
+        font-weight-medium      
         @click="router.push({ name: 'NoticePage', params: { id: item.id } })"
       >
         {{ item.title }}
