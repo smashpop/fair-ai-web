@@ -3,7 +3,10 @@
 import { ref, watch } from 'vue'
 import { fetchLastList } from '@/apis/notice'
 import { parseDate } from '@/utils/util'
+import { useRouter } from 'vue-router'
 
+// Constants
+const router = useRouter()
 const items = ref([])
 const loading = ref(false)
 const serverItemsLength = ref(0)
@@ -47,9 +50,10 @@ watch(
     <div class="d-flex justify-space-between align-center" style="height: 80px">
       <strong class="text-20 font-weight-bold text-black"> 공지사항 </strong>
       <v-btn 
-      variant="plain" 
-      class="text-16 text-black font-weight-semi-bold btn-plain-custom" 
-      :ripple="false"
+        variant="plain" 
+        class="text-16 text-black font-weight-semi-bold btn-plain-custom" 
+        :ripple="false"
+        @click="router.push('/news/notice')"
       > 
         <span>전체보기</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none" class="ml-2">
@@ -63,7 +67,11 @@ watch(
 
     <v-list style="padding: 0; margin: 0;">
       <v-list-item v-for="(item, index) in items" :key="index" style="padding: 0; margin: 0;">
-        <div class="d-flex justify-space-between align-center" style="height: 80px">
+        <div 
+          class="d-flex justify-space-between align-center cursor-pointer" 
+          style="height: 80px"
+          @click="router.push({ name: 'NoticePage', params: { id: item.id } })"
+        >
           <div class="text-16 font-weight-semi-bold text-black">
             {{ item.title }}
           </div>
