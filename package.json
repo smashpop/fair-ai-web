@@ -21,6 +21,7 @@
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "roboto-fontface": "*",
+    "swiper": "^11.0.7",
     "vue": "^3.4.21",
     "vue-country-flag-next": "^2.3.2",
     "vue-detect-browser": "^1.0.4",
