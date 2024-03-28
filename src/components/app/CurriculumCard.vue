@@ -34,7 +34,7 @@ const description = computed(() => {
         <v-container fluid class="pa-0">
           <v-row no-gutters>
             <div class="text-20 text-black font-weight-semi-bold">
-              {{ props.item.organization }}
+              {{ props.item.programName }}
             </div>
           </v-row>
 
