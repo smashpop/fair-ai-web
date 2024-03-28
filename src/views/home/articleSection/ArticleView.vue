@@ -35,7 +35,7 @@ loadFromServer()
 
     <v-divider class="border-opacity-100" :thickness="3" />
 
-    <v-carousel>
+    <v-carousel style="height: auto;">
       <p style="width: 100%; height: 60px; position: absolute; top: -60px; left: 0;" class="text-16 font-weight-bold text-black d-flex align-center">관련뉴스</p>
 
       <v-carousel-item>

@@ -26,7 +26,7 @@ function onScroll() {
       <logo />
 
       <div>
-        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100">
+        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100" attach>
           <template #activator="{ props }">
             <v-btn v-bind="props" variant="plain" class="btn-plain-custom" :ripple="false">
               <div>소개</div>
@@ -47,7 +47,7 @@ function onScroll() {
           </v-list>
         </v-menu>
 
-        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100">
+        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100" attach>
           <template #activator="{ props }">
             <v-btn v-bind="props" variant="plain" class="btn-plain-custom" :ripple="false">
               <div>자료실</div>
@@ -85,7 +85,7 @@ function onScroll() {
           </v-list>
         </v-menu>
 
-        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100">
+        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100" attach>
           <template #activator="{ props }">
             <v-btn v-bind="props" variant="plain" class="btn-plain-custom" :ripple="false">
               <div>소식</div>
@@ -109,7 +109,7 @@ function onScroll() {
           </v-list>
         </v-menu>
 
-        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100">
+        <v-menu open-on-hover transition="slide-y-transition" close-delay="100" open-delay="100" attach>
           <template #activator="{ props }">
             <v-btn v-bind="props" variant="plain" class="btn-plain-custom" :ripple="false">
               <div>문의·제안</div>
@@ -179,43 +179,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-app-bar { overflow: visible; }
 .v-app-bar:hover::v-deep .v-toolbar__content,
-.v-app-bar.active::v-deep .v-toolbar__content {
-  background: #fff;
-}
-.v-app-bar::v-deep .v-toolbar__content {
-  min-width: 1360px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-.v-app-bar::v-deep .v-toolbar__prepend > div:nth-of-type(2) {
-  margin-left: 75px;
-}
-.v-app-bar::v-deep .v-toolbar__prepend .v-btn {
-  opacity: 1;
-  padding: 0;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  height: 72px !important;
-}
-.v-app-bar::v-deep .v-toolbar__prepend .v-btn ~ .v-btn {
-  margin-left: 35px;
-}
-.v-app-bar::v-deep .v-toolbar__prepend .v-btn:hover {
-  color: #136bfc;
-}
+.v-app-bar.active::v-deep .v-toolbar__content { background: #fff; }
 
-.v-btn::v-deep .v-btn__content > p {
-  color: #222;
-}
-.calendar {
-  padding-right: 25px;
-  background: url('/src/assets/images/calendar.svg') 100% 1px no-repeat;
-}
+.v-app-bar::v-deep .v-toolbar__content { min-width: 1360px; border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+.v-app-bar::v-deep .v-toolbar__prepend > div:nth-of-type(2) { margin-left: 75px; }
+.v-app-bar::v-deep .v-toolbar__prepend .v-btn { opacity: 1; padding: 0; font-size: 20px; font-weight: 700; color: #000; height: 72px !important;}
+.v-app-bar::v-deep .v-toolbar__prepend .v-btn ~ .v-btn { margin-left: 35px;}
+.v-app-bar::v-deep .v-toolbar__prepend .v-btn:hover { color: #136bfc; }
 
-.v-overlay-container .v-menu {
-}
-.v-overlay-container .v-menu::after {
+.v-btn::v-deep .v-btn__content > p { color: #222; }
+.calendar { padding-right: 25px; background: url('/src/assets/images/calendar.svg') 100% 1px no-repeat; }
+
+.v-app-bar .v-overlay.v-menu {}
+.v-app-bar .v-overlay.v-menu::after {
   content: '';
   position: fixed;
   top: 72px;
@@ -224,18 +202,19 @@ export default {
   height: 80px;
   background: #fff;
   z-index: -1;
+  box-shadow: 0 3px 10px 0px rgba(0,0,0,0.05);
 }
-.v-overlay-container .v-menu::v-deep .v-overlay__content {
+
+.v-app-bar .v-overlay.v-menu::v-deep .v-overlay__content {
 }
-.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list {
+.v-app-bar .v-overlay.v-menu::v-deep .v-overlay__content .v-list {
   background: transparent;
 }
-.v-overlay-container .v-menu::v-deep .v-overlay__content .v-list .v-list-item {
+.v-app-bar .v-overlay.v-menu::v-deep .v-overlay__content .v-list .v-list-item {
   height: 80px !important;
   padding: 0;
 }
-.v-overlay-container
-  .v-menu::v-deep
+.v-app-bar .v-overlay.v-menu::v-deep
   .v-overlay__content
   .v-list
   .v-list-item
@@ -249,8 +228,7 @@ export default {
   padding: 0;
   min-width: auto;
 }
-.v-overlay-container
-  .v-menu::v-deep
+.v-app-bar .v-overlay.v-menu::v-deep
   .v-overlay__content
   .v-list
   .v-list-item
@@ -259,8 +237,7 @@ export default {
   ~ .v-btn {
   margin-left: 72px;
 }
-.v-overlay-container
-  .v-menu::v-deep
+.v-app-bar .v-overlay.v-menu::v-deep
   .v-overlay__content
   .v-list
   .v-list-item

@@ -156,9 +156,9 @@ function resetSuggest() {
 
             <p class="text-body-1 text-color-222 font-weight-bold mt-10">구분 *</p>
 
-            <v-radio-group v-model="suggest.categoryId" inline density="compact" color="primary">
+            <v-radio-group v-model="suggest.categoryId" inline class="mt-2" hide-details>
               <span v-for="(category, index) in suggestCategorys" :key="category">
-                <v-radio class="mr-2" :label="category.name" :value="index" />
+                <v-radio :label="category.name" :value="index" class="mr-7 input-radio-custom text-black"/>
               </span>
             </v-radio-group>
 
@@ -219,6 +219,7 @@ function resetSuggest() {
                   auto-grow
                   rows="12"
                   row-height="25"
+                  hide-details
                 />
               </v-col>
             </v-row>
@@ -234,6 +235,7 @@ function resetSuggest() {
                   show-size
                   variant="outlined"
                   density="compact"
+                  hide-details
                 >
                   <template #selection="{ fileNames }">
                     <template v-for="fileName in fileNames" :key="fileName">
@@ -243,6 +245,10 @@ function resetSuggest() {
                     </template>
                   </template>
                 </v-file-input>
+
+                <p class="mt-2 text-body-2 text-color-999">
+                  문의사항을 설명할 수 있는 파일이 있다면 첨부해 주세요.
+                </p>
               </v-col>
             </v-row>
 
@@ -251,8 +257,7 @@ function resetSuggest() {
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">
                   개인정보 수집 및 이용동의
                 </p>
-                <textarea readonly class="privacy scroll">
-(재)엔씨문화재단(이하 ‘재단’)은 이용자의 개인정보를 중요시하며, ‘개인정보보호법’ 등 재단이 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다. 재단은 개인정보 처리방침을 통하여 정보주체(이하 ‘이용자’)께서 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+                <textarea readonly class="privacy scroll">(재)엔씨문화재단(이하 ‘재단’)은 이용자의 개인정보를 중요시하며, ‘개인정보보호법’ 등 재단이 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다. 재단은 개인정보 처리방침을 통하여 정보주체(이하 ‘이용자’)께서 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
 
 1. 처리하는 개인정보의 항목 및 수집 방법
 수집하려는 개인정보의 항목
@@ -265,6 +270,20 @@ function resetSuggest() {
 
 동의를 거부하실 수 있으나 동의를 거부하실 경우 회원가입이 제한됩니다.</textarea
                 >
+              </v-col>
+            </v-row>
+
+            <v-row>
+              <v-col>
+                <div>
+                  <v-checkbox
+                    label="개인정보 수집 및 이용에 동의합니다."
+                    value=""
+                    hide-details
+                    class="input-chk-custom"
+                    :ripple="false"
+                  ></v-checkbox>
+                </div>
               </v-col>
             </v-row>
           </v-card-text>
