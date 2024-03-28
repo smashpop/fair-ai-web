@@ -1,25 +1,18 @@
 import request from '@/utils/request'
 
-export function fetchList(data) {
+export function fetchNationList(data) {
   return request({
-    url: '/ai-guideline-page',
+    url: '/ai-guideline-nation',
     method: 'post',
     data
   })
 }
 
-export function fetchListAll(data) {
+export function fetchOrganizationList(data) {
   return request({
-    url: '/ai-guideline',
-    method: 'get',
-    data
-  })
-}
-
-export function searchList(data) {
-  return request({
-    url: '/ai-guideline-search',
+    url: '/ai-guideline-organization',
     method: 'post',
     data
   })
 }
+

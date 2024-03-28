@@ -1,7 +1,13 @@
 <script setup>
 // Components
 import SmallSearchField from '@/components/app/SmallSearchField'
-import GuidelineView from './GuidelineView.vue'
+import NationView from './NationView.vue'
+import OrganizationView from './OrganizationView.vue'
+
+// Utilities
+import { ref } from 'vue'
+const type = ref('국가')
+
 </script>
 
 <template>
@@ -15,30 +21,29 @@ import GuidelineView from './GuidelineView.vue'
 
   <v-divider class="mt-15 mb-4" :thickness="1" />
   <v-sheet class="mx-auto snb" width="1360">
-    <v-btn variant="plain" :ripple="false" class="btn-plain-custom on">국가</v-btn>
-    <v-btn variant="plain" :ripple="false" class="btn-plain-custom">국제기구</v-btn>
+    <v-btn 
+      variant="plain" 
+      :ripple="false" 
+      class="btn-plain-custom on"
+      @click="type = '국가'"
+    >
+      국가
+    </v-btn>
+    <v-btn 
+      variant="plain" 
+      :ripple="false" 
+      class="btn-plain-custom"
+      @click="type = '국제기구'"
+    >
+      국제기구
+    </v-btn>
   </v-sheet>
+
   <v-divider class="mt-4" :thickness="1" />
-
-  <v-sheet class="mx-auto board mt-15" width="1360">
-    <v-container class="pa-0" fluid>
-      <v-row justify="space-between" align="center" no-gutters>
-        <v-col class="d-flex align-center line-height-normal">
-          <p class="text-34 font-weight-bold text-black">국가</p>
-        </v-col>
-
-        <v-col class="d-flex justify-end">
-          <p class="text-black font-weight-medium">
-            업데이트 : <span class="text-color-727171">2024.01.21</span>
-          </p>
-        </v-col>
-      </v-row>
-
-      <v-divider class="border-opacity-100 mt-5" :thickness="3" />
-
-      <v-row no-gutters class="justify-space-between">
-        <GuidelineView />
-      </v-row>
-    </v-container>
-  </v-sheet>
+  <div v-if="type==='국가'">
+    <NationView />
+  </div>
+  <div v-if="type==='국제기구'">
+    <OrganizationView />
+  </div>
 </template>
