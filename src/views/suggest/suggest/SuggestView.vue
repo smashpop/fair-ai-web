@@ -229,7 +229,7 @@ function resetSuggest() {
                 <p class="text-body-1 text-color-222 font-weight-bold mb-2">첨부파일</p>
                 <v-file-input
                   v-model="fileList"
-                  label="첨부파일"
+                  label="선택된 파일 없음"
                   accept="image/*"
                   chips
                   show-size

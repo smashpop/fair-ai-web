@@ -25,11 +25,39 @@ import SmallSearchField from '@/components/app/SmallSearchField'
     <v-container class="pa-0" fluid>
       <v-row justify="space-between" align="center" no-gutters>
         <v-col class="d-flex align-center line-height-normal">
-          <p class="text-20 font-weight-bold text-black">전체 <span>23</span></p>
+          <p class="text-20 font-weight-bold text-black">
+            전체 <span class="ml-2 text-main-color">1,016</span>
+          </p>
         </v-col>
 
         <v-col class="d-flex justify-end">
-          <p class="text-black font-weight-medium">최신순</p>
+          <v-sheet class="list-sort ml-8">
+            <v-menu location="bottom" attach>
+              <template v-slot:activator="{ props }">
+                <v-btn
+                  v-bind="props"
+                  variant="plain"
+                  class="btn-plain-custom text-black font-weight-medium text-body-1"
+                  rounded="0"
+                  :ripple="false"
+                >
+                  최신순
+                </v-btn>
+              </template>
+
+              <v-list>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>최신순</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </v-sheet>
         </v-col>
       </v-row>
 
