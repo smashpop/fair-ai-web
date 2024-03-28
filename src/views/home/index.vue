@@ -1,10 +1,10 @@
 <script setup>
 // Utilities
 import { ref, onMounted } from 'vue'
-import { popularImageSrc } from '@/utils/common'
+//import { popularImageSrc } from '@/utils/common'
 
 // Components
-import SearchSection from './searchSection'
+//import SearchSection from './searchSection'
 import PopularitySection from './popularitySection'
 import ArticleSection from './articleSection'
 import ThesisSection from './thesisSection'
@@ -38,36 +38,9 @@ async function loadFromServer() {
 }
 </script>
 
-<template>
-  <!-- 검색 -->
-  <p 
-  v-if="populars" 
-  style="position: absolute; top: 0; left: 0; width: 100%; height: 860px; background: green;"
-  >
-    <v-img
-      max-height="64"
-      :src="popularImageSrc(populars[0].id)"
-    />
-  </p>
-  
-  <v-container class="pa-0" fluid style="position: relative; z-index: 2; padding-top: 118px !important; height: 788px;">
-    <v-row no-gutters>
-      <v-sheet class="mx-auto" width="1360" style="background: transparent; min-width: 1360px;">      
-        <v-chip-group style="position: absolute; left: 50%; top: 150px;">
-          <v-chip>Chip 1</v-chip>
-
-          <v-chip>Chip 2</v-chip>
-
-          <v-chip>Chip 3</v-chip>
-        </v-chip-group>   
-        <SearchSection />
-      </v-sheet>
-
-      <v-sheet class="mx-auto" width="1360" style="background: transparent; margin-top: 94px; min-width: 1360px;">
-        <PopularitySection :populars="populars" />
-      </v-sheet>    
-    </v-row>
-  </v-container>
+<template> 
+  <!-- 메인배너 -->
+  <PopularitySection :populars="populars" />
 
   <!-- 최근 ai 이슈 -->
   <v-container class="pa-0" fluid>
